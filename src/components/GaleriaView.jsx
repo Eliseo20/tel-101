@@ -38,12 +38,6 @@ const GaleriaView = ({ onBack }) => {
             <div className="mb-8">
                 <HorizontalGallery items={galeriaData} />
             </div>
-
-            <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl text-center">
-                <p className="text-slate-600 dark:text-slate-300 font-medium max-w-2xl mx-auto">
-                    Nota: Puedes agregar tus propias imágenes a la carpeta <code className="bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200 px-2 py-1 rounded">public/galeria</code> y actualizar la información en el archivo <code className="bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200 px-2 py-1 rounded">src/data/galeriaData.js</code>.
-                </p>
-            </div>
         </div>
     );
 };

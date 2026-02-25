@@ -72,7 +72,7 @@ const HorizontalGallery = ({ items }) => {
                                 {item.title}
                             </h3>
 
-                            <div className="bg-black/40 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl transform transition-transform duration-500 max-w-3xl">
+                            <div className="bg-black/75 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl transform transition-transform duration-500 max-w-3xl">
                                 <p className="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
                                     {item.description}
                                 </p>
