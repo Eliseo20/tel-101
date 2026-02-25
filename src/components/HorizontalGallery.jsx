@@ -57,26 +57,25 @@ const HorizontalGallery = ({ items }) => {
                 {items.map((item, idx) => (
                     <div
                         key={idx}
-                        className="relative shrink-0 snap-center rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-slate-200/20"
-                        style={{ width: 'min(90vw, 1000px)', aspectRatio: '16/9' }}
+                        className="relative shrink-0 snap-center rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl hover:scale-[1.02] border border-slate-200/20 bg-slate-100 dark:bg-slate-900 flex flex-col transition-transform duration-500"
+                        style={{ width: 'min(90vw, 1000px)' }}
                     >
-                        <img
-                            src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
-                            alt={item.title}
-                            className="w-full h-full object-contain bg-slate-950"
-                            loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/60 to-transparent flex flex-col justify-end p-6 sm:p-12 transition-all duration-500">
+                        <div className="w-full relative bg-slate-950" style={{ aspectRatio: '16/9' }}>
+                            <img
+                                src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
+                                alt={item.title}
+                                className="absolute inset-0 w-full h-full object-contain"
+                                loading="lazy"
+                            />
+                        </div>
 
-                            <div className="bg-black/60 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl transform transition-transform duration-500 max-w-3xl">
-                                <h3 className="text-white font-black text-2xl sm:text-4xl lg:text-5xl uppercase tracking-tighter mb-4 sm:mb-6 drop-shadow-lg">
-                                    {item.title}
-                                </h3>
-                                <p className="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
-                                    {item.description}
-                                </p>
-                            </div>
-
+                        <div className="p-6 sm:p-10 flex-grow flex flex-col justify-center">
+                            <h3 className="text-[#002855] dark:text-white font-black text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight mb-4">
+                                {item.title}
+                            </h3>
+                            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
+                                {item.description}
+                            </p>
                         </div>
                     </div>
                 ))}
