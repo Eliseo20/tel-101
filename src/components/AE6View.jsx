@@ -5,7 +5,6 @@ import {
     Calculator, Settings, Power, Wrench, Thermometer, ShieldCheck, Flame, BookOpen, UserX, ActivitySquare,
     Network, ServerCog, Cpu
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -94,24 +93,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE6View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Contactor Tripolar de Potencia",
-            description: "El elemento fundamental en la automatización industrial para el control de motores eléctricos. Posee contactos robustos diseñados para soportar los arcos voltaicos durante los encendidos y apagados.",
-            image: "https://images.unsplash.com/photo-1580983546369-0df85dd4e7ec?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Bobina y Cámara Apagachispas",
-            description: "La bobina de mando, al ser energizada (24V, 110V o 220V), atrae el núcleo móvil permitiendo el flujo de potencia. Las cámaras circundantes extinguen rápidamente el arco eléctrico generado.",
-            image: "https://images.unsplash.com/photo-1620288627223-53302f4e8c74?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Cableado de Control y Enclavamientos",
-            description: "El circuito de mando conecta botoneras, sensores y PLC a la bobina del contactor. Los contactos auxiliares (NO/NC) permiten realizar retenciones magnéticas e interbloqueos de seguridad.",
-            image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE6 = [
         { term: "Contactor", def: "Interruptor operado electromagnéticamente, diseñado para el control remoto de circuitos eléctricos de potencia o de mando al accionar una carga." },
@@ -269,11 +250,6 @@ const AE6View = ({ onBack }) => {
                             ]} />
                             <Paragraph>Ignorar regulaciones arriesga sanciones y propaga inminentes peligros a instalaciones y trabajadores.</Paragraph>
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-50 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">

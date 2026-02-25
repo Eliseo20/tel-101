@@ -4,7 +4,6 @@ import {
     CheckCircle2, AlertTriangle, Zap, Activity, TrendingUp, Quote,
     Calculator, Settings, Power, Wrench, Thermometer, ShieldCheck, Flame, BookOpen, UserX, ActivitySquare
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -93,24 +92,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE3View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Interruptor Diferencial",
-            description: "Componente esencial de protección para salvar vidas ante corrientes de fuga. Un diferencial tipo AC o A es el estándar de seguridad en todo hogar para prevenir accidentes por contacto eléctrico.",
-            image: "https://images.unsplash.com/photo-1620288627223-53302f4e8c74?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Sensores y Toroidales",
-            description: "El funcionamiento interno del RCD se basa en un sensor toroidal que compara meticulosamente la corriente de fase y la de neutro, activando el disparo electromecánico si no coinciden.",
-            image: "https://images.unsplash.com/photo-1555664424-77dd71cd6c76?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Instalación en Tablero",
-            description: "La instalación correcta de un diferencial exige una asociación con una buena puesta a tierra y un ordenado montaje en riel DIN, manteniendo accesibilidad al botón de 'Test'.",
-            image: "https://images.unsplash.com/photo-1544724569-5f546fb6d6eb?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE3 = [
         { term: "Interruptor diferencial (RCD/GFCI)", def: "Dispositivo de corriente residual que desconecta automáticamente la alimentación al detectar una diferencia de corriente entre los conductores activos, indicando una fuga a tierra." },
@@ -336,11 +317,6 @@ const AE3View = ({ onBack }) => {
                                 "Documenta el trabajo mediante los símbolos reglamentarios en el plano del inmueble, anotando marca, modelo, sensibilidad, fecha de instalación y recomendaciones para el usuario."
                             ]} />
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">

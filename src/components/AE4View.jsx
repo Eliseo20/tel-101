@@ -5,7 +5,6 @@ import {
     Calculator, Settings, Power, Wrench, Thermometer, ShieldCheck, Flame, BookOpen, UserX, ActivitySquare,
     Globe, Network
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -94,24 +93,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE4View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Electrodos de Tierra",
-            description: "Construidos comúnmente en barras de acero cobreado, se entierran para disipar de manera eficiente corrientes de falla al suelo circundante, creando el primer nivel del sistema protector.",
-            image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Mallas Equipotenciales",
-            description: "Red de conductores de cobre instalados horizontalmente bajo tierra, frecuentemente con soldadura exotérmica. Unifican el potencial del terreno para eliminar los riesgos de voltajes de paso.",
-            image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Cámaras de Inspección",
-            description: "Permiten evaluar y dar mantenimiento periódico a las conexiones terrestres. La norma exige medición regular de la resistencia (generalmente menor a 10 Ohms) mediante puentes medidores adecuados.",
-            image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE4 = [
         { term: "Conexión a tierra", def: "Enlace eléctrico intencional entre una instalación y el terreno, diseñado para derivar de forma segura corrientes de falla y sobretensiones." },
@@ -294,11 +275,6 @@ const AE4View = ({ onBack }) => {
                         <ExpansionTile title="8. Mantenimiento y Verificación" icon={Settings}>
                             <Paragraph>La inspección visual garantiza la firmeza de las uniones y ausencia de corrosión. Se recomienda medición de resistencia anual. En entornos críticos, se realizan pruebas adicionales de paso y equipotencialidad.</Paragraph>
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">

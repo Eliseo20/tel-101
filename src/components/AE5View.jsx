@@ -5,7 +5,6 @@ import {
     Calculator, Settings, Power, Wrench, Thermometer, ShieldCheck, Flame, BookOpen, UserX, ActivitySquare,
     Network
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -94,24 +93,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE5View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Relé Térmico Bimetálico",
-            description: "El dispositivo clásico para protección de motores contra sobrecargas prolongadas. Sus láminas bimetálicas se curvan lentamente con el exceso de corriente hasta accionar el mecanismo de desconexión.",
-            image: "https://images.unsplash.com/photo-1580828369019-2220d5bcd18d?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Relés Electrónicos Digitales",
-            description: "Equipos modernos de protección que ofrecen mediciones precisas, múltiples curvas de disparo y capacidad de comunicación para integrarse a sistemas SCADA en instalaciones complejas.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Montaje con Contactor",
-            description: "El relé térmico se ensambla típicamente en conjunto directo con un contactor, formando un arrancador de motor compacto que ofrece control operativo y protección térmica en un solo bloque.",
-            image: "https://images.unsplash.com/photo-1544724569-5f546fb6d6eb?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE5 = [
         { term: "Relé de protección", def: "Dispositivo que supervisa condiciones eléctricas (corriente, tensión, etc.) y acciona mecanismos de desconexión en caso de anomalías." },
@@ -290,11 +271,6 @@ const AE5View = ({ onBack }) => {
                             ]} />
                             <Paragraph>Estas normas especifican requerimientos de desempeño, tiempos de disparo y compatibilidad electromagnética. Los fabricantes líderes entregan hojas técnicas esenciales que todo especialista debe consultar y respetar.</Paragraph>
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-50 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">

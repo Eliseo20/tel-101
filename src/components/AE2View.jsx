@@ -4,7 +4,6 @@ import {
     CheckCircle2, AlertTriangle, Zap, Activity, TrendingUp, Quote,
     Calculator, Settings, Power, Wrench, Thermometer, ShieldCheck, Flame, BookOpen
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -93,24 +92,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE2View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Interruptor Termomagnético",
-            description: "Es el estándar actual para tableros de distribución en baja tensión. Combina protección térmica (bimetal) para aislar sobrecargas, y protección magnética (solenoide) para despejar cortocircuitos en milisegundos, salvaguardando personas e infraestructura.",
-            image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Mecanismo Interno",
-            description: "Al interior de un disyuntor, las cámaras apagachispas juegan un rol vital dispersando y enfriando el arco eléctrico que se forma al interrumpir corrientes de falla elevadas, minimizando el riesgo de incendio.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Tableros de Distribución",
-            description: "El entorno clásico donde conviven las protecciones termomagnéticas distribuyendo energía. Un correcto diseño mediante coordinación selectiva asegura que solo opere el interruptor más cercano a la falla.",
-            image: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE2 = [
         { term: "Protector termomagnético", def: "Dispositivo que interrumpe el paso de corriente ante sobrecargas o cortocircuitos combinando un mecanismo térmico y uno magnético." },
@@ -327,11 +308,6 @@ const AE2View = ({ onBack }) => {
                             <SectionHeader title="6.3 Documentación, registros y formación continuada" />
                             <Paragraph>Debe mantenerse correctamente documentado todo el proceso de selección, instalación y mantenimiento de equipos de protección. Además, se exige una formación y reciclaje permanente de los operarios y responsables, a fin de estar al día con las novedades técnicas y normativas.</Paragraph>
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">

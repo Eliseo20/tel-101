@@ -10,6 +10,7 @@ import AE5View from './components/AE5View';
 import AE6View from './components/AE6View';
 import HomeView from './components/HomeView';
 import UnidadesView from './components/UnidadesView';
+import GaleriaView from './components/GaleriaView';
 
 import { MODULE_DATA } from './data/moduleData';
 
@@ -72,6 +73,7 @@ const App = () => {
   const handleNavigate = (path) => {
     if (path === 'inicio') navigate('/');
     else if (path === 'aprendizajes') navigate('/unidades');
+    else if (path === 'galeria') navigate('/galeria');
     else if (path.startsWith('ae')) navigate(`/${path}`);
     else navigate(path);
   };
@@ -89,6 +91,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomeView moduleData={MODULE_DATA} />} />
           <Route path="/unidades" element={<UnidadesView moduleData={MODULE_DATA} />} />
+          <Route path="/galeria" element={<GaleriaView onBack={() => navigate('/')} />} />
           <Route path="/ae1" element={<AE1View onBack={() => navigate('/')} darkMode={darkMode} />} />
           <Route path="/ae2" element={<AE2View onBack={() => navigate('/')} />} />
           <Route path="/ae3" element={<AE3View onBack={() => navigate('/')} />} />
@@ -99,14 +102,9 @@ const App = () => {
         </Routes>
       </main>
 
-      <footer className="border-t border-slate-200 dark:border-slate-800 py-20 mt-20 bg-slate-50 dark:bg-slate-900/50">
-        <div className="container mx-auto px-6 text-center space-y-4">
-          <p className="text-slate-400 dark:text-slate-600 text-[10px] font-black uppercase tracking-[0.5em]">{MODULE_DATA.codigo} - UNIDAD 1 PROTECCIONES</p>
-          <div className="flex justify-center gap-10 text-[10px] font-bold text-slate-500">
-            <span>SCT-AIEP: 4</span>
-            <span>Planificación 2024</span>
-            <span>v3.2</span>
-          </div>
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-10 mt-20 bg-slate-50 dark:bg-slate-900/50">
+        <div className="container mx-auto px-6 text-center">
+          {/* Footer content removed as requested */}
         </div>
       </footer>
     </div>

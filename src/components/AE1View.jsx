@@ -4,7 +4,6 @@ import {
     CheckCircle2, AlertTriangle, Unplug, Zap, Activity, TrendingUp, Info, Quote,
     Calculator, Settings, Power, Wrench, Thermometer, Battery
 } from 'lucide-react';
-import HorizontalGallery from './HorizontalGallery';
 
 const ExpansionTile = ({ title, icon: Icon, children, defaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -93,24 +92,6 @@ const HighlightBox = ({ title, children, type = "info" }) => {
 
 const AE1View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
-
-    const galleryData = [
-        {
-            title: "Fusibles Cilíndricos",
-            description: "Utilizados en aplicaciones residenciales y comerciales pequeñas. Su diseño cilíndrico de cerámica o vidrio permite manejar distintas capacidades de corriente de forma segura y económica, protegiendo circuitos ante sobrecargas.",
-            image: "https://images.unsplash.com/photo-1544724569-5f546fb6d6eb?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Fusibles Tipo Cuchilla (NH)",
-            description: "Diseñados para instalaciones industriales con altas demandas de corriente y mayor poder de corte. Su estructura robusta garantiza una conexión firme, ideal para la protección de tableros y transformadores.",
-            image: "https://images.unsplash.com/photo-1580983546369-0df85dd4e7ec?q=80&w=1920&h=1080&auto=format&fit=crop"
-        },
-        {
-            title: "Instalación Segura",
-            description: "El reemplazo y mantenimiento de fusibles requiere procedimientos LOTO. Es vital verificar que el calibre y la curva característica correspondan exactamente al circuito que se está protegiendo.",
-            image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1920&h=1080&auto=format&fit=crop"
-        }
-    ];
 
     const glossaryAE1 = [
         { term: "Estados de operación", def: "Condiciones en las que puede encontrarse una instalación o circuito eléctrico, tales como estado normal, sobrecarga, cortocircuito, falla a tierra, entre otros." },
@@ -381,11 +362,6 @@ const AE1View = ({ onBack }) => {
                                 <p>La correcta manipulación y selección son vitales para que las protecciones sean realmente eficaces, tal como recomiendan los autores de la bibliografía base.</p>
                             </HighlightBox>
                         </ExpansionTile>
-
-                        <div className="mb-8">
-                            <SectionHeader title="Galería de Equipos y Aplicaciones" />
-                            <HorizontalGallery items={galleryData} />
-                        </div>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
