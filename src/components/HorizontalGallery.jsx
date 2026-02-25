@@ -68,11 +68,10 @@ const HorizontalGallery = ({ items }) => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/60 to-transparent flex flex-col justify-end p-6 sm:p-12 transition-all duration-500">
 
-                            <h3 className="text-white font-black text-2xl sm:text-4xl lg:text-5xl uppercase tracking-tighter mb-4 sm:mb-6 transform transition-transform duration-500 drop-shadow-lg">
-                                {item.title}
-                            </h3>
-
-                            <div className="bg-black/75 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl transform transition-transform duration-500 max-w-3xl">
+                            <div className="bg-black/60 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl transform transition-transform duration-500 max-w-3xl">
+                                <h3 className="text-white font-black text-2xl sm:text-4xl lg:text-5xl uppercase tracking-tighter mb-4 sm:mb-6 drop-shadow-lg">
+                                    {item.title}
+                                </h3>
                                 <p className="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
                                     {item.description}
                                 </p>
