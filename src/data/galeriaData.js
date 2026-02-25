@@ -32,7 +32,7 @@ export const galeriaData = [
         "id": 5,
         "title": "Equipotencialidad Estructural",
         "description": "Ejemplo práctico de conexión a tierra de estructuras metálicas expuestas para evitar tensiones de contacto peligrosas.",
-        "image": "/galeria/conexión-a-tierra-de-estructura-metalica.jpg"
+        "image": "/galeria/conexion-tierra-estructura.jpg"
     },
     {
         "id": 6,
@@ -68,7 +68,7 @@ export const galeriaData = [
         "id": 11,
         "title": "Fusible tipo gG",
         "description": "Fusible cilíndrico de uso general e industrial, que provee protección contra sobrecargas y cortocircuitos.",
-        "image": "/galeria/fusible gg.jpg"
+        "image": "/galeria/fusible-gg.jpg"
     },
     {
         "id": 12,
@@ -146,7 +146,7 @@ export const galeriaData = [
         "id": 24,
         "title": "Relé Térmico",
         "description": "Vista frontal del dispositivo de protección, destacando el dial regulador de corriente y los botones manuales de Reset y Test.",
-        "image": "/galeria/rele-termico-.jpg"
+        "image": "/galeria/rele-termico.jpg"
     },
     {
         "id": 25,
@@ -158,6 +158,6 @@ export const galeriaData = [
         "id": 26,
         "title": "Telurómetro en Uso",
         "description": "Equipo digital portátil desplegando una medición de resistencia en la estaca de tierra, asegurando cumplimiento normativo.",
-        "image": "/galeria/Comprar-Telurómetro-digital-portátil-0-200V,-0-2000ohm-en-Lima-Perú,-UT521,-telurómetro-de-3-cables-y-dos-estacas.jpg"
+        "image": "/galeria/telurometro.jpg"
     }
 ];

@@ -61,7 +61,7 @@ const HorizontalGallery = ({ items }) => {
                         style={{ width: 'min(90vw, 1000px)', aspectRatio: '16/9' }}
                     >
                         <img
-                            src={item.image}
+                            src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
                             alt={item.title}
                             className="w-full h-full object-cover"
                             loading="lazy"
