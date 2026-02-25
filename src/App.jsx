@@ -11,6 +11,7 @@ import AE6View from './components/AE6View';
 import HomeView from './components/HomeView';
 import UnidadesView from './components/UnidadesView';
 import GaleriaView from './components/GaleriaView';
+import ProtectionsQuizGame from './components/ProtectionsQuizGame';
 
 import { MODULE_DATA } from './data/moduleData';
 
@@ -74,6 +75,7 @@ const App = () => {
     if (path === 'inicio') navigate('/');
     else if (path === 'aprendizajes') navigate('/unidades');
     else if (path === 'galeria') navigate('/galeria');
+    else if (path === 'quiz') navigate('/quiz');
     else if (path.startsWith('ae')) navigate(`/${path}`);
     else navigate(path);
   };
@@ -92,6 +94,7 @@ const App = () => {
           <Route path="/" element={<HomeView moduleData={MODULE_DATA} />} />
           <Route path="/unidades" element={<UnidadesView moduleData={MODULE_DATA} />} />
           <Route path="/galeria" element={<GaleriaView onBack={() => navigate('/')} />} />
+          <Route path="/quiz" element={<ProtectionsQuizGame />} />
           <Route path="/ae1" element={<AE1View onBack={() => navigate('/')} darkMode={darkMode} />} />
           <Route path="/ae2" element={<AE2View onBack={() => navigate('/')} />} />
           <Route path="/ae3" element={<AE3View onBack={() => navigate('/')} />} />
