@@ -63,7 +63,7 @@ const HorizontalGallery = ({ items }) => {
                         <img
                             src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`}
                             alt={item.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain bg-slate-950"
                             loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/60 to-transparent flex flex-col justify-end p-6 sm:p-12 transition-all duration-500">
