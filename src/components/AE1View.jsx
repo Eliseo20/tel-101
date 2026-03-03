@@ -490,7 +490,12 @@ const AE1View = ({ onBack }) => {
                         </ExpansionTile>
 
                         <ExpansionTile title="III. Generación mediante Energías Alternativas" icon={Zap}>
-                            <SectionHeader title="Introducción a la Energía Geotérmica" />
+                            <div className="mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800">
+                                <h3 className="text-xl font-black text-amber-900 dark:text-amber-300 uppercase mb-2">A. Energía Geotérmica</h3>
+                                <p className="text-sm text-amber-700 dark:text-amber-500">Aprovechamiento del calor interno de la Tierra para la generación eléctrica mediante fluidos a alta temperatura.</p>
+                            </div>
+
+                            <SectionHeader title="1. Introducción a la Energía Geotérmica" />
                             <Paragraph>La geotermia se ha consolidado, a nivel global, como una alternativa relevante y sustentable dentro del espectro de fuentes utilizadas para la generación eléctrica. Su utilización descansa en la capacidad de aprovechar el calor interno de la Tierra, mediante tecnologías específicas que transforman esta energía térmica en electricidad. Este texto, basado principalmente en la obra "Fuentes de energía" de José Roldán Viloria (2008) y las directrices planteadas por la Superintendencia de Electricidad y Combustibles (SEC) de Chile, profundiza en los fundamentos, procesos, ventajas, desafíos y el marco regulatorio de la generación de electricidad geotérmica, con un enfoque académico, estructurado y contextualizado a nivel global.</Paragraph>
 
                             {/* Video de Introducción Geotermia */}
@@ -622,10 +627,111 @@ const AE1View = ({ onBack }) => {
                                 <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante fuentes alternativas como la geotermia, identificando sus principios técnicos, impactos ambientales y su viabilidad tecnológica y económica.</p>
                             </HighlightBox>
 
-                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
-                            <Paragraph>Además de la geotermia, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <div className="mt-16 mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800">
+                                <h3 className="text-xl font-black text-amber-900 dark:text-amber-300 uppercase mb-2">B. Energía Solar Fotovoltaica</h3>
+                                <p className="text-sm text-amber-700 dark:text-amber-500">Conversión directa de la radiación solar en electricidad mediante el efecto fotovoltaico en semiconductores.</p>
+                            </div>
+
+                            <SectionHeader title="1. Introducción a la Generación Solar Fotovoltaica" />
+                            <Paragraph>La generación de energía eléctrica a partir de fuentes solares ha experimentado un crecimiento significativo a nivel global en las últimas décadas. Los sistemas fotovoltaicos, en particular, se han posicionado como una de las alternativas más limpias y sostenibles para la producción de electricidad, permitiendo la diversificación de la matriz energética y contribuyendo a la reducción de las emisiones de gases contaminantes. La expansión de la energía solar fotovoltaica responde tanto al avance tecnológico como a la necesidad de incorporar fuentes renovables en la industria eléctrica, considerando principios técnicos, normativos y medioambientales que regulan su funcionamiento y expansión (Roldán Viloria, 2008).</Paragraph>
+
+                            {/* Espacio reservado para Video/Imagen de Introducción Solar Fotovoltaica */}
+                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Espacio reservado para Video/Imagen: Solar Fotovoltaica]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="2. Principios de la Generación Solar Fotovoltaica" />
+                            <Paragraph>La generación fotovoltaica se basa en el principio físico del efecto fotovoltaico. Este fenómeno fue descubierto por el físico francés Alexandre-Edmond Becquerel en 1839, y constituye el mecanismo por el cual ciertas sustancias semiconductoras son capaces de generar corriente eléctrica directa cuando son expuestas a la radiación solar.</Paragraph>
+                            <Paragraph>Cuando la luz, compuesta por fotones, incide sobre la superficie de una celda o célula fotovoltaica, las partículas de luz transfieren su energía a los electrones de los átomos presentes en el material semiconductor, generalmente silicio. Este proceso posibilita que los electrones se "desprendan" de sus átomos, creando un flujo de corriente eléctrica que puede ser utilizada directamente o transformada a corriente alterna mediante inversores eléctricos para su integración a la red eléctrica (Roldán Viloria, 2008).</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1. Teoría y Funcionamiento del Efecto Fotovoltaico</h5>
+                            <Paragraph>El efecto fotovoltaico ocurre fundamentalmente en materiales semiconductores. En los sistemas más comunes se utiliza silicio, aunque también pueden emplearse otros materiales como teluro de cadmio o seleniuro de cobre e indio. El proceso básico involucra la formación de una unión tipo p-n, donde la parte "p" corresponde a un material con portadores positivos (huecos) y la parte "n" corresponde a un material con portadores negativos (electrones).</Paragraph>
+                            <Paragraph>Al incidir la radiación solar sobre la superficie de la célula, los fotones de suficiente energía liberan electrones del material semiconductor en la zona de la unión, generando pares electrón-hueco. Bajo el efecto del campo eléctrico interno de la unión p-n, los electrones se desplazan hacia la zona n y los huecos hacia la zona p, produciendo así una diferencia de potencial. Esta diferencia puede conectarse a un circuito externo, permitiendo que los electrones fluyan y así obtener energía eléctrica utilizable.</Paragraph>
+
+                            <SectionHeader title="3. Componentes de un Sistema de Generación Solar Fotovoltaica" />
+                            <Paragraph>Un sistema fotovoltaico típico se compone de varios elementos fundamentales, cuyo diseño y configuración mantienen estrecha relación con la escala y tipo de aplicación, desde instalaciones residenciales hasta grandes centrales solares industriales.</Paragraph>
                             <List items={[
-                                "Energía Solar (Fotovoltaica y Térmica): Convierte la luz o calor del sol en electricidad. En rápida expansión y emisiones cero operativas, pero intermitente.",
+                                "Paneles o módulos fotovoltaicos: Constituyen la unidad básica de captación y transformación de energía. Cada panel contiene múltiples celdas interconectadas y encapsuladas para brindar soporte mecánico y protección ambiental.",
+                                "Inversores eléctricos: Son dispositivos electrónicos que convierten la corriente continua generada por las células fotovoltaicas en corriente alterna apta para su uso en instalaciones convencionales o para su inyección en la red eléctrica.",
+                                "Sistemas de acumulación (opcional): En algunos sistemas, especialmente aislados o autónomos, se utilizan baterías para almacenar la energía generada y suministrarla cuando no hay luz solar.",
+                                "Transformadores y sistemas de protección: En grandes instalaciones, se requieren equipos adicionales para adaptar los niveles de tensión y proteger el sistema ante sobretensiones, sobrecorrientes, o fluctuaciones en la red."
+                            ]} />
+
+                            <SectionHeader title="4. Tipologías de Generación Solar Fotovoltaica" />
+                            <Paragraph>Desde la perspectiva de la generación eléctrica, existen diferentes formas de desplegar tecnología fotovoltaica de acuerdo a criterios de localización, tamaño y funcionalidad principal.</Paragraph>
+                            <List items={[
+                                "Generación distribuida: Corresponde a plantas instaladas en cercanía del punto de consumo, ya sea en techos residenciales, comerciales o industriales. Suelen tener capacidad limitada en potencia y contribuyen directamente al autoconsumo o balance de energía en la red (Roldán Viloria, 2008).",
+                                "Centrales solares fotovoltaicas de gran escala: Son plantas industriales que agrupan grandes cantidades de módulos en terrenos específicos. Producen energía centralizada, la cual es inyectada a la red eléctrica de alta tensión para atender la demanda en amplias regiones geográficas."
+                            ]} />
+
+                            <SectionHeader title="5. Proceso de Generación en una Central Solar Fotovoltaica" />
+                            <Paragraph>El proceso comienza con la captación de la radiación solar incidente sobre los paneles o módulos fotovoltaicos. La electricidad producida por los módulos es corriente continua (CC), la cual es recolectada a través de conjuntos de cableado y enviada al inversor centralizado o a micro-inversores, dependiendo del diseño del sistema.</Paragraph>
+                            <Paragraph>El inversor transforma la CC en corriente alterna (CA) y a continuación la energía es monitoreada, medida y acondicionada para ser transportada mediante transformadores de media o alta tensión. La energía finalmente es transmitida a través de líneas eléctricas hacia los consumidores o directamente a la red de distribución nacional o regional.</Paragraph>
+
+                            <SectionHeader title="6. Factores que Influyen en la Generación Solar Fotovoltaica" />
+                            <Paragraph>El rendimiento y la eficiencia de la generación solar fotovoltaica están influenciados por una serie de factores que deben ser considerados para el diseño, dimensionamiento y operación de los sistemas. Entre estos factores destacan:</Paragraph>
+                            <List items={[
+                                "Irradiancia o radiación solar: La cantidad de energía solar que llega a la superficie terrestre depende de la latitud, altitud, clima y época del año. Zonas cercanas al ecuador y con bajo nivel de nubosidad son particularmente favorables.",
+                                "Orientación e inclinación de los paneles: Una correcta inclinación y orientación maximizan la captación solar diaria y anual.",
+                                "Eficiencia de las celdas fotovoltaicas: Esta depende de la tecnología utilizada (silicio monocristalino, policristalino, capa fina, etc.) y puede variar entre 10% y 22% en productos comerciales actuales.",
+                                "Temperatura ambiente: Las altas temperaturas pueden reducir ligeramente la eficiencia de los paneles debido a la naturaleza física de los materiales semiconductores.",
+                                "Sombra y suciedad: Sombreamientos parciales y acumulación de polvo o partículas reducen significativamente la producción de energía."
+                            ]} />
+
+                            <SectionHeader title="7. Ventajas de la Generación Fotovoltaica" />
+                            <Paragraph>La tecnología fotovoltaica presenta diversas ventajas frente a otras formas de generación eléctrica:</Paragraph>
+                            <List items={[
+                                "Fuente inagotable y renovable: La energía solar es prácticamente inagotable en la escala temporal humana y no depende directamente de fuentes fósiles o finitas.",
+                                "Baja o nula emisión de gases contaminantes: Durante su operación, los sistemas fotovoltaicos no generan emisiones de gases de efecto invernadero ni contaminantes atmosféricos perjudiciales.",
+                                "Mantenimiento relativamente bajo: Los sistemas fotovoltaicos carecen de partes móviles y requieren menos operaciones de mantenimiento que otras tecnologías, aunque la limpieza periódica es necesaria.",
+                                "Modularidad y escalabilidad: Es posible instalar desde pequeños módulos individuales hasta grandes centrales, permitiendo adaptabilidad a distintas necesidades y disponibilidades territoriales y económicas (Roldán Viloria, 2008)."
+                            ]} />
+
+                            <SectionHeader title="8. Limitaciones y Desafíos de la Generación Fotovoltaica" />
+                            <Paragraph>A pesar de sus ventajas, la generación solar fotovoltaica enfrenta ciertos límites técnicos y económicos:</Paragraph>
+                            <List items={[
+                                "Intermitencia e imprevisibilidad: La producción eléctrica depende de la presencia de luz solar, sufriendo disminuciones en días nublados, lluviosos o durante la noche.",
+                                "Requerimientos de espacio: Las grandes plantas requieren áreas extensas para la instalación de paneles, lo que puede generar competencia con otros usos del suelo, especialmente agricultura o protección de ecosistemas (Roldán Viloria, 2008).",
+                                "Costos iniciales relativamente altos: Aunque los precios han disminuido significativamente, la inversión inicial puede ser un obstáculo para algunos usuarios o regiones menos desarrolladas.",
+                                "Necesidad de acumuladores o respaldo: Para asegurar la continuidad del suministro, especialmente en aplicaciones aisladas de la red, es necesario contar con sistemas de almacenamiento energético (baterías) o soluciones híbridas."
+                            ]} />
+
+                            <SectionHeader title="9. Impacto Ambiental de la Generación Solar Fotovoltaica" />
+                            <Paragraph>Una de las principales fortalezas de la generación fotovoltaica es su bajo impacto ambiental durante la etapa de operación. Sin embargo, en un análisis del ciclo de vida completo, pueden identificarse ciertos efectos y consideraciones relevantes:</Paragraph>
+                            <List items={[
+                                "Extracción y transformación de materiales: El proceso de producción de celdas fotovoltaicas implica la utilización de materiales como silicio, metales pesados y químicos, cuya extracción y refinamiento puede tener impactos locales en términos de contaminación y consumo energético.",
+                                "Emisiones y residuos en la fabricación: Durante la manufactura pueden producirse emisiones de gases y generación de residuos que requieren una gestión adecuada para minimizar sus efectos sobre la salud y el ambiente.",
+                                "Uso del suelo: Las grandes instalaciones pueden modificar el hábitat en áreas extensas, alterando el drenaje, flora y fauna locales si no se lleva a cabo un diseño ambientalmente sensible.",
+                                "Residuos al final de la vida útil: Si bien los paneles fotovoltaicos tienen una vida útil prolongada, entre 20 y 30 años, al término de este período es necesario gestionar adecuadamente su reciclaje para evitar la acumulación de desechos peligrosos, especialmente en los módulos que contienen metales pesados."
+                            ]} />
+
+                            <SectionHeader title="10. Normativa y Regulación Sectorial" />
+                            <Paragraph>La integración de la generación fotovoltaica en la industria eléctrica está sujeta a normativas técnicas, legales y medioambientales específicas que garantizan la operación segura, eficiente y responsable de estos sistemas. Entre las regulaciones más importantes, se destacan:</Paragraph>
+                            <List items={[
+                                "Normas Técnicas de Instalación: Los estándares técnicos, como los desarrollados por la Superintendencia de Electricidad y Combustibles (SEC), establecen los requisitos y procedimientos para la instalación, operación, mantenimiento y conexión a la red de sistemas fotovoltaicos.",
+                                "Normas medioambientales: Se exige que todo proyecto evalúe el impacto ambiental de acuerdo a la legislación vigente antes de su construcción, considerando usos alternativos del suelo, biodiversidad, emisiones y generación de residuos (Normas Técnicas Sector Electricidad).",
+                                "Incentivos y políticas públicas: Diversos países han promulgado leyes y regulaciones para fomentar el uso de energías renovables a través de subsidios, precios preferenciales para la energía producida y facilidades para la conexión a la red."
+                            ]} />
+
+                            <SectionHeader title="11. Perspectivas Futuras de la Generación Solar Fotovoltaica" />
+                            <Paragraph>A nivel global, el potencial de crecimiento de la energía solar sigue siendo amplio. El desarrollo de tecnologías más eficientes, de menor costo y menor impacto ambiental, junto a un marco normativo favorable, continuará impulsando la expansión de la generación fotovoltaica.</Paragraph>
+                            <Paragraph>Entre las tendencias a futuro se incluyen la integración de sistemas inteligentes de control y gestión de la demanda, el desarrollo de soluciones de almacenamiento más eficientes y la descentralización de la generación, permitiendo a usuarios residenciales e industriales transformarse en prosumidores (productores y consumidores simultáneamente).</Paragraph>
+
+                            <SectionHeader title="12. Conclusiones" />
+                            <Paragraph>La generación solar fotovoltaica constituye una alternativa viable, limpia y flexible dentro del conjunto de tecnologías disponibles para la producción eléctrica a escala global. Basada en el aprovechamiento directo de la radiación solar mediante el efecto fotovoltaico, su desarrollo depende de factores tecnológicos, económicos, normativos y ambientales que requieren una evaluación integral.</Paragraph>
+                            <Paragraph>Si bien presenta desafíos técnicos como la intermitencia, requerimientos de espacio y reciclaje de materiales, sigue siendo una de las opciones preferidas para avanzar hacia sociedades energéticamente sustentables y menos dependientes de los combustibles fósiles, en consonancia con los acuerdos internacionales sobre cambio climático y protección ambiental (Roldán Viloria, 2008).</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.4">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante fuentes alternativas como la energía solar fotovoltaica, identificando sus principios técnicos, impactos ambientales y su viabilidad tecnológica y económica.</p>
+                            </HighlightBox>
+
+                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
+                            <Paragraph>Además de la geotermia y la energía solar fotovoltaica, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <List items={[
+                                "Energía Solar Térmica: Concentra el calor del sol para calentar un fluido y generar electricidad.",
                                 "Energía Eólica: Utiliza aerogeneradores impulsados por el viento. Limpia pero intermitente. Requiere estudios precisos de vientos.",
                                 "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente.",
                                 "Energía Marina (Mareomotriz/Undimotriz): Aprovechamiento de mareas y olas. En vías de desarrollo comercial por sus altos costos."
