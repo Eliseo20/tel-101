@@ -130,10 +130,11 @@ const AE2View = ({ onBack }) => {
         { term: "Alta Tensión (AT)", def: "Niveles de voltaje elevados (generalmente entre 66 kV y 220 kV en Chile) utilizados para minimizar las pérdidas de energía (efecto Joule) durante el transporte a largas distancias." },
         { term: "Extra Alta Tensión (EAT)", def: "Voltajes superiores a 220 kV (típicamente 500 kV) empleados en líneas troncales para la interconexión de grandes regiones." },
         { term: "Subestación Eléctrica", def: "Instalación destinada a modificar y establecer los niveles de tensión de una infraestructura eléctrica, facilitando la transmisión y distribución." },
-        { term: "Transformador", def: "Máquina eléctrica estática que transfiere energía eléctrica de un circuito a otro, elevando o reduciendo el voltaje manteniendo la frecuencia." },
+        { term: "Transformador", def: "Máquina eléctrica estática que transfiere energía eléctrica de un circuito a otro, elevando o reduciendo el voltaje manteniendo la frecuencia y operando bajo el principio de inducción electromagnética." },
+        { term: "Relación de Transformación", def: "Proporción entre el número de espiras del devanado secundario y el primario en un transformador, que determina la razón en la cual el voltaje será modificado." },
         { term: "Sistema Interconectado Nacional (SEN)", def: "Infraestructura principal en Chile que concentra casi la totalidad de la generación y transmisión, extendiéndose desde Arica hasta Chiloé." },
         { term: "Centro de Despacho Económico de Carga (CEN)", def: "Entidad independiente (Coordinador Eléctrico Nacional en Chile) encargada de coordinar la operación segura y al mínimo costo del sistema eléctrico." },
-        { term: "Pérdidas de Transmisión", def: "Porcentaje de energía que se disipa en forma de calor en los conductores durante su transporte, debido a la resistencia natural del material." }
+        { term: "Pérdidas de Transmisión", def: "Porcentaje de energía que se disipa en forma de calor en los conductores durante su transporte, debido a la resistencia natural del material y al efecto Joule." }
     ];
 
     return (
@@ -406,16 +407,113 @@ const AE2View = ({ onBack }) => {
                             </SubExpansionTile>
                         </ExpansionTile>
 
+                        <ExpansionTile title="III. Transformadores de Alto Voltaje" icon={Power} defaultOpen={false}>
+                            <Paragraph>En el contexto global actual, la demanda de energía eléctrica continúa incrementándose debido al crecimiento poblacional, la urbanización y el desarrollo tecnológico. La energía eléctrica no solo es esencial para los procesos industriales y la vida cotidiana, sino que también es fundamental para el desarrollo sostenible. En este sistema, los transformadores de alto voltaje adquieren un papel trascendental, ya que facilitan la transmisión eficiente de la electricidad a largas distancias y con mínimas pérdidas energéticas. Entender su funcionamiento, tipos y aplicación es crucial para todos aquellos que deseen profundizar en el conocimiento del sector eléctrico, considerando las normativas técnicas, los aspectos medioambientales y económicos, y el marco legal que regula su utilización y operación.</Paragraph>
+
+                            <SubExpansionTile title="1. Definición y Fundamentos">
+                                <SectionHeader title="1.1 Definición de Transformador" />
+                                <Paragraph>Un transformador es un dispositivo eléctrico estático que permite transferir energía eléctrica de un circuito a otro mediante inducción electromagnética, modificando los niveles de tensión e intensidad. Existen transformadores para diversas aplicaciones, pero en el sistema de transmisión eléctrica, los transformadores de alto voltaje son fundamentales para elevar o reducir la tensión, permitiendo así la transmisión eficiente de grandes cantidades de energía eléctrica por largas distancias (Roldán Viloria, 2008).</Paragraph>
+
+                                <SectionHeader title="1.2 Fundamentos Operativos" />
+                                <Paragraph>De manera general, un transformador de alto voltaje opera bajo los principios de la Ley de Faraday de la inducción electromagnética. Este dispositivo consta de dos bobinados, denominados primario y secundario, enrollados alrededor de un núcleo ferromagnético común. Cuando se aplica una tensión alterna al bobinado primario, se genera un flujo magnético variable en el núcleo, el cual induce una fuerza electromotriz (f.e.m.) en el bobinado secundario. Según el número de espiras de cada bobinado, la relación de transformación puede incrementar o disminuir el voltaje aplicado.</Paragraph>
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="2. Importancia y Estructura Básica">
+                                <SectionHeader title="2.1 Importancia en los Sistemas de Transmisión" />
+                                <Paragraph>Una vez generada la energía eléctrica en las centrales generadoras, esta debe transportarse a los centros de consumo, que suelen estar alejados de los puntos de generación. La transmisión de energía eléctrica se enfrenta a un gran desafío: las pérdidas por efecto Joule, que aumentan con la corriente. Para reducir estas pérdidas, la energía se transporta a alta tensión y baja corriente, lo cual es posible gracias a los transformadores de alto voltaje. De ahí su importancia en la arquitectura de cualquier sistema interconectado de energía eléctrica (Roldán Viloria, 2008).</Paragraph>
+
+                                <SectionHeader title="2.2 Estructura Básica" />
+                                <Paragraph>Los transformadores de alto voltaje poseen una estructura que los hace robustos y seguros para operar en condiciones críticas. Sus principales componentes son:</Paragraph>
+                                <List items={[
+                                    "Núcleo magnético: Generalmente fabricado con láminas de acero silicio que reducen las pérdidas magnéticas y mejoran la eficiencia.",
+                                    "Bobinados: Constituidos por conductores de cobre o aluminio, correctamente aislados, que forman el devanado primario y secundario.",
+                                    "Aislamiento: Materiales como papel impregnado en aceite mineral, aceites dieléctricos o compuestos líquidos sintéticos, destinados a soportar altas tensiones entre bobinados y entre los bobinados y la carcasa metálica del transformador.",
+                                    "Cubierta y tanque: Generalmente fabricado con acero, su función principal es proteger los componentes internos y contener el aceite, además de proveer conexión a tierra.",
+                                    "Radiadores: Dispositivos que ayudan a disipar el calor generado durante el funcionamiento.",
+                                    "Accesorios de protección: Incluyen válvulas de alivio de presión, relés Buchholz, termómetros, y otros sistemas de monitoreo."
+                                ]} />
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="3. Principios de Funcionamiento y Tipos">
+                                <SectionHeader title="3.1 Principios de Funcionamiento" />
+                                <Paragraph>El funcionamiento de los transformadores de alto voltaje se basa en la transferencia de energía sin contacto eléctrico directo entre los circuitos, utilizando el acoplamiento magnético a través del núcleo. La relación de transformación se define como la relación entre el número de espiras del devanado secundario respecto al primario. Así, la tensión y la corriente se relacionan inversamente en proporción a la relación de vueltas.</Paragraph>
+                                <Paragraph>Matemáticamente, la relación de transformación se expresa como:</Paragraph>
+                                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-xl text-center font-mono my-4 border border-slate-200 dark:border-slate-700">
+                                    Vs / Vp = Ns / Np
+                                </div>
+                                <Paragraph>Donde Vs es Tensión secundaria, Vp Tensión primaria, Ns espiras secundarias y Np espiras primarias. Asimismo, la potencia transferida es, idealmente, la misma en ambos lados, considerando que en transformadores ideales las pérdidas internas son despreciables (Pp = Ps).</Paragraph>
+                                <Paragraph>En la práctica, existen pérdidas en los transformadores, tales como las pérdidas en el núcleo (por histéresis y corrientes parásitas) y las pérdidas en los devanados (por efecto Joule), que se tienen en cuenta en el diseño y operación de estas máquinas (Roldán Viloria, 2008).</Paragraph>
+
+                                <SectionHeader title="3.2 Tipos de Transformadores" />
+                                <Paragraph>Los transformadores de alto voltaje pueden clasificarse de acuerdo a diversas características, tales como su función, nivel de tensión, y tipo de enfriamiento. Entre los más importantes se destacan:</Paragraph>
+                                <List items={[
+                                    "Transformadores elevadores y reductores: Los elevadores aumentan el nivel de tensión proveniente de la central generadora, mientras que los reductores disminuyen la tensión a niveles aptos para la distribución al usuario final.",
+                                    "Transformadores de potencia: Son utilizados en las subestaciones principales del sistema de transmisión, manejando potencias que pueden superar los 100 MVA y tensiones de varios cientos de kilovoltios.",
+                                    "Transformadores de distribución: Reducen la alta tensión a niveles apropiados para su distribución en redes secundarias, generalmente por debajo de 35 kV.",
+                                    "Transformadores de medida o instrumentación: Diseñados para reducir los altos valores de tensión y corriente a rangos manejables y seguros para equipos de medición y protección.",
+                                    "Transformadores de aislamiento: Utilizados para separar eléctricamente dos circuitos, garantizando la seguridad y protegiendo los equipos sensibles."
+                                ]} />
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="4. Aplicaciones, Normativa y Aspectos Económicos">
+                                <SectionHeader title="4.1 Aplicaciones y Uso en el Sistema Interconectado" />
+                                <Paragraph>En sistemas interconectados, los transformadores de alto voltaje juegan un rol fundamental. Por ejemplo, en el Sistema Interconectado Nacional de Chile y en los grandes sistemas eléctricos globales, los transformadores de potencia son indispensables tanto en las subestaciones de generación como en las subestaciones de transmisión y distribución. Esto permite regular los niveles de tensión según las necesidades de cada tramo de la red.</Paragraph>
+                                <Paragraph>La flexibilidad que ofrecen los transformadores posibilita que diferentes sistemas eléctricos, incluso con distintos valores de tensión, frecuencia y topología, puedan interconectarse, optimizando así el aprovechamiento de los recursos energéticos. Esto permite una mayor seguridad, estabilidad del sistema y redundancia en el suministro eléctrico.</Paragraph>
+
+                                <SectionHeader title="4.2 Normativa Técnica, Estándares de Seguridad y Marco Legal" />
+                                <Paragraph>El diseño, fabricación, instalación y operación de transformadores de alto voltaje está regulado por estrictas normas técnicas internacionales (IEC, IEEE) y nacionales. En Chile, la Superintendencia de Electricidad y Combustibles (SEC) es el organismo encargado de emitir las Normas Técnicas del Sector Electricidad, las cuales establecen los requisitos mínimos de calidad, seguridad y eficiencia.</Paragraph>
+                                <Paragraph>Algunos de los requerimientos fundamentales incluyen:</Paragraph>
+                                <List items={[
+                                    "Resistencia al cortocircuito y niveles de aislamiento.",
+                                    "Compatibilidad electromagnética y control de pérdidas energéticas.",
+                                    "Protección contra sobrecalentamiento, incendios y explosiones.",
+                                    "Sistemas de monitoreo y protección de fallas."
+                                ]} />
+
+                                <SectionHeader title="4.3 Aspectos Económicos y Gestión Empresarial" />
+                                <Paragraph>La adquisición e instalación de transformadores de alto voltaje representa una inversión significativa. Es fundamental considerar no solo el costo inicial, sino también los costos de operación, mantenimiento, eficiencia energética y disposición final al término de su vida útil. Los criterios económicos se entrelazan con los criterios técnicos, legales y medioambientales, dado que la eficiencia reduce las pérdidas operacionales, y la adecuada gestión ambiental minimiza potenciales pasivos y litigios regulatorios.</Paragraph>
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="5. Impacto Ambiental, Mantenimiento e Innovaciones">
+                                <SectionHeader title="5.1 Impacto Ambiental" />
+                                <Paragraph>Si bien los transformadores son esenciales, también presentan impactos ambientales (Roldán Viloria, 2008). Los principales riesgos asociados incluyen:</Paragraph>
+                                <List items={[
+                                    "Fugas de aceites dieléctricos: Los derrames de aceite mineral pueden contaminar suelos y cursos de agua.",
+                                    "PCBs (Bifenilos Policlorados): Transformadores antiguos pueden emplear estos compuestos altamente tóxicos que requieren estricto control y eliminación.",
+                                    "Ruido y EMF: Generación de ruido significativo durante la operación y campos electromagnéticos que deben estar regulados.",
+                                    "Impacto visual y ocupación del espacio: Las subestaciones modifican el paisaje y ocupan extensas áreas."
+                                ]} />
+                                <Paragraph>Para mitigar estos impactos se adoptan tecnologías limpias y mejores prácticas medioambientales, conforme a las recomendaciones de la SEC y directrices internacionales.</Paragraph>
+
+                                <SectionHeader title="5.2 Mantenimiento y Gestión" />
+                                <Paragraph>El mantenimiento preventivo y correctivo busca reducir fallas inesperadas, prolongar la vida útil y asegurar la continuidad del servicio. Entre las tareas rutinarias destacan:</Paragraph>
+                                <List items={[
+                                    "Monitoreo del estado del aceite (gases disueltos, humedad, acidez).",
+                                    "Inspección de aislamiento y limpieza de sistemas de enfriamiento.",
+                                    "Revisión de sistemas de protección (relés Buchholz, válvulas) y medición de parámetros eléctricos."
+                                ]} />
+
+                                <SectionHeader title="5.3 Innovaciones y Retos Actuales" />
+                                <Paragraph>El avance tecnológico permite desarrollar transformadores más eficientes y ecológicos. Las principales tendencias incluyen:</Paragraph>
+                                <List items={[
+                                    "Aislamiento ecológico: Aceites dieléctricos biodegradables o sintéticos.",
+                                    "Transformadores secos: Uso de aislamiento sólido, eliminando aceites.",
+                                    "Optimización magnética y sistemas inteligentes: Reducción de pérdidas y monitoreo continuo.",
+                                    "Diseños compactos: Nuevos materiales para equipos más ligeros y pequeños."
+                                ]} />
+                            </SubExpansionTile>
+                        </ExpansionTile>
+
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
                                 <Quote size={120} />
                             </div>
                             <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">Conclusiones Generales</h3>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                Los sistemas de transmisión eléctrica trifásica y las redes interconectadas constituyen la piedra angular de la infraestructura energética mundial. Permiten el aprovechamiento racional de los recursos, facilitando el transporte y entrega confiable de electricidad a millones de familias, industrias y comercios. Su desarrollo busca maximizar la eficiencia y diversificar la matriz energética garantizando una transición justa y segura.
+                                Los sistemas de transmisión eléctrica trifásica, las redes interconectadas y los transformadores de alto voltaje constituyen la piedra angular de la infraestructura energética mundial. Permiten el aprovechamiento racional de los recursos, facilitando el transporte y entrega confiable de electricidad a millones de familias, industrias y comercios. Su desarrollo busca maximizar la eficiencia y diversificar la matriz energética garantizando una transición justa y segura.
                             </Paragraph>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                La interconexión de sistemas responde tanto a la necesidad de seguridad del suministro como a la optimización económica. Solo a través de la aplicación técnica, el diseño de infraestructuras de alta tensión y el cumplimiento riguroso de normativas (como las directrices de la SEC en Chile), estos sistemas podrán hacer frente a los enormes desafíos de integración renovable, digitalización y sostenibilidad en las décadas venideras.
+                                La interconexión de sistemas responde tanto a la necesidad de seguridad del suministro como a la optimización económica. Solo a través de la aplicación técnica, el diseño de infraestructuras clave como las de alta tensión y el cumplimiento riguroso de normativas (como las directrices de la SEC en Chile e IEC a nivel internacional), estos sistemas podrán hacer frente a los enormes desafíos de integración renovable, digitalización y sostenibilidad en las décadas venideras.
                             </Paragraph>
                         </div>
                     </div>
