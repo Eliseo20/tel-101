@@ -154,29 +154,167 @@ const AE1View = ({ onBack }) => {
                             <Paragraph>En este documento se caracterizan los principales sistemas de generación presentes en la industria: fuentes hídricas, térmicas y alternativas. Analizaremos sus principios de funcionamiento, sus beneficios y el consecuente impacto ambiental que cada una de estas tecnologías conlleva, adaptándose a los estándares y normativas vigentes.</Paragraph>
                         </div>
 
-                        <ExpansionTile title="I. Generación mediante Fuentes Hídricas" icon={Power} defaultOpen={true}>
-                            <SectionHeader title="1.1 Principio de funcionamiento" />
-                            <Paragraph>Las centrales hidroeléctricas aprovechan la energía potencial y cinética del agua para generar electricidad. El proceso básico consiste en retener el agua en un embalse mediante una presa, y luego dejarla caer a alta presión a través de tuberías guiadas hacia una turbina. La fuerza del agua hace girar los álabes de la turbina, la cual está conectada al eje de un generador eléctrico. A medida que el generador gira, convierte la energía mecánica en energía eléctrica.</Paragraph>
-                            <Paragraph>Existen diferentes tipos de centrales hídricas, como las de embalse (que almacenan grandes cantidades de agua y pueden regular la generación) y las de pasada (que utilizan el caudal natural del río sin gran capacidad de almacenamiento).</Paragraph>
+                        <ExpansionTile title="I. Generación Hidroeléctrica" icon={Power} defaultOpen={true}>
+                            <SectionHeader title="Introducción" />
+                            <Paragraph>La generación de energía eléctrica es uno de los principales motores del desarrollo económico y social de cualquier país. Dentro de las fuentes de generación, la energía hidroeléctrica ocupa un papel fundamental debido a su histórica participación, su elevada capacidad instalada a nivel global y su baja producción de gases de efecto invernadero durante la operación. Este texto académico pretende caracterizar en profundidad la generación hidroeléctrica, abordando sus principios de funcionamiento, tipos de centrales, proceso de generación, aspectos tecnológicos y el impacto ambiental correspondiente, siguiendo el marco conceptual y bibliográfico propuesto por Roldán Viloria, José (2008), así como las Normas Técnicas Sector Electricidad de la Superintendencia de Electricidad y Combustibles de Chile.</Paragraph>
 
-                            <SectionHeader title="1.2 Ventajas y Desafíos" />
+                            {/* Espacio para Imagen/Video de Introducción */}
+                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Espacio reservado para Video/Imagen: Represa Hidroeléctrica]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="1. Principios de la Generación Hidroeléctrica" />
+                            <Paragraph>La generación hidroeléctrica parte del aprovechamiento de la energía potencial del agua, contenida en sus masas almacenadas a cierta altura o en su curso a través de ríos. El principio físico central es la transformación de la energía potencial gravitatoria del agua en energía cinética y posteriormente en energía eléctrica, haciendo uso de turbinas y generadores.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), el proceso es el siguiente: El agua, almacenada o en movimiento, se canaliza hacia unas turbinas que convierten su energía potencial en energía mecánica mediante el movimiento de un eje. Este eje, acoplado a un generador eléctrico, transforma la energía mecánica en energía eléctrica a través de la inducción electromagnética. Todo el sistema debe contemplar además elementos de control, seguridad y adaptación a la red eléctrica.</Paragraph>
+                            <HighlightBox title="Potencia Desarrollada" type="info">
+                                <p className="mb-2">El rendimiento del proceso depende directamente de dos factores físicos fundamentales: el caudal del agua y el desnivel que recorre (también llamado "salto"). Matemáticamente, la potencia P desarrollada por una central hidroeléctrica se puede expresar como:</p>
+                                <div className="p-4 bg-white/50 dark:bg-black/20 rounded-xl border border-blue-100 dark:border-blue-900/30 text-center my-3">
+                                    <code className="text-lg font-black font-mono">P = ρ × g × Q × H × η</code>
+                                </div>
+                                <ul className="text-sm space-y-1 mt-2">
+                                    <li><strong>ρ</strong> = densidad del agua (~1000 kg/m³)</li>
+                                    <li><strong>g</strong> = aceleración de la gravedad (9,81 m/s²)</li>
+                                    <li><strong>Q</strong> = caudal (m³/s)</li>
+                                    <li><strong>H</strong> = altura del salto (m)</li>
+                                    <li><strong>η</strong> = rendimiento global (adimensional)</li>
+                                </ul>
+                            </HighlightBox>
+                            <Paragraph>Así, la viabilidad y el diseño de una central hidroeléctrica dependen fundamentalmente de la disponibilidad de un recurso hídrico adecuado tanto en caudal como en salto de agua, así como de las condiciones topográficas y medioambientales de la zona.</Paragraph>
+
+                            <SectionHeader title="2. Proceso de Generación Hidroeléctrica" />
+                            <Paragraph>El proceso de generación eléctrica en una central hidroeléctrica se puede dividir en los siguientes pasos clave:</Paragraph>
                             <List items={[
-                                "Energía Renovable: Es un recurso inagotable a escala humana (mientras se mantenga el ciclo del agua).",
-                                "Bajas Emisiones: Durante su operación, las emisiones de gases de efecto invernadero son mínimas en comparación con los combustibles fósiles.",
-                                "Estabilidad: Proporcionan una fuente de energía constante y predecible, ideal para la carga base del sistema eléctrico.",
-                                "Altos Costos Iniciales: La construcción de presas e infraestructura hidráulica exige una gran inversión de capital.",
-                                "Impacto Geográfico: Requieren condiciones topográficas e hidrológicas específicas, lo que limita su ubicación."
+                                "Captación del recurso hídrico: Consiste en recolectar el agua de un embalse, río o lago, mediante una presa o toma de agua. En casos de embalses, la presa retiene agua para garantizar disponibilidad durante el año.",
+                                "Conducción: El agua es guiada a través de canales, túneles o tuberías forzadas hacia la sala de máquinas. Se busca minimizar pérdidas por fricción y fugas.",
+                                "Conversión de energía: El agua pasa por una turbina hidráulica, que convierte la energía potencial y cinética del fluido en energía mecánica de rotación.",
+                                "Generación eléctrica: La turbina está conectada a un generador eléctrico (alternador), que produce electricidad mediante el principio de la inducción electromagnética.",
+                                "Salida de agua: El agua turbina se descarga downstream, restableciéndose eventualmente su curso hacia el cauce natural.",
+                                "Transformación y transmisión: La energía eléctrica generada se eleva de tensión mediante transformadores y se conecta al sistema de transmisión para su distribución."
+                            ]} />
+                            <Paragraph>La eficiencia en cada paso depende del diseño específico, las condiciones del recurso hídrico y el mantenimiento de las instalaciones.</Paragraph>
+
+                            <SectionHeader title="3. Tipos de Centrales Hidroeléctricas" />
+                            <Paragraph>La clasificación de las centrales hidroeléctricas depende principalmente de la forma en que aprovechan el recurso hídrico. Existen dos grandes categorías: centrales de embalse y centrales de pasada.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.1 Centrales de embalse</h5>
+                            <Paragraph>Las centrales de embalse almacenan una gran cantidad de agua detrás de una presa construida transversalmente sobre un río. Dicho embalse permite regular el caudal de agua durante el año, lo cual posibilita la generación continua de electricidad independientemente del régimen natural de lluvias o deshielos. Las principales características de las centrales de embalse, según Roldán Viloria (2008), son:</Paragraph>
+                            <List items={[
+                                "Permiten almacenar agua para épocas de estiaje.",
+                                "Ofrecen una gran flexibilidad en la operación de la central, pudiendo cubrir demandas pico de energía.",
+                                "Su construcción implica importantes trabajos de infraestructura civil (presas, embalses, túneles).",
+                                "Los embalses pueden afectar ampliamente el territorio aguas arriba y modificar sustancialmente el entorno ecológico."
                             ]} />
 
-                            <SectionHeader title="1.3 Impacto Ambiental" />
-                            <Paragraph>Aunque no emiten contaminantes de manera directa, las grandes centrales hidroeléctricas de embalse presentan impactos significativos:</Paragraph>
+                            {/* Espacio para Imagen/Video de Central de Embalse */}
+                            <div className="my-6 relative w-full aspect-[21/9] bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Video: Central de Embalse - Ralco/Colbún]
+                                </span>
+                            </div>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.2 Centrales de pasada</h5>
+                            <Paragraph>Las centrales de pasada no almacenan grandes volúmenes de agua, sino que aprovechan directamente el caudal natural del río. Resultan adecuadas en cursos fluviales de caudal constante y significativo o donde el impacto ambiental de un embalse sería inaceptable. Sus características principales son:</Paragraph>
                             <List items={[
-                                "Pérdida de biodiversidad por inundación de extensas áreas.",
-                                "Alteración de ecosistemas acuáticos y terrestres.",
-                                "Modificación del caudal y la temperatura de los ríos aguas abajo.",
-                                "Posibles desplazamientos de comunidades locales.",
-                                "Emisiones de metano por la descomposición de biomasa sumergida."
+                                "No requieren grandes embalses ni alteran significativamente el régimen natural del río.",
+                                "Pueden acompañar el régimen hidrológico natural y así su producción eléctrica varía según las fluctuaciones estacionales del caudal.",
+                                "La obra civil suele ser menos impactante, aunque igualmente requiere estructuras de derivación, canales de conducción y sala de máquinas."
                             ]} />
+                            <Paragraph>En la práctica, muchas centrales hidroeléctricas corresponden a soluciones intermedias entre estos dos extremos, dependiendo de las condiciones geográficas y la planificación energética local/regional.</Paragraph>
+
+                            <SectionHeader title="4. Componentes de una Central Hidroeléctrica" />
+                            <Paragraph>Tanto en centrales de embalse como de pasada, los componentes principales, según Roldán Viloria (2008) y las Normas Técnicas del Sector Electricidad, son:</Paragraph>
+                            <List items={[
+                                "Presa o barrera: Estructura de hormigón, tierra o materiales mixtos, destinada a retener el agua y crear el desnivel.",
+                                "Aliviadero: Mecanismo para evacuar el exceso de agua y evitar el sobrepaso de la presa.",
+                                "Tomas de agua: Estructuras de acceso al embalse, dotadas de compuertas y rejillas para filtrar sólidos.",
+                                "Canales o túneles de aducción: Encauzan el agua desde el embalse hacia la cámara de carga.",
+                                "Tuberías forzadas: Conducen el agua a presión hacia las turbinas.",
+                                "Cámara de carga: Permite estabilizar el flujo antes de su ingreso a las turbinas.",
+                                "Turbinas hidráulicas: Elemento mecánico que convierte la energía hidráulica en mecánica de rotación. Tipos comunes: Pelton, Francis y Kaplan, elegidas según el salto de agua y caudal disponible.",
+                                "Generadores eléctricos: Acoplados a las turbinas, transforman la energía mecánica rotatoria en energía eléctrica.",
+                                "Transformadores: Elevan la tensión de la energía eléctrica generada para su transmisión eficiente.",
+                                "Canal de descarga (o restitución): Devuelve el agua al río o curso natural.",
+                                "Sala de control: Alberga los sistemas de control y protección de la central."
+                            ]} />
+
+                            {/* Espacio para Imagen Infografía */}
+                            <div className="my-6 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Infografía: Esquema de Partes de una Central]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="5. Turbinas Hidráulicas" />
+                            <Paragraph>Las turbinas hidráulicas representan el corazón del proceso de generación hidroeléctrica. Según el rango de salto y caudal del recurso hídrico disponible, se selecciona entre diferentes tipos de turbinas:</Paragraph>
+                            <List items={[
+                                "Turbina Pelton: Adecuada para saltos elevados (generalmente superiores a 300 m) y caudales moderados o bajos. Es una turbina de acción, donde el chorro de agua impacta en los alabes tipo “cuchara”.",
+                                "Turbina Francis: Utilizada para saltos y caudales medios, generalmente entre 10 y 300 m. Es una turbina de reacción y de uso muy extendido a nivel internacional.",
+                                "Turbina Kaplan: Ideal para bajas caídas y altos caudales (menos de 30 m de salto). Es una turbina de reacción con álabes orientables."
+                            ]} />
+
+                            <SectionHeader title="6. Funcionamiento de un Generador Hidroeléctrico" />
+                            <Paragraph>El generador hidroeléctrico es, a grandes rasgos, una gran dinamo acoplada al eje de la turbina. Su principio se fundamenta en la ley de Faraday de la inducción electromagnética: una bobina en movimiento en el seno de un campo magnético genera una fuerza electromotriz y, por tanto, una corriente eléctrica alterna.</Paragraph>
+                            <Paragraph>Las centrales hidroeléctricas suelen emplear generadores síncronos, que requieren para su conexión a red un régimen de giro constante, sincronizado con la frecuencia de la red (normalmente 50 o 60 Hz). La potencia del generador dependerá directamente de la potencia hidráulica disponible y del rendimiento de acoplamiento mecánico.</Paragraph>
+
+                            <SectionHeader title="7. Normativas y Estándares Técnicos" />
+                            <Paragraph>Como documenta la Superintendencia de Electricidad y Combustibles (SEC), la construcción, operación y mantenimiento de centrales hidroeléctricas están regidas por normativas nacionales e internacionales, que consideran no sólo aspectos de seguridad eléctrica (puesta a tierra, protección de equipos, interruptores, sistemas de control), sino también la protección del medio ambiente y la seguridad hidráulica.</Paragraph>
+                            <List items={[
+                                "Procedimientos constructivos y mantenimiento programado de presas, canales y maquinaria.",
+                                "Sistemas de protección contra sobretensión y fallas.",
+                                "Mecanismos de cierre y liberación controlada de caudales para evitar inundaciones y garantizar caudales ecológicos mínimos.",
+                                "Protocolos de monitoreo y respuesta ante emergencias."
+                            ]} />
+
+                            <SectionHeader title="8. Importancia y Ventajas de la Generación Hidroeléctrica" />
+                            <Paragraph>La energía hidroeléctrica es, en la actualidad, la forma de energía renovable más utilizada en el mundo. Presenta las siguientes ventajas, según Roldán Viloria (2008):</Paragraph>
+                            <List items={[
+                                "Bajo costo operacional: Una vez construida la central, los costos de explotación y mantenimiento son considerablemente bajos respecto a otras fuentes.",
+                                "Larga vida útil: Muchas centrales hidroeléctricas pueden operar por más de cincuenta años con adecuados programas de mantenimiento.",
+                                "Flexibilidad operativa: Las centrales de embalse permiten almacenamiento estacional y regulación de la producción, respondiendo ágilmente a la demanda de energía.",
+                                "Bajas emisiones: No emiten gases de efecto invernadero durante la operación normal, contribuyendo positivamente a los compromisos contra el cambio climático.",
+                                "Multifuncionalidad: Los embalses pueden utilizarse para riego, control de inundaciones, suministro de agua potable, desarrollo turístico y generación de pesca."
+                            ]} />
+
+                            <SectionHeader title="9. Desventajas y Desafíos de la Hidroelectricidad" />
+                            <Paragraph>No obstante sus muchas ventajas, la generación hidroeléctrica implica una serie de desafíos y desventajas, entre las que destacan:</Paragraph>
+                            <List items={[
+                                "Inversiones iniciales elevadas: Los costes de construcción de presas e infraestructuras asociadas pueden ser muy altos.",
+                                "Impacto ambiental: Especialmente en grandes centrales de embalse, se modifica el ecosistema ribereño y terrestre a gran escala, impactando flora, fauna y comunidades humanas.",
+                                "Dependencia del régimen hídrico: Sequías prolongadas o cambios climáticos pueden afectar significativamente la producción eléctrica.",
+                                "Desplazamiento de población: Se han documentado casos emblemáticos de reasentamiento obligatorio por inundación de zonas habitadas.",
+                                "Riesgos asociados a la falla de presas: El colapso de una presa puede tener consecuencias catastróficas aguas abajo."
+                            ]} />
+
+                            <SectionHeader title="10. Impacto Ambiental de la Generación Hidroeléctrica" />
+                            <Paragraph>El impacto ambiental de una central hidroeléctrica es muy variable, dependiendo del tipo de central, el tamaño del embalse, las características del ecosistema intervenido y las medidas de mitigación adoptadas. Según Roldán Viloria (2008) y estándares internacionales, los principales impactos incluyen:</Paragraph>
+                            <List items={[
+                                "Alteración de los regímenes naturales de los cursos de agua.",
+                                "Modificación de flujos sedimentológicos y geomorfología del río.",
+                                "Fragmentación y pérdida de hábitats acuáticos y terrestres.",
+                                "Interrupción de migraciones de especies ictícolas.",
+                                "Producción de gases de efecto invernadero por descomposición de material vegetal en embalses tropicales.",
+                                "Impactos sociales, culturales y económicos en comunidades desplazadas o afectadas aguas abajo."
+                            ]} />
+
+                            <SectionHeader title="11. Soluciones de Mitigación y Buenas Prácticas" />
+                            <Paragraph>Ante estos desafíos, la construcción y operación de centrales hidroeléctricas modernas adoptan una serie de buenas prácticas y tecnologías de mitigación:</Paragraph>
+                            <List items={[
+                                "Caudales ecológicos: Garantizar descargas mínimas aguas abajo para mantener los ecosistemas.",
+                                "Pantallas para peces y escaleras de migración: Facilitan el desplazamiento de especies acuáticas.",
+                                "Gestión ambiental adaptativa: Monitoreo de flora, fauna y calidad del agua asociada a la central.",
+                                "Reforestación y recuperación de hábitats: Esfuerzos para restaurar ecosistemas en zonas degradadas.",
+                                "Rescate y protección del patrimonio cultural: Documentación y relocalización de sitios arqueológicos y culturales."
+                            ]} />
+
+                            <SectionHeader title="12. Hidroelectricidad en el Contexto Global" />
+                            <Paragraph>A nivel internacional, la hidroelectricidad representa aproximadamente el 16% de la producción mundial de electricidad, superando a otras fuentes renovables. China, Brasil, Canadá, Estados Unidos y Rusia lideran en potencia instalada y producción hidroeléctrica. No obstante, el desarrollo de nuevas redes y tecnologías de almacenamiento, así como la integración de fuentes renovables variables (como la solar y la eólica), están modificando el rol de las grandes centrales hidroeléctricas, privilegiando a futuro el desarrollo de “mini” y “micro” hidros, de menor impacto ambiental y mayor flexibilidad de integración a redes distribuidas.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.1">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de identificar los principios y proceso de generación eléctrica mediante fuentes hídricas, considerando tipos de centrales hidroeléctricas, productos generados y medio de transporte de la energía eléctrica.</p>
+                            </HighlightBox>
                         </ExpansionTile>
 
                         <ExpansionTile title="II. Generación mediante Fuentes Térmicas" icon={Thermometer}>
