@@ -759,10 +759,147 @@ const AE1View = ({ onBack }) => {
                                 <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante fuentes alternativas como la energía solar fotovoltaica, identificando sus principios técnicos, impactos ambientales y su viabilidad tecnológica y económica.</p>
                             </HighlightBox>
 
-                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
-                            <Paragraph>Además de la geotermia y la energía solar fotovoltaica, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <div className="mt-16 mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800">
+                                <h3 className="text-xl font-black text-amber-900 dark:text-amber-300 uppercase mb-2">C. Centrales Termosolares</h3>
+                                <p className="text-sm text-amber-700 dark:text-amber-500">Concentración de la radiación solar para producir calor y evaporar un fluido que acciona una turbina eléctrica.</p>
+                            </div>
+
+                            <SectionHeader title="1. Introducción a las Centrales Termosolares" />
+                            <Paragraph>La energía termosolar, o energía solar térmica de concentración, ha experimentado un desarrollo notable en las últimas décadas. Representa uno de los pilares fundamentales de las fuentes alternativas de generación eléctrica, en sintonía con la transición energética global promovida por las inquietudes medioambientales y la búsqueda de sostenibilidad. Según Roldán Viloria (2008), la utilización de la radiación solar para la generación eléctrica constituye una opción relevante debido a la abundancia del recurso solar en muchas regiones del planeta y a su carácter renovable e inagotable.</Paragraph>
+                            <Paragraph>Este texto desarrolla los fundamentos de la energía termosolar desde una perspectiva académica, abordando los principios físicos y tecnológicos, las variantes tecnológicas predominantes, el proceso de generación eléctrica, el contexto global de su desarrollo, así como el análisis de su impacto ambiental, conforme lo señalado en la bibliografía básica propuesta y la normativa vigente.</Paragraph>
+
+                            {/* Espacio reservado para Video/Imagen de Introducción Centrales Termosolares */}
+                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Espacio reservado para Video/Imagen: Termosolar]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="2. Principios de Generación Eléctrica Termosolar" />
+                            <Paragraph>La energía termosolar se basa en el aprovechamiento de la radiación solar para producir calor, que luego es usado para generar electricidad. Según Roldán Viloria (2008), los sistemas termosolares se distinguen de la energía fotovoltaica en que no convierten directamente la luz solar en electricidad, sino que concentran el calor del sol para elevar la temperatura de un fluido, creando vapor que acciona turbinas generadoras.</Paragraph>
+                            <Paragraph>El principio físico fundamental es la concentración de la radiación solar empleando sistemas ópticos como espejos parabólicos o heliostatos. Esta concentración incrementa la energía térmica disponible, permite alcanzar temperaturas significativamente superiores a la lograda por métodos solares pasivos y optimiza así la eficiencia del proceso termoeléctrico.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1. Etapas del Proceso Básico</h5>
                             <List items={[
-                                "Energía Solar Térmica: Concentra el calor del sol para calentar un fluido y generar electricidad.",
+                                "Captación de radiación solar por medio de concentradores ópticos.",
+                                "Transmisión de la energía térmica a un receptor central o a un tubo colector.",
+                                "Transferencia de calor a un fluido térmico, que puede ser agua, aceite térmico, sales fundidas u otro medio de alta capacidad calorífica.",
+                                "Generación de vapor o intercambio de calor para accionar una turbina.",
+                                "Conversión de energía mecánica en energía eléctrica mediante un generador acoplado a la turbina."
+                            ]} />
+                            <Paragraph>Los sistemas de almacenamiento térmico, frecuentemente mediante sales fundidas, ofrecen la posibilidad de independizar la generación de la disponibilidad instantánea de radiación solar, permitiendo la operación nocturna o durante cortos períodos de nubosidad.</Paragraph>
+
+                            <SectionHeader title="3. Principales Tipos de Centrales Termosolares" />
+                            <Paragraph>De acuerdo con Roldán Viloria (2008), existen varias tecnologías dominantes para la concentración y el aprovechamiento de la energía solar térmica en la generación eléctrica. Estos sistemas pueden clasificarse principalmente en tres categorías:</Paragraph>
+                            <List items={[
+                                "Colectores cilíndrico-parabólicos.",
+                                "Sistemas de torre central (o de receptor central).",
+                                "Discos parabólicos (paraboloides)."
+                            ]} />
+                            <Paragraph>Todas las tecnologías se fundamentan en la concentración de la radiación solar sobre un área pequeña para optimizar la eficiencia de conversión térmica. No obstante, existen diferencias sustanciales en la arquitectura, escala y aplicación de cada sistema.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.1. Centrales de Colectores Cilíndrico-Parabólicos</h5>
+                            <Paragraph>Este es el sistema más ampliamente implementado a nivel industrial. Los espejos con forma de canal parabólico concentran la radiación solar a lo largo de un tubo receptor ubicado en el foco longitudinal del reflector. A través de este tubo circula un fluido térmico, normalmente aceite sintético, que absorbe el calor y lo transporta a un generador de vapor (Roldán Viloria, 2008).</Paragraph>
+                            <Paragraph>Las plantas cilíndrico-parabólicas pueden instalarse modulando la cantidad de colectores, lo que permite una escalabilidad considerable. Un ejemplo destacado es la Plataforma Solar de Almería (España), reconocida internacionalmente por su desarrollo en esta tecnología.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.2. Centrales de Torre Central</h5>
+                            <Paragraph>En este sistema, gran número de heliostatos (espejos con movimiento biaxial) siguen la trayectoria del sol y concentran los rayos sobre un receptor ubicado en la cima de una torre. La energía térmica concentrada calienta un fluido, con frecuencia sales fundidas, que actúan como almacenamiento y medio de transferencia de calor. El vapor producido acciona las turbinas generadoras, permitiendo así la producción de electricidad (Roldán Viloria, 2008).</Paragraph>
+                            <Paragraph>Las centrales de torre central facilitan la integración de almacenamiento térmico de gran capacidad, haciendo posible la generación eléctrica continua y la regulación de la producción, ventaja significativa respecto a otras tecnologías solares.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.3. Sistemas de Disco Parabólico</h5>
+                            <Paragraph>Los discos parabólicos son sistemas de menor escala: cada disco actúa como un sofisticado concentrador solar que dirige la radiación sobre un receptor ubicado en el foco. En estos casos, se emplea una cámara de calor acoplada a un motor Stirling o sistema termoeléctrico, convirtiendo directamente la energía térmica en eléctrica. Idóneos para aplicaciones descentralizadas o suministro autónomo, tienen menores requerimientos de instalación comparados con los sistemas anteriores.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">3.4. Aplicaciones Híbridas y Otras Variaciones</h5>
+                            <Paragraph>Algunas plantas termosolares integran sistemas híbridos, por ejemplo, agregando combustibles fósiles para garantizar la continuidad de la generación durante períodos de baja insolación. También existen variantes experimentales que emplean diferentes fluidos de trabajo, como aire comprimido o combinaciones de ciclos Rankine y Brayton, procurando optimizar la eficiencia termodinámica global del sistema.</Paragraph>
+
+                            <SectionHeader title="4. Proceso de Generación Eléctrica en Plantas Termosolares" />
+                            <Paragraph>El proceso de generación en las centrales termosolares sigue los principios de la termodinámica y de la electromecánica clásica. Conforme a lo explicado por Roldán Viloria (2008), puede dividirse en las siguientes etapas detalladas:</Paragraph>
+                            <List items={[
+                                "Captación y concentración: La radiación solar es capturada mediante colectores ópticos (espejos) y concentrada sobre el receptor térmico, donde se transfiere al fluido primario de trabajo. La concentración puede aumentar considerablemente la temperatura, llegando incluso a superar los 500 °C dependiendo del diseño.",
+                                "Transporte y almacenamiento: El calor es transportado mediante un circuito primario al sistema generador de vapor o a un sistema de almacenamiento térmico, normalmente de sales fundidas. El almacenamiento térmico permite manejar la intermitencia propia de la fuente solar.",
+                                "Generación de vapor: El calor absorbido se utiliza para transformar agua en vapor de alta presión y temperatura.",
+                                "Expansión de vapor y generación eléctrica: El vapor acciona una turbina, la que está acoplada a un alternador que transforma la energía mecánica de rotación en electricidad por inducción electromagnética, siguiendo los principios de Faraday.",
+                                "Condensación y recirculación: Tras pasar la turbina, el vapor se condensa y el agua retorna al ciclo, incorporándose nuevamente como fluido de trabajo. Este es un ciclo cerrado que optimiza la eficiencia y minimiza pérdidas."
+                            ]} />
+                            <Paragraph>Las innovaciones recientes han mejorado la eficiencia de transferencia de calor, la gestión del almacenamiento térmico y la integración de ciclos combinados para aprovechar mejor la energía captada.</Paragraph>
+
+                            <SectionHeader title="5. Contexto Global de la Energía Termosolar" />
+                            <Paragraph>El desarrollo de la tecnología termosolar ha trascendido fronteras, estableciéndose en diferentes continentes. Las mayores capacidades instaladas se concentran fundamentalmente en regiones con alta radiación solar, escasa nubosidad y grandes extensiones de superficie disponible, como el suroeste de Estados Unidos, el sur de España, el norte de África, Dubái, Sudáfrica, Chile, Australia y China.</Paragraph>
+                            <Paragraph>Según información de la Agencia Internacional de Energía Renovable (IRENA), para el año 2023 la capacidad global instalada de energía termosolar superaba los 6 GW, con una tendencia al alza por el desarrollo de nuevos proyectos y la reducción progresiva de costos de inversión.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">5.1. Proyectos Emblemáticos</h5>
+                            <List items={[
+                                "Ivanpah Solar Electric Generating System (Estados Unidos): planta de torre central con 377 MW de capacidad.",
+                                "Complexo Solar de Ouarzazate (Noor CSP, Marruecos): combinación de tecnologías de torre y cilindro-parabólica, con almacenamiento térmico.",
+                                "Gemasolar (España): pionera en el almacenamiento con sales fundidas y generación 24/7.",
+                                "Cerro Dominador (Chile): primera central termosolar en América Latina, con torre central y 110 MW de capacidad."
+                            ]} />
+                            <Paragraph>El impulso internacional está condicionado por estrategias de transición energética, políticas de incentivo a energías renovables, y el cumplimiento de compromisos globales de reducción de gases de efecto invernadero (COP21, Acuerdo de París). Adicionalmente, la adaptación de las normativas técnicas y la flexibilidad de sistemas eléctricos para integrar energías renovables en la matriz son factores determinantes, como lo establece la Norma Técnica Sector Electricidad (SEC, Chile, 2000).</Paragraph>
+
+                            <SectionHeader title="6. Ventajas y Limitaciones de la Energía Termosolar" />
+                            <Paragraph>De acuerdo a Roldán Viloria (2008), las centrales termosolares presentan una serie de ventajas técnicas, medioambientales y económicas, aunque también ciertas limitaciones inherentes a su tecnología y a la naturaleza del recurso solar.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">6.1. Ventajas</h5>
+                            <List items={[
+                                "Fuente renovable, inagotable y ampliamente disponible en regiones desérticas o semiáridas.",
+                                "Generación de electricidad sin emisiones directas de gases contaminantes durante la operación.",
+                                "Potencial para almacenamiento térmico, permitiendo suministro continuo y adaptabilidad a la demanda.",
+                                "Bajo requerimiento de agua para la producción de vapor en comparación con centrales térmicas tradicionales.",
+                                "Impacto ambiental menor respecto a centrales térmicas de combustibles fósiles, especialmente en términos de emisión de CO2 y partículas.",
+                                "Fomenta el desarrollo de la industria local, la creación de empleo y la innovación tecnológica."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">6.2. Limitaciones</h5>
+                            <List items={[
+                                "Naturaleza intermitente: depende de la disponibilidad diaria y estacional del recurso solar.",
+                                "Altos costos de inversión inicial, asociados a la infraestructura y los sistemas de almacenamiento térmico.",
+                                "Requieren grandes superficies libres de sombras.",
+                                "Pueden implicar impactos locales en la fauna y flora debido a la ocupación del territorio y a las altas temperaturas en el receptor.",
+                                "Menor eficiencia en comparación con ciclos térmicos convencionales bajo ciertas condiciones de operación."
+                            ]} />
+
+                            <SectionHeader title="7. Impacto Ambiental de las Centrales Termosolares" />
+                            <Paragraph>El impacto ambiental de las centrales termosolares, aunque significativamente menor que el de las centrales convencionales basadas en combustibles fósiles, no es despreciable y debe ser considerado detalladamente en la planificación de proyectos, conforme a los lineamientos de la Norma Técnica Sector Electricidad (SEC, Chile, 2000) y las regulaciones internacionales.</Paragraph>
+                            <List items={[
+                                "Uso del suelo: Los requerimientos de superficie pueden ser altos. La construcción de una central termosolar implica el despeje del terreno, lo que puede afectar hábitats ecológicos. Sin embargo, el uso puede ser compatible con actividades agropecuarias o de conservación, dependiendo del diseño y la ubicación.",
+                                "Emisión de calor: Las zonas de concentración, especialmente en torres centrales, pueden crear microclimas o afectar aves y otros animales que, al sobrevolar el receptor, sufren quemaduras letales.",
+                                "Uso de agua: En comparación con centrales térmicas convencionales, los sistemas termosolares pueden modular el consumo de agua optando por condensadores refrigerados por aire, minimizando así la extracción de recursos hídricos en zonas áridas.",
+                                "Productos y sustancias químicas: El manejo de aceites térmicos y sales fundidas exige medidas rigurosas para evitar filtraciones y contaminación del suelo o las aguas subterráneas.",
+                                "Residuos y materiales: Si bien el volumen de residuos sólidos es bajo, los materiales empleados (espejos, fluidos térmicos) requieren correcta disposición al final de su vida útil.",
+                                "Emisión de CO2 indirecta: Aunque durante la operación la emisión de gases de efecto invernadero es nula, la fabricación de componentes supone ciertas emisiones asociadas, que se ven rápidamente compensadas por la sustitución de fuentes fósiles."
+                            ]} />
+                            <Paragraph>Diversos estudios ambientales elaborados en el contexto de la evaluación de impacto de proyectos termosolares señalan que las externalidades negativas son gestionables mediante la adopción de buenas prácticas de diseño, construcción y operación. Las medidas de mitigación pueden incluir la revegetación de áreas, la monitorización de la fauna, el control de vertidos y la planificación integrada del uso del territorio.</Paragraph>
+
+                            <SectionHeader title="8. Normativa y Regulación de las Centrales Termosolares" />
+                            <Paragraph>El desarrollo de proyectos termosolares está sujeto a la regulación legal local e internacional sobre generación eléctrica, uso eficiente de la energía, requisitos medioambientales y normas técnicas referentes a la conexión a la red y seguridad operativa.</Paragraph>
+                            <Paragraph>En Chile, la Norma Técnica Sector Electricidad (SEC, 2000) dispone los lineamientos para la operación, conexión y fiscalización de plantas generadoras, incluyendo tecnologías alternativas. Se establecen criterios mínimos de eficiencia, seguridad y estabilidad del suministro, así como estándares de protección de redes eléctricas y parámetros de calidad.</Paragraph>
+                            <Paragraph>A nivel global, organismos como la Agencia Internacional de Energía (IEA), la Agencia Internacional de Energía Renovable (IRENA) y la Comisión Electrotécnica Internacional (IEC), promueven la armonización de normas y protocolos para facilitar la integración de energías renovables y garantizar la seguridad y competitividad de los sistemas termosolares.</Paragraph>
+                            <Paragraph>La legislación medioambiental exige la presentación de estudios de impacto ambiental, consultas comunitarias y procesos de compensación o mitigación según sea necesario. A menudo, la financiación internacional ligada a requisitos de sostenibilidad impulsa el cumplimiento y monitoreo efectivo de estas regulaciones.</Paragraph>
+
+                            <SectionHeader title="9. Tendencias y Futuro de la Energía Termosolar" />
+                            <Paragraph>Las proyecciones industriales y científicas, citadas por Roldán Viloria (2008) y otros organismos internacionales, indican que la termosolar tendrá un papel creciente en la matriz energética mundial durante las próximas décadas, particularmente por:</Paragraph>
+                            <List items={[
+                                "La mejora en la eficiencia de captadores y sistemas de almacenamiento térmico.",
+                                "La integración con sistemas híbridos y tecnologías complementarias, como la fotovoltaica y la de almacenamiento en baterías.",
+                                "El desarrollo de soluciones de menor escala para aplicaciones industriales y mineras, además de usos domésticos en zonas aisladas.",
+                                "La reducción sostenida de los costos de inversión, promovida por la economía de escala y la maduración tecnológica.",
+                                "La emergencia de políticas públicas robustas para el fomento y la internalización de costos ambientales de sistemas convencionales."
+                            ]} />
+                            <Paragraph>Sin embargo, el avance de la termosolar exige mantener un equilibrio entre la innovación, la equidad territorial, la protección del medio ambiente y la involucración de las comunidades en los procesos de decisión. La colaboración multinacional es esencial para transferir conocimiento y capital a los países con mejores condiciones de radiación, permitiendo así una transición energética justa y efectiva.</Paragraph>
+
+                            <SectionHeader title="10. Conclusión" />
+                            <Paragraph>Las centrales termosolares constituyen una alternativa tecnológica sólida y eficiente para la generación de electricidad en un contexto de transición hacia fuentes renovables, conforme a lo documentado por Roldán Viloria (2008) y las normas técnicas del sector eléctrico global. Su desarrollo se apoya en principios físicos sólidos, avances en ingeniería y la urgente necesidad de reducir la dependencia de fuentes fósiles.</Paragraph>
+                            <Paragraph>Si bien su impacto ambiental es sustancialmente menor que el de las tecnologías tradicionales, sigue requiriendo una gestión responsable del suelo, del agua y de los residuos, así como el cumplimiento estricto de las normativas aplicables. La energía termosolar, lejos de representar una solución aislada, debe integrarse de manera sinérgica con otras fuentes renovables y los sistemas actuales de generación y transmisión eléctrica, en procura de un sistema energético más sostenible, seguro y resiliente a nivel global.</Paragraph>
+                            <Paragraph>Por último, el creciente apoyo institucional, la innovación tecnológica y la concienciación sobre el cambio climático hacen prever que la termosolar será, durante el presente siglo, uno de los motores principales de la transformación estructural del sector eléctrico mundial.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.5">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante centrales termosolares, identificando sus principios técnicos, sus distintas variantes tecnológicas, sus impactos ambientales y su viabilidad frente a otras energías alternativas en el mercado global.</p>
+                            </HighlightBox>
+
+                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
+                            <Paragraph>Además de la geotermia, la energía solar fotovoltaica y la termosolar, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <List items={[
                                 "Energía Eólica: Utiliza aerogeneradores impulsados por el viento. Limpia pero intermitente. Requiere estudios precisos de vientos.",
                                 "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente.",
                                 "Energía Marina (Mareomotriz/Undimotriz): Aprovechamiento de mareas y olas. En vías de desarrollo comercial por sus altos costos."
