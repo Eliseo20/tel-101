@@ -346,25 +346,124 @@ const AE1View = ({ onBack }) => {
                         </ExpansionTile>
 
                         <ExpansionTile title="II. Generación mediante Fuentes Térmicas" icon={Thermometer}>
-                            <SectionHeader title="2.1 Principios de Operación" />
-                            <Paragraph>Las centrales termoeléctricas generan electricidad a partir del calor. Este calor se produce generalmente mediante la quema de combustibles fósiles (carbón, gas natural, derivados del petróleo) o, en el caso de las centrales nucleares, mediante la fisión del uranio. El calor obtenido se utiliza para calentar agua en una caldera, produciendo vapor a alta presión y temperatura. Este vapor se expande en una turbina de vapor, haciéndola girar. Al igual que en las demás centrales, el eje de la turbina está acoplado a un generador eléctrico.</Paragraph>
+                            <SectionHeader title="Introducción" />
+                            <Paragraph>La generación eléctrica es uno de los pilares fundamentales para el desarrollo industrial, social y económico de las naciones modernas. Entre los diversos métodos de obtención de energía eléctrica, la generación mediante fuentes térmicas ha ocupado, y en muchos países aún ocupa, un rol preponderante en el sistema energético global. Según Roldán Viloria (2008), las centrales térmicas constituyen un conjunto de instalaciones industriales donde la energía química almacenada en combustibles fósiles o nucleares es transformada en energía eléctrica a través de complejos procesos de conversión.</Paragraph>
+                            <Paragraph>En el presente texto se aborda de manera estructurada y académica los fundamentos de la generación eléctrica mediante fuentes térmicas, así como una descripción y análisis de los principales tipos de centrales térmicas existentes en el mundo: centrales de gas, carbón, petróleo, nucleares y de vapor. Todo este análisis se desarrolla en un contexto global, recurriendo a bibliografía especializada como el texto "Fuentes de energía" de José Roldán Viloria (2008) y las Normas Técnicas del Sector Electricidad (SEC) de Chile, para proporcionar fundamentos sólidos y actualizados.</Paragraph>
 
-                            <SectionHeader title="2.2 Tipos Principales" />
+                            {/* Espacio para Imagen/Video de Introducción */}
+                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Espacio reservado para Video/Imagen: Introducción a Centrales Térmicas]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="1. Principios de Generación Eléctrica Mediante Fuente Térmica" />
+                            <Paragraph>El principio fundamental en la generación eléctrica por fuente térmica reside en la conversión de energía química (o nuclear) contenida en materiales combustibles, en energía térmica, y, finalmente, en energía eléctrica utilizable. El combustible –sea sólido, líquido o gaseoso– es sometido a un proceso de combustión controlada (o fisión nuclear, en su caso) para liberar calor. Esta energía térmica se utiliza para calentar agua bajo presión, generando vapor. El vapor, a su vez, mueve una turbina acoplada mecánicamente a un generador eléctrico, el cual, mediante el fenómeno de inducción electromagnética, transforma la energía mecánica en energía eléctrica.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), este proceso puede resumirse en las siguientes etapas esenciales:</Paragraph>
                             <List items={[
-                                "Centrales a Carbón: Históricamente muy utilizadas por su bajo costo, pero altamente contaminantes.",
-                                "Centrales a Gas Natural (Ciclo Combinado): Utilizan turbinas de gas y de vapor conjuntamente, alcanzando altas eficiencias y menores emisiones que el carbón.",
-                                "Centrales a Petróleo: Su uso ha disminuido por los altos costos y el impacto ambiental, reservándose a menudo como respaldo.",
-                                "Centrales Nucleares: Generan enormes cantidades de energía base sin emitir CO2, pero con el desafío de la gestión de residuos radiactivos."
+                                "Combustión o fisión nuclear para la obtención de energía térmica.",
+                                "Transferencia de calor al agua para producir vapor de alta presión y temperatura.",
+                                "Transformación de la energía térmica del vapor en energía mecánica, gracias al movimiento de la turbina.",
+                                "Conversión de la energía mecánica en energía eléctrica en el generador."
+                            ]} />
+                            <Paragraph>La eficiencia del proceso depende de factores tecnológicos, del tipo de combustible utilizado, del diseño de las turbinas y calderas, así como de los sistemas de refrigeración y el manejo de residuos. Las Normas Técnicas del Sector Electricidad de Chile establecen parámetros y requisitos mínimos para garantizar eficiencia y seguridad en estas instalaciones.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">1.1 El Ciclo Termodinámico: Ciclo de Rankine</h5>
+                            <Paragraph>La mayor parte de las centrales térmicas trabajan sobre la base del llamado Ciclo de Rankine, que describe el proceso termodinámico seguido por el fluido de trabajo (agua/vapor). Este ciclo comprende la evaporización del agua, la expansión del vapor en la turbina, la condensación del vapor y la recirculación del condensado a la caldera. La eficiencia térmica de una central está limitada por el segundo principio de la termodinámica, lo que implica que nunca es posible convertir toda la energía calorífica del combustible en energía eléctrica.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">1.2 Ventajas y Limitaciones de la Generación Térmica</h5>
+                            <Paragraph>Las centrales térmicas ofrecen la ventaja de poder instalarse cerca de áreas de consumo o de yacimientos de combustibles, además de su capacidad de generación estable y ajustable a la demanda. Sin embargo, presentan limitaciones en términos de conversión energética y emisión de contaminantes, lo que motiva una búsqueda constante de aumentos de eficiencia y de reducción de impactos ambientales.</Paragraph>
+
+                            {/* Espacio para Imagen/Video sobre Ciclo Rankine */}
+                            <div className="my-6 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Video/Infografía: Ciclo de Rankine y Componentes]
+                                </span>
+                            </div>
+
+                            <SectionHeader title="2. Tipos de Centrales Térmicas" />
+                            <Paragraph>Dentro de las centrales térmicas pueden reconocerse varias tipologías, según el combustible utilizado y la tecnología de conversión. De acuerdo a Roldán Viloria (2008), las principales son las centrales térmicas de gas, carbón, petróleo, nucleares y de vapor. Cada una presenta características tecnológicas y ambientales específicas.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1 Centrales Térmicas de Gas</h5>
+                            <Paragraph>Las centrales térmicas de gas operan principalmente con gas natural, aunque en algunas regiones también pueden emplearse gases derivados del petróleo (gas licuado, gasóleo, etc.). Su funcionamiento básico se sustenta en la combustión directa del gas en una cámara, generando fluidos calientes que impulsan turbinas de gas. Alternativamente, en ciclos combinados, el calor residual permite calentar agua para sumar una turbina de vapor, aumentando así la eficiencia global del sistema.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), su mayor ventaja radica en la rapidez de puesta en marcha, su alta eficiencia (particularmente en ciclos combinados, que alcanzan hasta un 60%), y menores emisiones contaminantes en comparación con el carbón o el petróleo. No obstante, su dependencia de la disponibilidad y el precio del gas puede limitar su desarrollo en ciertas regiones.</Paragraph>
+                            <List items={[
+                                "Funcionamiento: El gas se quema en una cámara de combustión. Los gases calientes resultantes hacen girar una turbina acoplada a un generador eléctrico. En ciclo combinado, los gases residuales calientan agua para accionar una turbina de vapor, mejorando el rendimiento.",
+                                "Ventajas: Alta eficiencia. Emisiones menores de CO₂ y contaminantes locales respecto a otros fósiles. Flexibilidad operativa y rápida adaptación a la demanda.",
+                                "Desventajas: Dependencia del suministro gasífero. Emisión de gases de efecto invernadero."
                             ]} />
 
-                            <SectionHeader title="2.3 Impacto Ambiental" />
-                            <Paragraph>Las centrales térmicas convencionales (fósiles) son los principales contribuyentes al impacto ambiental en el sector eléctrico:</Paragraph>
+                            {/* Espacio para Imagen/Video Central a Gas */}
+                            <div className="my-6 relative w-full aspect-[21/9] bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Video: Central Térmica de Ciclo Combinado]
+                                </span>
+                            </div>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.2 Centrales Térmicas de Carbón</h5>
+                            <Paragraph>Las centrales de carbón representan una de las formas más tradicionales de generación térmica. El carbón, tras ser triturado y pulverizado, se quema en calderas a alta temperatura. El vapor generado acciona turbinas para producir electricidad. A pesar de las mejoras tecnológicas, estas centrales se asocian con importantes preocupaciones ambientales por sus elevadas emisiones de dióxido de carbono, óxidos de azufre y partículas en suspensión.</Paragraph>
+                            <Paragraph>Roldán Viloria (2008) señala que aún hoy el carbón sigue siendo un combustible clave debido a su abundancia y bajo coste en muchos países. Sin embargo, las crecientes exigencias normativas impulsan la adopción de tecnologías de captura y almacenamiento de carbono (CCS) para mitigar su impacto ambiental.</Paragraph>
                             <List items={[
-                                "Emisiones de Gases de Efecto Invernadero (GEI): Principalmente CO2, causante del cambio climático global.",
-                                "Contaminación Atmosférica: Emisión de óxidos de nitrógeno (NOx), óxidos de azufre (SOx) y material particulado, afectando la calidad del aire.",
-                                "Uso y Contaminación del Agua: Requieren grandes volúmenes de agua para refrigeración, y el vertido termal puede afectar ecosistemas acuáticos locales.",
-                                "Generación de Residuos Sólidos: Como cenizas volantes y de fondo en el caso del carbón, o el complejo manejo de los residuos nucleares."
+                                "Funcionamiento: El carbón se muele hasta convertirlo en polvo. Se quema en una caldera, liberando calor. El vapor generado mueve una turbina y el generador produce electricidad.",
+                                "Ventajas: Gran disponibilidad global de carbón. Costo relativamente bajo del combustible.",
+                                "Desventajas: Altas emisiones de gases contaminantes y residuos sólidos. Mayores costos asociados al control de contaminación. Baja eficiencia comparativa y problemas de manejo de cenizas y escorias."
                             ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.3 Centrales Térmicas de Petróleo</h5>
+                            <Paragraph>Las centrales térmicas de petróleo utilizan como combustible derivados líquidos del petróleo, tales como fuel oil, diésel o residuales pesados. El proceso de generación eléctrica es similar al de carbón: el combustible se quema en calderas, se produce vapor y éste acciona una turbina conectada al generador. El petróleo ha jugado un papel fundamental en la electrificación de zonas insulares o remotas donde no existen alternativas más baratas.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), estas centrales presentan una eficiencia intermedia entre el carbón y el gas, pero sus elevados costes y altos impactos ambientales (emisión de SO₂, NOₓ, contaminantes orgánicos y polvos finos) han impulsado la tendencia mundial a reducir su uso, quedando básicas para sistemas de respaldo o regiones sin acceso a combustibles más limpios.</Paragraph>
+                            <List items={[
+                                "Funcionamiento: El combustible líquido se atomiza e inyecta en la caldera para combustión. El vapor generado acciona la turbina y el generador acoplado produce electricidad.",
+                                "Ventajas: Flexibilidad en la ubicación de la planta. Arranque y parada relativamente rápidos.",
+                                "Desventajas: Altos costos operacionales y de combustibles. Emisiones elevadas de contaminantes atmosféricos. Riesgos asociados a derrames y contaminación del agua."
+                            ]} />
+
+                            {/* Espacio para Imagen/Video Central Nuclear */}
+                            <div className="my-6 relative w-full aspect-[21/9] bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Video: Funcionamiento Central Nuclear]
+                                </span>
+                            </div>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.4 Centrales Nucleares</h5>
+                            <Paragraph>Las centrales nucleares constituyen una categoría especial de centrales térmicas donde la fuente primaria de calor es la fisión nuclear del átomo (usualmente uranio-235 o plutonio-239) en un reactor. En el reactor, los neutrones bombardean núcleos de material fisionable, produciendo fragmentos y liberando gran cantidad de energía en forma de calor. Este calor se utiliza para generar vapor, que a su vez acciona las turbinas y permite la generación eléctrica.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), las centrales nucleares aportan como principal ventaja la generación de grandes volúmenes de energía base, con bajas emisiones directas de gases contaminantes y de efecto invernadero. Sin embargo, presentan desafíos significativos en cuanto a la gestión de residuos radiactivos, seguridad operativa y aceptación social.</Paragraph>
+                            <List items={[
+                                "Funcionamiento: La fisión nuclear en el reactor genera calor. En un circuito primario cerrado, un refrigerante transmite el calor a un generador de vapor. El vapor mueve la turbina y el generador produce electricidad.",
+                                "Ventajas: Alta densidad energética; grandes volúmenes de energía con poca materia prima. Bajas emisiones de CO₂ durante la operación.",
+                                "Desventajas: Gestión y almacenamiento de residuos radiactivos. Riesgo de accidentes o fugas. Altos costos iniciales e infraestructuras complejas. Elevada oposición social en muchos países."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.5 Centrales de Vapor (Convencionales o Mixtas)</h5>
+                            <Paragraph>Las centrales de vapor, también llamadas convencionales, pueden utilizar diversos combustibles (carbón, petróleo, biomasa) para calentar agua en calderas y producir vapor a alta presión. Este tipo de plantas ha sido históricamente el eje de la generación térmica, combinando distintas fuentes primarias. En la actualidad, muchas de estas centrales han adaptado sus tecnologías para operar en ciclos combinados o como plantas mixtas mediante co-combustión, integrando biomasas o residuos industriales.</Paragraph>
+                            <Paragraph>El proceso se articula en torno al vapor como motor de la turbina y, por ende, del generador. Las características y eficiencia variarán según el combustible empleado, la presión y temperatura del vapor y los complementos tecnológicos aplicados.</Paragraph>
+                            <List items={[
+                                "Funcionamiento: El combustible (sólido, líquido o gaseoso) se quema en la caldera. El agua se transforma en vapor de alta presión. El vapor impulsa la turbina y esta al generador eléctrico.",
+                                "Ventajas: Versatilidad en el uso de combustibles. Soluciones tecnológicas probadas y ampliamente disponibles.",
+                                "Desventajas: Emisiones contaminantes según combustibles empleados. Baja eficiencia comparada con ciclos combinados modernos."
+                            ]} />
+
+                            <SectionHeader title="3. Consideraciones Tecnológicas y Económicas" />
+                            <Paragraph>La viabilidad y selección de una u otra tecnología térmica depende de muchos factores, tales como los costos relativos de inversión y operación, la disponibilidad y precio de los combustibles, la infraestructura de transporte y almacenamiento, las normativas ambientales y los contextos regulatorios internacionales (tales como los compromisos por reducción de emisiones de gases de efecto invernadero).</Paragraph>
+                            <Paragraph>La bibliografía técnica y las Normas de la SEC indican la importancia de evaluar:</Paragraph>
+                            <List items={[
+                                "Consumo y logística de combustibles.",
+                                "Requerimientos de agua de enfriamiento y gestión de vertidos.",
+                                "Sistemas de mitigación y filtración de gases y partículas.",
+                                "Costos asociados a derechos de emisión de CO₂ y otros contaminantes.",
+                                "Requerimientos de seguridad y planes de contingencia."
+                            ]} />
+                            <Paragraph>A nivel mundial, se observa una transición paulatina hacia centrales térmicas más eficientes (por ejemplo, ciclo combinado, cogeneración, centrales nucleares de nueva generación) y hacia la integración de fuentes menos contaminantes, siguiendo las directrices internacionales en favor de la reducción de emisiones y la sostenibilidad energética.</Paragraph>
+
+                            <SectionHeader title="4. Conclusiones" />
+                            <Paragraph>La generación eléctrica mediante fuentes térmicas sigue siendo un componente fundamental del mix energético mundial. A pesar de los avances tecnológicos y el desarrollo acelerado de energías renovables, la estabilidad, escalabilidad y control de carga de estas centrales justifican su permanencia, aunque bajo la presión de un marco regulatorio más estricto y la necesidad de minimizar impactos ambientales.</Paragraph>
+                            <Paragraph>El estudio de los principios de transformación termodinámica, junto a la caracterización y análisis de las distintas tecnologías térmicas (gas, carbón, petróleo, nucleares, vapor) permite comprender los retos actuales y futuros en materia energética. Conforme expone Roldán Viloria (2008), el dominio técnico y normativo, combinado con una gestión responsable de los recursos y residuos, serán claves para un desarrollo energético sostenible.</Paragraph>
+                            <Paragraph>Las innovaciones en eficiencia, tecnologías de captura de carbono, diversificación de combustibles y gestión de residuos son la base para una transición segura y ambientalmente responsable de las centrales térmicas. Así, su caracterización y análisis deben estar siempre presentes en los estudios de introducción a la industria eléctrica, considerando su rol presente y futuro en el contexto global.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.2">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de identificar los principios de generación eléctrica mediante fuente térmica, considerando las características, ventajas y desventajas tecnológicas de cada método, y su impacto en el entorno local y global.</p>
+                            </HighlightBox>
                         </ExpansionTile>
 
                         <ExpansionTile title="III. Generación mediante Energías Alternativas" icon={Zap}>
