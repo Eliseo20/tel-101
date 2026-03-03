@@ -768,12 +768,17 @@ const AE1View = ({ onBack }) => {
                             <Paragraph>La energía termosolar, o energía solar térmica de concentración, ha experimentado un desarrollo notable en las últimas décadas. Representa uno de los pilares fundamentales de las fuentes alternativas de generación eléctrica, en sintonía con la transición energética global promovida por las inquietudes medioambientales y la búsqueda de sostenibilidad. Según Roldán Viloria (2008), la utilización de la radiación solar para la generación eléctrica constituye una opción relevante debido a la abundancia del recurso solar en muchas regiones del planeta y a su carácter renovable e inagotable.</Paragraph>
                             <Paragraph>Este texto desarrolla los fundamentos de la energía termosolar desde una perspectiva académica, abordando los principios físicos y tecnológicos, las variantes tecnológicas predominantes, el proceso de generación eléctrica, el contexto global de su desarrollo, así como el análisis de su impacto ambiental, conforme lo señalado en la bibliografía básica propuesta y la normativa vigente.</Paragraph>
 
-                            {/* Espacio reservado para Video/Imagen de Introducción Centrales Termosolares */}
-                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Espacio reservado para Video/Imagen: Termosolar]
-                                </span>
+                            {/* Video Planta termosolar (Cerro Dominador) */}
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/OHkGk6t0p-Q"
+                                    title="Planta termosolar"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <SectionHeader title="2. Principios de Generación Eléctrica Termosolar" />
@@ -835,6 +840,20 @@ const AE1View = ({ onBack }) => {
                                 "Gemasolar (España): pionera en el almacenamiento con sales fundidas y generación 24/7.",
                                 "Cerro Dominador (Chile): primera central termosolar en América Latina, con torre central y 110 MW de capacidad."
                             ]} />
+
+                            {/* Video ¿Cómo funciona la primera planta termosolar de América Latina? */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/z8ei_mk1Amc"
+                                    title="¿Cómo funciona la primera planta termosolar de América Latina?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
                             <Paragraph>El impulso internacional está condicionado por estrategias de transición energética, políticas de incentivo a energías renovables, y el cumplimiento de compromisos globales de reducción de gases de efecto invernadero (COP21, Acuerdo de París). Adicionalmente, la adaptación de las normativas técnicas y la flexibilidad de sistemas eléctricos para integrar energías renovables en la matriz son factores determinantes, como lo establece la Norma Técnica Sector Electricidad (SEC, Chile, 2000).</Paragraph>
 
                             <SectionHeader title="6. Ventajas y Limitaciones de la Energía Termosolar" />
