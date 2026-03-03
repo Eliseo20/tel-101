@@ -635,12 +635,17 @@ const AE1View = ({ onBack }) => {
                             <SectionHeader title="1. Introducción a la Generación Solar Fotovoltaica" />
                             <Paragraph>La generación de energía eléctrica a partir de fuentes solares ha experimentado un crecimiento significativo a nivel global en las últimas décadas. Los sistemas fotovoltaicos, en particular, se han posicionado como una de las alternativas más limpias y sostenibles para la producción de electricidad, permitiendo la diversificación de la matriz energética y contribuyendo a la reducción de las emisiones de gases contaminantes. La expansión de la energía solar fotovoltaica responde tanto al avance tecnológico como a la necesidad de incorporar fuentes renovables en la industria eléctrica, considerando principios técnicos, normativos y medioambientales que regulan su funcionamiento y expansión (Roldán Viloria, 2008).</Paragraph>
 
-                            {/* Espacio reservado para Video/Imagen de Introducción Solar Fotovoltaica */}
-                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Espacio reservado para Video/Imagen: Solar Fotovoltaica]
-                                </span>
+                            {/* Video de Introducción Solar Fotovoltaica */}
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/PROhNDen3nk"
+                                    title="Animación 2D Solar Fotovoltaica"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <SectionHeader title="2. Principios de la Generación Solar Fotovoltaica" />
@@ -650,6 +655,19 @@ const AE1View = ({ onBack }) => {
                             <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1. Teoría y Funcionamiento del Efecto Fotovoltaico</h5>
                             <Paragraph>El efecto fotovoltaico ocurre fundamentalmente en materiales semiconductores. En los sistemas más comunes se utiliza silicio, aunque también pueden emplearse otros materiales como teluro de cadmio o seleniuro de cobre e indio. El proceso básico involucra la formación de una unión tipo p-n, donde la parte "p" corresponde a un material con portadores positivos (huecos) y la parte "n" corresponde a un material con portadores negativos (electrones).</Paragraph>
                             <Paragraph>Al incidir la radiación solar sobre la superficie de la célula, los fotones de suficiente energía liberan electrones del material semiconductor en la zona de la unión, generando pares electrón-hueco. Bajo el efecto del campo eléctrico interno de la unión p-n, los electrones se desplazan hacia la zona n y los huecos hacia la zona p, produciendo así una diferencia de potencial. Esta diferencia puede conectarse a un circuito externo, permitiendo que los electrones fluyan y así obtener energía eléctrica utilizable.</Paragraph>
+
+                            {/* Video Paneles Solares Explicados */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/Mhvm9keeM5o"
+                                    title="Paneles Solares Explicados"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
 
                             <SectionHeader title="3. Componentes de un Sistema de Generación Solar Fotovoltaica" />
                             <Paragraph>Un sistema fotovoltaico típico se compone de varios elementos fundamentales, cuyo diseño y configuración mantienen estrecha relación con la escala y tipo de aplicación, desde instalaciones residenciales hasta grandes centrales solares industriales.</Paragraph>
@@ -670,6 +688,19 @@ const AE1View = ({ onBack }) => {
                             <SectionHeader title="5. Proceso de Generación en una Central Solar Fotovoltaica" />
                             <Paragraph>El proceso comienza con la captación de la radiación solar incidente sobre los paneles o módulos fotovoltaicos. La electricidad producida por los módulos es corriente continua (CC), la cual es recolectada a través de conjuntos de cableado y enviada al inversor centralizado o a micro-inversores, dependiendo del diseño del sistema.</Paragraph>
                             <Paragraph>El inversor transforma la CC en corriente alterna (CA) y a continuación la energía es monitoreada, medida y acondicionada para ser transportada mediante transformadores de media o alta tensión. La energía finalmente es transmitida a través de líneas eléctricas hacia los consumidores o directamente a la red de distribución nacional o regional.</Paragraph>
+
+                            {/* Video Parque Fotovoltaico */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/l0P-s4SGJXM"
+                                    title="Cómo funciona un parque fotovoltaico"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
 
                             <SectionHeader title="6. Factores que Influyen en la Generación Solar Fotovoltaica" />
                             <Paragraph>El rendimiento y la eficiencia de la generación solar fotovoltaica están influenciados por una serie de factores que deben ser considerados para el diseño, dimensionamiento y operación de los sistemas. Entre estos factores destacan:</Paragraph>
