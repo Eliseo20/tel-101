@@ -351,11 +351,16 @@ const AE1View = ({ onBack }) => {
                             <Paragraph>En el presente texto se aborda de manera estructurada y académica los fundamentos de la generación eléctrica mediante fuentes térmicas, así como una descripción y análisis de los principales tipos de centrales térmicas existentes en el mundo: centrales de gas, carbón, petróleo, nucleares y de vapor. Todo este análisis se desarrolla en un contexto global, recurriendo a bibliografía especializada como el texto "Fuentes de energía" de José Roldán Viloria (2008) y las Normas Técnicas del Sector Electricidad (SEC) de Chile, para proporcionar fundamentos sólidos y actualizados.</Paragraph>
 
                             {/* Espacio para Imagen/Video de Introducción */}
-                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Espacio reservado para Video/Imagen: Introducción a Centrales Térmicas]
-                                </span>
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/meZkGeqoNTo"
+                                    title="¿Cómo funciona una central de energía termoeléctrica?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <SectionHeader title="1. Principios de Generación Eléctrica Mediante Fuente Térmica" />
@@ -376,10 +381,16 @@ const AE1View = ({ onBack }) => {
                             <Paragraph>Las centrales térmicas ofrecen la ventaja de poder instalarse cerca de áreas de consumo o de yacimientos de combustibles, además de su capacidad de generación estable y ajustable a la demanda. Sin embargo, presentan limitaciones en términos de conversión energética y emisión de contaminantes, lo que motiva una búsqueda constante de aumentos de eficiencia y de reducción de impactos ambientales.</Paragraph>
 
                             {/* Espacio para Imagen/Video sobre Ciclo Rankine */}
-                            <div className="my-6 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Video/Infografía: Ciclo de Rankine y Componentes]
-                                </span>
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/8aB1xGiiP5Q"
+                                    title="Ciclo de Rankine"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <SectionHeader title="2. Tipos de Centrales Térmicas" />
@@ -395,10 +406,16 @@ const AE1View = ({ onBack }) => {
                             ]} />
 
                             {/* Espacio para Imagen/Video Central a Gas */}
-                            <div className="my-6 relative w-full aspect-[21/9] bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Video: Central Térmica de Ciclo Combinado]
-                                </span>
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/U9JhUlz0lIo"
+                                    title="Centrales térmicas de ciclo combinado"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.2 Centrales Térmicas de Carbón</h5>
@@ -420,10 +437,16 @@ const AE1View = ({ onBack }) => {
                             ]} />
 
                             {/* Espacio para Imagen/Video Central Nuclear */}
-                            <div className="my-6 relative w-full aspect-[21/9] bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Video: Funcionamiento Central Nuclear]
-                                </span>
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/e8ckW4r_mIM"
+                                    title="VISITO una CENTRAL NUCLEAR de España☢️ Como funciona?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.4 Centrales Nucleares</h5>
