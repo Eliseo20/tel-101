@@ -490,18 +490,127 @@ const AE1View = ({ onBack }) => {
                         </ExpansionTile>
 
                         <ExpansionTile title="III. Generación mediante Energías Alternativas" icon={Zap}>
-                            <SectionHeader title="3.1 Energía Solar (Fotovoltaica y Térmica)" />
-                            <Paragraph>La energía solar se aprovecha principalmente de dos formas: mediante paneles fotovoltaicos (que convierten la luz solar directamente en electricidad mediante semiconductores) y mediante concentración solar térmica (que concentra el calor del sol para producir vapor y accionar una turbina).</Paragraph>
-                            <Paragraph>Son tecnologías en rápida expansión, con cero emisiones operativas, aunque su generación es intermitente (depende de la luz solar) y requieren gran superficie para instalaciones a gran escala. El impacto ambiental se centra en la minería para la fabricación de paneles y su disposición al final de su vida útil.</Paragraph>
+                            <SectionHeader title="Introducción a la Energía Geotérmica" />
+                            <Paragraph>La geotermia se ha consolidado, a nivel global, como una alternativa relevante y sustentable dentro del espectro de fuentes utilizadas para la generación eléctrica. Su utilización descansa en la capacidad de aprovechar el calor interno de la Tierra, mediante tecnologías específicas que transforman esta energía térmica en electricidad. Este texto, basado principalmente en la obra "Fuentes de energía" de José Roldán Viloria (2008) y las directrices planteadas por la Superintendencia de Electricidad y Combustibles (SEC) de Chile, profundiza en los fundamentos, procesos, ventajas, desafíos y el marco regulatorio de la generación de electricidad geotérmica, con un enfoque académico, estructurado y contextualizado a nivel global.</Paragraph>
 
-                            <SectionHeader title="3.2 Energía Eólica" />
-                            <Paragraph>Utiliza la fuerza del viento para mover las aspas de aerogeneradores, conectados a un generador. Al igual que la solar, es limpia y renovable, pero intermitente. Requiere estudios de viento precisos para su ubicación (onshore u offshore). Los impactos ambientales incluyen el impacto visual paisajístico, el ruido acústico y los posibles daños a aves y murciélagos.</Paragraph>
+                            {/* Espacio reservado para Video/Imagen de Introducción Geotermia */}
+                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
+                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
+                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
+                                    [Espacio reservado para Video/Imagen: Geotermia]
+                                </span>
+                            </div>
 
-                            <SectionHeader title="3.3 Otras Tecnologías Alternativas" />
+                            <SectionHeader title="1. Principios Fundamentales de la Geotermia" />
+                            <Paragraph>La energía geotérmica es la energía térmica almacenada bajo la superficie terrestre. Esta se origina principalmente por la desintegración de elementos radiactivos en el interior del planeta y el calor remanente de procesos de formación de la Tierra. De acuerdo con Roldán Viloria (2008), la temperatura del subsuelo aumenta en promedio entre 25 y 30 °C por cada kilómetro de profundidad, aunque este gradiente geotérmico puede variar considerablemente según las características geológicas locales.</Paragraph>
+                            <Paragraph>El aprovechamiento geotérmico para la generación de electricidad requiere de la existencia de campos o reservorios geotérmicos. Estos sistemas suelen estar constituidos por:</Paragraph>
                             <List items={[
-                                "Geotérmica: Aprovecha el calor del interior de la corteza terrestre en zonas con actividad volcánica.",
-                                "Biomasa: Quema de residuos orgánicos (silvícolas, agrícolas, urbanos) para generar calor y electricidad. Se considera neutra en carbono si se gestiona de forma sostenible.",
-                                "Mareomotriz/Undimotriz: Aprovechamiento de las mareas y las olas del océano. Tecnologías emergentes con gran potencial pero altos costos y desafíos técnicos."
+                                "Una fuente de calor de considerable magnitud, generalmente magma o rocas a altas temperaturas.",
+                                "Un reservorio poroso y permeable que almacene el agua o vapor calentado.",
+                                "Una capa impermeable que retenga el fluido.",
+                                "Una fuente de recarga de agua (por ejemplo, precipitaciones o infiltraciones)."
+                            ]} />
+                            <Paragraph>La energía geotérmica puede clasificarse en función de la temperatura de los fluidos presentes en el yacimiento: alta entalpía (más de 150 °C), media entalpía (90-150 °C) y baja entalpía (menos de 90 °C). La producción eléctrica exige, generalmente, recursos de alta o media entalpía.</Paragraph>
+
+                            <SectionHeader title="2. Proceso de Generación Eléctrica Mediante Energía Geotérmica" />
+                            <Paragraph>El proceso para la generación de electricidad a partir de energía geotérmica implica la transformación de la energía térmica en energía eléctrica a través de una serie de etapas y componentes tecnológicos que dependen del tipo de recurso geotérmico y la tecnología seleccionada para su explotación.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1. Extracción del Fluido Geotérmico</h5>
+                            <Paragraph>El primer paso consiste en la perforación y diseño de pozos geotérmicos, que permiten acceder al reservorio subterráneo. Una vez llegado a las profundidades deseadas (que pueden oscilar entre 500 y 3.000 metros, dependiendo del campo geotérmico), los fluidos calientes (agua, vapor o una mezcla de ambos) ascienden a la superficie impulsados por su propia presión y el gradiente de temperatura.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.2. Tipos de Centrales Geotérmicas</h5>
+                            <Paragraph>Según la naturaleza del recurso disponible y la temperatura de los fluidos, existen tres tecnologías básicas para convertir la energía térmica del fluido geotérmico en electricidad:</Paragraph>
+                            <List items={[
+                                "Centrales de vapor seco: Utilizan directamente el vapor extraído para accionar la turbina. Son posibles en campos geotérmicos donde el vapor existe naturalmente a presiones y temperaturas adecuadas (por encima de 150 °C, idealmente sobre 220 °C). El vapor seco es conducido a las turbinas que mueven el generador eléctrico.",
+                                "Centrales de vapor flash: Apropiadas para yacimientos donde el recurso principal es agua a alta temperatura y presión (normalmente entre 150 y 350 °C). El agua caliente es despresurizada (“flash”) al llegar a la superficie, lo que genera vapor que se utiliza para accionar la turbina. El agua restante puede ser aprovechada en una segunda etapa de despresurización para obtener más vapor (doble flash) antes de su reinyección o descarte.",
+                                "Centrales de ciclo binario: Empleadas en yacimientos de temperatura media o baja (generalmente entre 85 y 170 °C). El fluido geotérmico calienta, mediante un intercambiador de calor, a un segundo fluido con punto de ebullición bajo (típicamente isobutano o pentano), el cual se vaporiza y mueve la turbina. Esta tecnología no requiere que el fluido geotérmico se vaporice, ampliando así el rango de recursos aprovechables."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.3. Conversión y Transporte de la Electricidad</h5>
+                            <Paragraph>Una vez que la turbina es accionada por el vapor o el fluido secundario, se acopla a un generador eléctrico que transforma la energía mecánica en energía eléctrica. Finalmente, la electricidad producida se ajusta mediante transformadores para ser inyectada a la red de distribución o transmisión, según las Normas Técnicas del Sector Electricidad de cada país (como las desarrolladas por la SEC en Chile).</Paragraph>
+
+                            <SectionHeader title="3. Componentes Principales de una Central Geotérmica" />
+                            <Paragraph>Tanto las centrales de vapor seco, flash o ciclo binario comparten una serie de componentes esenciales, aunque su diseño específico puede variar:</Paragraph>
+                            <List items={[
+                                "Pozos de producción y de reinyección.",
+                                "Sistema de tuberías y separadores de vapor.",
+                                "Intercambiadores de calor (en el caso de ciclo binario).",
+                                "Turbina de vapor o de gas.",
+                                "Generador eléctrico.",
+                                "Sistemas de condensadores y de enfriamiento.",
+                                "Plantas de tratamiento de aguas residuales y gases.",
+                                "Sistemas de control y monitoreo."
+                            ]} />
+                            <Paragraph>Todo el sistema requiere de estrictos controles operacionales y ambientales, siguiendo normas internacionales y nacionales para garantizar la seguridad, eficiencia y sustentabilidad del proceso.</Paragraph>
+
+                            <SectionHeader title="4. Distribución Geográfica de los Recursos Geotérmicos" />
+                            <Paragraph>La geotermia es una fuente energética intrínsecamente ligada a la actividad tectónica global. La mayor disponibilidad de recursos geotérmicos de alta entalpía se encuentra en el llamado “Cinturón de Fuego del Pacífico”, donde la interacción de placas tectónicas ha generado abundantes manifestaciones hidrotermales (aguas termales, géiseres, fumarolas, etc.). Países como Islandia, Filipinas, Indonesia, México, Estados Unidos (especialmente California y Nevada), Nueva Zelanda, Kenia, Etiopía, Turquía, Italia, y Chile, destacan en la utilización de la energía geotérmica para producción eléctrica.</Paragraph>
+                            <Paragraph>Según datos de la Agencia Internacional de Energía (AIE), a 2024 existen más de 16 GW de capacidad instalada de generación eléctrica geotérmica en el mundo, siendo Indonesia, Filipinas y Estados Unidos los principales países en términos de megavatios instalados.</Paragraph>
+
+                            <SectionHeader title="5. Ventajas y Desafíos de la Generación Geotérmica" />
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">5.1. Ventajas</h5>
+                            <List items={[
+                                "Sostenibilidad: Si el reservorio se maneja adecuadamente, la energía geotérmica es esencialmente renovable a escala humana de tiempo.",
+                                "Factor de planta elevado: Las centrales geotérmicas pueden operar más de 7.500 horas al año, con factores de disponibilidad del orden del 90%, muy superiores a fuentes solares o eólicas.",
+                                "Baja huella de carbono: El proceso produce emisiones netas de gases de efecto invernadero significativamente menores que las centrales térmicas convencionales.",
+                                "Estabilidad en la generación: A diferencia de fuentes variables como el sol o el viento, la geotermia provee energía continua, útil como base en los sistemas eléctricos.",
+                                "Uso local de recursos: Reduce la dependencia de combustibles fósiles importados, mejorando la seguridad energética."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">5.2. Desafíos y Limitaciones</h5>
+                            <List items={[
+                                "Elevados costos iniciales: La exploración y perforación geotérmica es costosa y arriesgada, pues exige gran inversión antes de conocer la viabilidad económica del recurso.",
+                                "Ubicación geográfica restringida: Solo las regiones con actividad geotérmica suficiente permiten la implantación rentable de centrales eléctricas.",
+                                "Gestión de residuos: Las aguas geotermales pueden contener sustancias tóxicas (arsénico, boro, mercurio, sales) que requieren tratamiento especializado.",
+                                "Fenómenos sísmicos: En ocasiones, la reinyección de fluidos puede inducir microsismos, requiriendo monitoreo y mitigación adecuados (SEC, 200-).",
+                                "Agotamiento local: Un manejo inadecuado del reservorio puede llevar a la disminución del recurso, afectando la vida útil del proyecto."
+                            ]} />
+
+                            <SectionHeader title="6. Impactos Ambientales de la Generación Geotérmica" />
+                            <Paragraph>La generación de electricidad a partir de recursos geotérmicos es, en términos generales, notablemente menos impactante que el uso de fuentes fósiles. Sin embargo, no está exenta de efectos ambientales que deben ser diagnosticados y gestionados desde la ingeniería y la regulación.</Paragraph>
+                            <List items={[
+                                "Emisiones Atmosféricas: En ciertos yacimientos, los fluidos geotérmicos contienen gases disueltos (CO₂, H₂S, NH₃, CH₄). Aunque las emisiones netas sean bajas, pueden ser localmente relevantes y requieren sistemas de filtrado o dispersión adecuada.",
+                                "Descarga de Aguas y Sólidos: Los líquidos residuales pueden tener minerales disueltos que podrían contaminar aguas subterráneas y superficiales. La reinyección en el reservorio es la práctica recomendada para evitar contaminación y mantener la presión del yacimiento.",
+                                "Fenómenos Inducidos: La reinyección significativa de fluidos puede inducir pequeños movimientos sísmicos (“sismicidad inducida”), que deben ser monitoreados conforme a normativas técnicas (SEC).",
+                                "Impacto en Superficie: Aunque la huella superficial es muy inferior a la de proyectos solares, eólicos o hídricos, las instalaciones alteran localmente el paisaje y vegetación.",
+                                "Ruido y Olores: Las perforaciones generan ruido, y el H₂S en algunos yacimientos posee olor a “huevo podrido” perceptible localmente."
+                            ]} />
+
+                            <SectionHeader title="7. Normativa y Regulación para Proyectos Geotérmicos" />
+                            <Paragraph>De acuerdo con la Norma Técnicas Sector Electricidad (SEC), el desarrollo de proyectos geotérmicos en Chile para la generación eléctrica está sujeto a:</Paragraph>
+                            <List items={[
+                                "Evaluaciones de impacto ambiental obligatorias.",
+                                "Permisos de exploración y concesión de explotación del recurso geotérmico.",
+                                "Cumplimiento de estándares de seguridad operacional.",
+                                "Planes de monitoreo de emisiones, residuos y gestión ante eventos sísmicos.",
+                                "Normas de calidad del aire, agua y suelos."
+                            ]} />
+
+                            <SectionHeader title="8. Casos y Perspectivas Globales" />
+                            <Paragraph>Islandia es un ejemplo paradigmático, cubriendo más del 25% de su electricidad y 90% de calefacción mediante geotermia. Estados Unidos lidera la capacidad instalada global, destacando The Geysers en California. En Chile, la planta Cerro Pabellón (2017), a más de 4.500 msnm, fue la primera en Sudamérica. Países como Indonesia y Kenia están acelerando inversiones para aprovechar entornos volcánicos y descarbonizar matrices energéticas.</Paragraph>
+
+                            <SectionHeader title="9. Tendencias Tecnológicas y Futuro" />
+                            <List items={[
+                                "Perfeccionamiento de técnicas de perforación más profundas.",
+                                "Centrales de ciclo binario mejoradas y fluidos de transferencia más eficientes.",
+                                "Sistemas Geotérmicos Mejorados (EGS) para fracturar rocas calientes secas y crear nuevos reservorios.",
+                                "Integración de la geotermia con cogeneración, desalinización y calefacción directa."
+                            ]} />
+
+                            <SectionHeader title="10. Conclusión" />
+                            <Paragraph>La generación eléctrica mediante energía geotérmica constituye una alternativa estratégica y cada vez más relevante para el abastecimiento energético mundial del siglo XXI. Si bien su desarrollo está condicionado por la geología local y presenta desafíos técnicos, económicos y ambientales, la eficiencia, continuidad y baja huella ecológica de su operación la posicionan como pieza clave en la transición hacia sistemas eléctricos más sostenibles.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.3">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante fuentes alternativas como la geotermia, identificando sus principios técnicos, impactos ambientales y su viabilidad tecnológica y económica.</p>
+                            </HighlightBox>
+
+                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
+                            <Paragraph>Además de la geotermia, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <List items={[
+                                "Energía Solar (Fotovoltaica y Térmica): Convierte la luz o calor del sol en electricidad. En rápida expansión y emisiones cero operativas, pero intermitente.",
+                                "Energía Eólica: Utiliza aerogeneradores impulsados por el viento. Limpia pero intermitente. Requiere estudios precisos de vientos.",
+                                "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente.",
+                                "Energía Marina (Mareomotriz/Undimotriz): Aprovechamiento de mareas y olas. En vías de desarrollo comercial por sus altos costos."
                             ]} />
                         </ExpansionTile>
 
