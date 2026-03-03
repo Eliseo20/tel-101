@@ -16,9 +16,10 @@ const ProtectionsQuizGame = () => {
     const [isAnswered, setIsAnswered] = useState(false);
 
     const startChallenge = (size) => {
-        setChallengeSize(size);
+        const actualSize = Math.min(size, ALL_QUESTIONS.length);
+        setChallengeSize(actualSize);
         const shuffled = [...ALL_QUESTIONS].sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0, size).map(q => {
+        const selected = shuffled.slice(0, actualSize).map(q => {
             const optionsWithIndices = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.correct }));
             const shuffledOptions = optionsWithIndices.sort(() => 0.5 - Math.random());
             return {
@@ -83,12 +84,12 @@ const ProtectionsQuizGame = () => {
 
                     <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12">
                         {[
-                            { size: 10, label: "Entrenamiento", icon: Target, color: "hover:border-blue-500" },
-                            { size: 20, label: "Desafío Técnico", icon: Zap, color: "hover:border-yellow-500" },
-                            { size: 30, label: "Maestría Senior", icon: Award, color: "hover:border-[#D1202F]" }
-                        ].map(item => (
+                            { size: Math.min(10, ALL_QUESTIONS.length), label: "Entrenamiento", icon: Target, color: "hover:border-blue-500" },
+                            { size: Math.min(20, ALL_QUESTIONS.length), label: "Desafío Técnico", icon: Zap, color: "hover:border-yellow-500" },
+                            { size: ALL_QUESTIONS.length, label: "Maestría Senior", icon: Award, color: "hover:border-[#D1202F]" }
+                        ].map((item, index) => (
                             <button
-                                key={item.size}
+                                key={index}
                                 onClick={() => startChallenge(item.size)}
                                 className={`group relative p-10 bg-white dark:bg-slate-900 border-2 border-slate-100 dark:border-slate-800 rounded-[2.5rem] transition-all hover:shadow-2xl overflow-hidden text-center ${item.color}`}
                             >
