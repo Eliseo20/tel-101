@@ -1095,11 +1095,141 @@ const AE1View = ({ onBack }) => {
                                 <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante energía eólica, identificando sus principios técnicos, impactos ambientales, normativa aplicable y viabilidad frente a otras energías en la transición energética global.</p>
                             </HighlightBox>
 
-                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
-                            <Paragraph>Además de la geotermia, la energía solar fotovoltaica, termosolar y eólica, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes relevantes en la matriz energética moderna:</Paragraph>
+                            <div className="mt-16 mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800">
+                                <h3 className="text-xl font-black text-amber-900 dark:text-amber-300 uppercase mb-2">E. Energía Mareomotriz</h3>
+                                <p className="text-sm text-amber-700 dark:text-amber-500">Aprovechamiento de las mareas oceánicas para la generación de electricidad.</p>
+                            </div>
+
+                            <SectionHeader title="1. Introducción a la Energía Mareomotriz" />
+                            <Paragraph>La generación eléctrica mediante energía mareomotriz representa un campo clave dentro de las denominadas fuentes alternativas de energía. Dada la creciente preocupación global relacionada con el agotamiento de combustibles fósiles y la necesidad de reducir el impacto ambiental, la explotación de las mareas como fuente renovable y limpia cobra progresiva importancia. En este texto se examina de manera sistemática la tecnología mareomotriz, atendiendo sus principios de funcionamiento, tipos de centrales existentes, implicancias técnicas, económicas y medioambientales, utilizando como base la obra Fuentes de energía de José Roldán Viloria (2008) y las Normas Técnicas del Sector Electricidad.</Paragraph>
+
+                            {/* Video ¿Qué es la Energía Mareomotriz? */}
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/jIwb96PwmDU"
+                                    title="¿Qué es la Energía Mareomotriz?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            <SectionHeader title="2. Principio de Generación Eléctrica Mareomotriz" />
+                            <Paragraph>La energía mareomotriz utiliza la fuerza gravitacional que ejercen la Luna y el Sol sobre la masa de agua de los océanos, generando ciclos previsibles de subida y bajada, es decir, las mareas. La captación de esta energía para la generación eléctrica se produce mediante la conversión del desplazamiento de grandes volúmenes de agua y de la diferencia de niveles entre la pleamar (marea alta) y bajamar (marea baja) en energía mecánica, la que posteriormente se transforma en energía eléctrica.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), el fundamento físico es idéntico al de una central hidroeléctrica convencional: se permite que el agua se desplace debido a diferencias de nivel, impulsando turbinas a través de un declive artificialmente generado mediante barreras. La novedad está en que la fuerza motriz proviene de las mareas, un fenómeno periódico y predecible, cuando se presentan diferencias de altura del nivel del mar lo suficientemente significativas para proporcionar un volumen útil y regular de energía.</Paragraph>
+                            <Paragraph>Existen dos procesos principales para el aprovechamiento mareomotriz:</Paragraph>
                             <List items={[
-                                "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente.",
-                                "Energía Marina (Mareomotriz/Undimotriz): Aprovechamiento de mareas y olas. En vías de desarrollo comercial por sus altos costos."
+                                "El almacenamiento temporal del agua durante la pleamar y su liberación durante la bajamar para mover turbinas.",
+                                "Aprovechamiento directo de los flujos bidireccionales de las mareas mediante turbinas reversibles."
+                            ]} />
+                            <Paragraph>El potencial técnico depende fundamentalmente de la amplitud de las mareas y de la morfología costera. Requiere condiciones particulares (amplitudes mareales superiores a 5 metros y ensenadas profundas) para ser viable desde el punto de vista de la inversión y la eficiencia.</Paragraph>
+
+                            <SectionHeader title="3. Tipos de Centrales Mareomotrices" />
+                            <Paragraph>Los tipos de centrales mareomotrices se clasifican de acuerdo a sus configuraciones estructurales y mecanismos de captación del potencial energético. Las principales tipologías, siguiendo a Roldán Viloria (2008), son:</Paragraph>
+                            <List items={[
+                                "Centrales de embalse o de estuario: se construyen diques en la desembocadura de estuarios o bahías, formando un área cerrada en la que el agua queda atrapada en marea alta y liberada en marea baja, o viceversa, para impulsar las turbinas. Son el modelo más tradicional e implantado.",
+                                "Centrales de corriente de marea (“tidal stream”): no requieren embalses ni presas, sino que aprovechan la energía cinética del flujo de las corrientes mareales mediante turbinas sumergidas similares a los aerogeneradores. Extraen energía directamente del movimiento de agua, sin creación de diferencias de nivel.",
+                                "Centrales mixtas: combinan el almacenamiento y el uso directo de las corrientes de marea, optimizando así la generación durante todo el ciclo mareal."
+                            ]} />
+                            <Paragraph>Las instalaciones de embalse, a su vez, pueden ser de simple efecto (operan solo durante la descarga) o de doble efecto (ambas direcciones, tanto durante la entrada del agua al embalse – marea creciente –como durante la salida – marea descendente–, aprovechando toda la amplitud del ciclo). El diseño específico responde a la topografía local, la amplitud de la marea y los requerimientos energéticos.</Paragraph>
+
+                            <SectionHeader title="4. Estructura y Componentes de una Central Mareomotriz" />
+                            <Paragraph>Una central mareomotriz de embalse típica consta, conforme lo expone Roldán Viloria (2008), de los siguientes elementos:</Paragraph>
+                            <List items={[
+                                "Un dique o presa que delimita la zona de embalse y recoge el agua de la marea.",
+                                "Turbinas hidráulicas, habitualmente reversibles (funcionan en ambos sentidos del flujo), conectadas a generadores eléctricos.",
+                                "Compuertas de control para regular la entrada y salida de agua del embalse.",
+                                "Edificio de generación y sistemas auxiliares de control y seguridad."
+                            ]} />
+                            <Paragraph>Las turbinas más utilizadas en instalaciones mareomotrices son del tipo bulbo (Bulb turbines), debido a que permiten el paso del agua en ambas direcciones, maximizando el aprovechamiento energético a lo largo de todo el ciclo mareal.</Paragraph>
+
+                            <SectionHeader title="5. Principio de Funcionamiento y Fases del Ciclo Mareomotriz" />
+                            <Paragraph>El funcionamiento de las centrales de embalse sigue el ciclo natural de la marea. El proceso típico se desarrolla en las siguientes fases:</Paragraph>
+                            <List items={[
+                                "Durante el ascenso de la marea, las compuertas permanecen abiertas, permitiendo el llenado de la cuenca hasta alcanzar el máximo nivel (pleamar).",
+                                "En el cambio de marea, las compuertas se cierran para retener el agua dentro del embalse mientras el nivel exterior desciende (marea baja).",
+                                "Al establecerse una suficiente diferencia de niveles entre el agua almacenada y la exterior, se abren las turbinas, generando energía eléctrica al vaciarse el embalse hacia el mar.",
+                                "En instalaciones de doble efecto, las turbinas también operan durante la marea creciente, cuando el agua vuelve a entrar en el embalse, produciendo así electricidad en ambos sentidos del flujo."
+                            ]} />
+
+                            {/* Video Construyendo una Turbina Mareomotriz */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/s3XtzULzylE"
+                                    title="Construyendo una Turbina Mareomotriz"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            <Paragraph>El principal desafío es la discontinuidad: la generación depende de los ciclos mareales, que son predecibles pero no constantes a lo largo del día ni del año. Esto requiere una integración cuidadosa al sistema eléctrico, adecuando el suministro a la demanda o bien combinando fuentes alternativas.</Paragraph>
+
+                            <SectionHeader title="6. Implantación y Explotación de Centrales Mareomotrices en el Mundo" />
+                            <Paragraph>El desarrollo de centrales mareomotrices ha sido necesariamente selectivo, por el condicionante geográfico. Las instalaciones más emblemáticas a nivel global, referenciadas tanto en Roldán Viloria (2008) como en informes sectoriales, incluyen:</Paragraph>
+                            <List items={[
+                                "La Central de La Rance, en Francia, inaugurada en 1966 y con una potencia instalada de 240 MW. Es el ejemplo más representativo de central de embalse, con ciclos de doble efecto.",
+                                "La central de Sihwa, en Corea del Sur, con 254 MW, la mayor del mundo en su género.",
+                                "Numerosos proyectos pilotos de turbinas de corriente de marea en el Reino Unido, Canadá y Noruega, adaptadas a las condiciones de grandes estrechos y fiordos."
+                            ]} />
+                            <Paragraph>A pesar de su enorme potencial teórico (en áreas propicias), la potencia actual instalada globalmente es pequeña en relación a otras fuentes renovables y en relación al potencial estimado. Esto se debe principalmente a los elevados costos iniciales, la selección restringida de emplazamientos y las preocupaciones medioambientales asociadas.</Paragraph>
+
+                            <SectionHeader title="7. Impacto Ambiental de la Energía Mareomotriz" />
+                            <Paragraph>Uno de los principales aspectos a considerar en la implantación de una central mareomotriz es su repercusión sobre el entorno. Roldán Viloria (2008) enfatiza que, aunque la energía mareomotriz es considerada limpia por su nula emisión de gases, puede generar impactos ecológicos significativos según el tipo de tecnología utilizada:</Paragraph>
+                            <List items={[
+                                "Alteración de ecosistemas estuarinos y marinos: La construcción de diques y embalses modifica la hidrodinámica natural, afectando tanto a la flora como a la fauna acuática, especialmente especies dependientes de los ciclos de agua salobre o migraciones periódicas.",
+                                "Variación en la salinidad y sedimentación: La retención o liberación de volúmenes de agua puede alterar el ritmo natural de sedimentación y el balance de salinidad, lo que afecta nutrientes y ciclos biológicos locales.",
+                                "Impacto sobre aves y especies marinas: Las áreas húmedas alteradas pueden dejar de ser aptas para aves migratorias, mientras que las turbinas pueden representar un riesgo físico para peces y mamíferos marinos.",
+                                "Cambios paisajísticos y uso del suelo: La presencia de diques y estructuras auxiliares cambia la fisonomía costera, afectando actividades económicas como la pesca o el turismo.",
+                                "Ruido y vibraciones: Las turbinas sumergidas generan vibraciones y potencial ruido subacuático, con efectos aún objeto de estudio sobre la fauna marina."
+                            ]} />
+                            <Paragraph>Sin embargo, las nuevas tecnologías de corriente de marea minimizan muchos de estos impactos al no requerir estructuras de almacenamiento masivo. Según la bibliografía consultada, la tendencia actual es hacia diseños modulares, respetuosos con el entorno y de mantenimiento sencillo. Las Normas Técnicas del Sector Electricidad establecen rigurosos requisitos de evaluación de impacto ambiental y monitoreo continuo, alineados con la normativa internacional.</Paragraph>
+
+                            <SectionHeader title="8. Ventajas y Limitaciones de la Energía Mareomotriz" />
+                            <Paragraph>Analizando la bibliografía (Roldán Viloria, 2008), las principales ventajas de la tecnología mareomotriz incluyen:</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">8.1. Ventajas</h5>
+                            <List items={[
+                                "Fuente renovable, limpia e inagotable (mientras actúe la influencia gravitación lunar y solar).",
+                                "Gran predictibilidad del recurso: las mareas pueden calcularse con precisión a corto y largo plazo.",
+                                "Baja variabilidad anual e independencia de factores climáticos como viento o radiación solar.",
+                                "Larga vida útil de las instalaciones."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">8.2. Limitaciones</h5>
+                            <List items={[
+                                "Disponibilidad geográfica muy restringida: solo es viable en lugares con gran amplitud de marea y morfología favorable.",
+                                "Elevado costo inicial de construcción e impacto ambiental local significativo.",
+                                "Producción de energía intermitente y oscilante, dependiente de ciclos mareales (aunque altamente predecible, no coincide siempre con los picos de demanda).",
+                                "Dificultad de almacenamiento de energía producida y necesidad de sistemas auxiliares para integración a la red.",
+                                "Mantenimiento y operación complejos, dadas las condiciones corrosivas del medio marino."
+                            ]} />
+
+                            <SectionHeader title="9. Integración en el Contexto Energético Global" />
+                            <Paragraph>El Plan Mundial de Transición Energética, impulsado por los Objetivos de Desarrollo Sostenible (ODS) y la agenda de descarbonización, contempla la diversificación de matrices energéticas mediante fuentes limpias, renovables y autóctonas. En este contexto, la energía mareomotriz se presenta como una alternativa estratégica para zonas costeras con recursos adecuados, especialmente en aquellos países con largo litoral oceánico y alta densidad demográfica cerca de la costa.</Paragraph>
+                            <Paragraph>La coordinación y regulación internacional, incluida la aplicación de normas técnicas como las desarrolladas en Chile (SEC 200-), buscan asegurar la seguridad operacional, la eficiencia energética, la protección ambiental y la integración adecuada a los sistemas eléctricos mayoristas. No obstante, el desafío sigue siendo el abaratamiento de las tecnologías y la evaluación adecuada de los impactos locales antes de su adopción masiva.</Paragraph>
+
+                            <SectionHeader title="10. Perspectivas Futuras de la Energía Mareomotriz" />
+                            <Paragraph>De acuerdo a los expertos y la bibliografía utilizada (Roldán Viloria, 2008), las tendencias tecnológicas apuntan al perfeccionamiento de turbinas para flujos bidireccionales, sistemas de almacenamiento energético (como baterías o integración con redes de hidrógeno) y maximización de la eficiencia mediante inteligencia artificial para la gestión predictiva de generación versus demanda.</Paragraph>
+                            <Paragraph>Asimismo, el futuro desarrollará sistemas híbridos que combinen varias fuentes alternativas (mar, sol, viento) en ubicaciones estratégicas. Las innovaciones en materiales resistentes a la corrosión marina y el auge de la economía “azul” pueden reducir barreras económicas y mejorar la competitividad de lo mareomotriz frente a otras fuentes renovables.</Paragraph>
+                            <Paragraph>La participación de la ciudadanía y la integración de consideraciones sociales y culturales en la evaluación de proyectos será central, tal como destacan las directrices internacionales y las normativas técnicas del sector.</Paragraph>
+
+                            <SectionHeader title="11. Conclusión" />
+                            <Paragraph>La generación mareomotriz encarna el principio de conversión directa de energías naturales de gran escala en energía útil para la sociedad, reflejando la tendencia global hacia matrices energéticas diversificadas y limpias. Sin embargo, enfrenta notables retos de viabilidad económica, ecológica y de integración social. El estudio detallado de su tecnología, ventajas, desventajas e impactos, como se presenta en Fuentes de energía de Roldán Viloria (2008) y las normativas técnicas sectoriales, es fundamental para la formación de técnicos y profesionales capaces de evaluar su desarrollo futuro en un contexto globalizado y sostenible.</Paragraph>
+                            <Paragraph>En síntesis, el aprovechamiento de la energía de las mareas es una muestra de cómo los avances técnicos, la regulación adecuada y el respeto medioambiental pueden conjugarse para responder a los desafíos energéticos del siglo XXI.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.7">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante energía mareomotriz, identificando sus principios técnicos, impactos ambientales, normativa aplicable y viabilidad frente a otras energías en la transición energética global.</p>
+                            </HighlightBox>
+
+                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
+                            <Paragraph>Además de la geotermia, la energía solar fotovoltaica, termosolar, eólica y mareomotriz, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes relevantes en la matriz energética moderna:</Paragraph>
+                            <List items={[
+                                "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente."
                             ]} />
                         </ExpansionTile>
 
