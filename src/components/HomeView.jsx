@@ -47,10 +47,10 @@ const HomeView = ({ onNavigate, moduleData }) => {
                         <div className="flex items-center gap-4">
                             <span className={`bg-white/20 px-4 py-1.5 rounded-xl text-xs font-black uppercase tracking-widest shadow-xl`}>{moduleData.codigo}</span>
                             <div className="h-px w-12 bg-white/30" />
-                            <span className="text-white/80 text-sm font-bold">Carrera de Electricidad</span>
+                            <span className="text-white/80 text-sm font-bold">Introducción a la Industria Eléctrica</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-black leading-[0.9] uppercase italic tracking-tighter">
-                            Protecciones <br /><span className="text-white not-italic">Eléctricas</span>
+                            {moduleData.nombre}
                         </h1>
                         <div className="max-w-xl bg-white/10 border-l-4 border-white p-8 rounded-r-3xl backdrop-blur-md">
                             <h3 className="text-white text-[10px] font-bold uppercase mb-3 tracking-[0.2em] flex items-center gap-2">

@@ -94,15 +94,14 @@ const AE2View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
 
     const glossaryAE2 = [
-        { term: "Protector termomagnético", def: "Dispositivo que interrumpe el paso de corriente ante sobrecargas o cortocircuitos combinando un mecanismo térmico y uno magnético." },
-        { term: "Elemento térmico", def: "Mecanismo basado en una lámina bimetálica que protege contra sobrecargas (lento incremento de corriente) mediante su deformación progresiva por calor (efecto Joule)." },
-        { term: "Elemento magnético", def: "Mecanismo basado en una bobina (solenoide) que responde casi instantáneamente ante cortocircuitos al generar un fuerte campo magnético." },
-        { term: "Simbología IEC / ANSI", def: "Estándares y normas internacionales para representar gráficamente componentes eléctricos en esquemas de circuitos de manera universal." },
-        { term: "Zonas de operación", def: "Rangos específicos de corriente (no actuación, disparo retardado o disparo instantáneo) que determinan bajo qué condiciones el dispositivo abrirá el circuito." },
-        { term: "Curvas de disparo", def: "Relación gráfica entre la magnitud de la sobrecorriente y el tiempo de actuación, típicamente clasificadas en tipos (B, C, D) según la aplicación." },
-        { term: "Poder de corte (Breaking capacity)", def: "Corriente máxima de cortocircuito que un interruptor automático puede interrumpir de forma segura sin destruirse ni causar daños adicionales." },
-        { term: "Coordinación selectiva", def: "Implementación ajustada de protecciones en serie de modo que, ante una falla, opere únicamente el dispositivo más cercano al punto de falla." },
-        { term: "Procedimiento de Bloqueo y Etiquetado (LOTO)", def: "Práctica de seguridad esencial (Lock-out/Tag-out) para aislar la fuente de energía e inmovilizar el mecanismo antes de iniciar tareas de mantenimiento." }
+        { term: "Transmisión Eléctrica", def: "Etapa del suministro eléctrico que transporta la energía a largas distancias desde las plantas generadoras hasta las subestaciones o puntos de consumo masivo, utilizando altos niveles de tensión." },
+        { term: "Alta Tensión (AT)", def: "Niveles de voltaje elevados (generalmente entre 66 kV y 220 kV en Chile) utilizados para minimizar las pérdidas de energía (efecto Joule) durante el transporte a largas distancias." },
+        { term: "Extra Alta Tensión (EAT)", def: "Voltajes superiores a 220 kV (típicamente 500 kV) empleados en líneas troncales para la interconexión de grandes regiones." },
+        { term: "Subestación Eléctrica", def: "Instalación destinada a modificar y establecer los niveles de tensión de una infraestructura eléctrica, facilitando la transmisión y distribución." },
+        { term: "Transformador", def: "Máquina eléctrica estática que transfiere energía eléctrica de un circuito a otro, elevando o reduciendo el voltaje manteniendo la frecuencia." },
+        { term: "Sistema Interconectado Nacional (SEN)", def: "Infraestructura principal en Chile que concentra casi la totalidad de la generación y transmisión, extendiéndose desde Arica hasta Chiloé." },
+        { term: "Centro de Despacho Económico de Carga (CEN)", def: "Entidad independiente (Coordinador Eléctrico Nacional en Chile) encargada de coordinar la operación segura y al mínimo costo del sistema eléctrico." },
+        { term: "Pérdidas de Transmisión", def: "Porcentaje de energía que se disipa en forma de calor en los conductores durante su transporte, debido a la resistencia natural del material." }
     ];
 
     return (
@@ -118,7 +117,7 @@ const AE2View = ({ onBack }) => {
                     </button>
                     <div className="h-10 w-px bg-slate-200 dark:bg-slate-800" />
                     <div className="flex flex-col">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Módulo TEL302</span>
+                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Módulo TEL101</span>
                         <span className="text-sm font-black dark:text-white uppercase">AE2: Instalación y Mantenimiento</span>
                     </div>
                 </div>
@@ -146,177 +145,80 @@ const AE2View = ({ onBack }) => {
 
                         <div className="mb-12 border-l-8 border-[#D1202F] pl-8 py-2">
                             <h2 className="text-4xl font-black text-[#002855] dark:text-white uppercase tracking-tighter leading-tight">
-                                Protecciones Eléctricas: <br /> <span className="text-[#D1202F]">Instalación y Mantenimiento de Protector Termomagnético en Circuitos</span>
+                                Introducción a la Industria Eléctrica: <br /> <span className="text-[#D1202F]">Sistemas de Transmisión Eléctrica</span>
                             </h2>
                         </div>
 
                         <div className="p-8 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 lg:rounded-[3rem] rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 mb-10">
                             <SectionHeader title="Introducción" />
-                            <Paragraph>En el campo de las instalaciones eléctricas, la correcta protección de los circuitos resulta fundamental para salvaguardar la integridad de las personas, los equipos y la infraestructura. Uno de los dispositivos más empleados con estos fines es el protector termomagnético, también llamado interruptor automático termomagnético. Estos dispositivos interrumpen el paso de la corriente eléctrica cuando detectan una sobrecarga o un cortocircuito, limitando así los daños potenciales derivados de fallas eléctricas.</Paragraph>
-                            <Paragraph>En el presente texto de estudio se abordan, de manera exhaustiva y rigurosa, los conocimientos y competencias necesarias para la instalación y el mantenimiento de estos elementos de protección, considerando la simbología y la normativa de clasificación vigentes según las normas IEC (International Electrotechnical Commission) y ANSI (American National Standards Institute). El contenido aquí desarrollado corresponde a los requerimientos académicos y de evaluación que rigen la enseñanza técnica de las protecciones eléctricas, siguiendo la orientación global y la bibliografía recomendada.</Paragraph>
-                            <Paragraph>A continuación, se exploran detalladamente los conceptos, principios de funcionamiento, procedimientos de instalación y criterios normativos indispensables para asegurar una correcta protección eléctrica en sistemas de baja y media tensión.</Paragraph>
+                            <Paragraph>Una vez generada la energía eléctrica, debe ser transportada hacia los centros de consumo (ciudades, industrias, minería), que a menudo se encuentran a cientos o miles de kilómetros de las centrales generadoras. Esta tarea monumental es llevada a cabo por los Sistemas de Transmisión Eléctrica, verdaderas autopistas de energía que sostienen el desarrollo y la interconexión del país.</Paragraph>
+                            <Paragraph>La Unidad 2 de este módulo tiene como objetivo caracterizar estos sistemas a nivel nacional, analizando su infraestructura, el papel de las subestaciones y el rol fundamental de las entidades coordinadoras que gestionan la operación segura y económica del flujo eléctrico. Entender la transmisión es comprender cómo se integra el país energéticamente.</Paragraph>
                         </div>
 
-                        <ExpansionTile title="1. Simbología Según Normas IEC y ANSI" icon={BookOpen} defaultOpen={true}>
-                            <Paragraph>El conocimiento de la simbología normalizada permite una correcta interpretación de esquemas eléctricos, la selección apropiada de componentes y la comunicación efectiva entre técnicos de todo el mundo. Las normas internacionales IEC 60617 y las normas ANSI Y32.2/IEEE Std 315 definen los símbolos gráficos utilizados en diagramas de circuitos eléctricos y electrónicos.</Paragraph>
+                        <ExpansionTile title="I. Fundamentos de la Transmisión Eléctrica" icon={Zap} defaultOpen={true}>
+                            <SectionHeader title="1.1 ¿Por qué se transmite en Alta Tensión?" />
+                            <Paragraph>El principal desafío de transportar electricidad largas distancias es la pérdida de energía en forma de calor debido a la resistencia de los cables (Efecto Joule). Dado que las pérdidas son proporcionales al cuadrado de la corriente ($I^2R$), la estrategia técnica consiste en reducir la corriente al mínimo posible. Para transmitir la misma potencia ($P = V \times I$), si se reduce la corriente, se debe elevar proporcionalmente el voltaje.</Paragraph>
+                            <Paragraph>Por este motivo, a la salida de las centrales generadoras, grandes transformadores elevan la tensión a niveles de Alta Tensión (AT) o Extra Alta Tensión (EAT), generalmente a 110 kV, 220 kV o hasta 500 kV. Esta operación minimiza drásticamente las pérdidas, reduce el calibre (y el peso/costo) de los cables conductores necesarios y permite la viabilidad técnica y económica del transporte a larga distancia.</Paragraph>
 
-                            <SectionHeader title="1.1 Símbolos según la norma IEC" />
-                            <Paragraph>La IEC proporciona una colección estandarizada de símbolos para los dispositivos de protección. Por ejemplo:</Paragraph>
+                            <SectionHeader title="1.2 Componentes de un Sistema de Transmisión" />
                             <List items={[
-                                "Interruptor automático genérico: Consiste en una línea sinuosa o curva dentro de un rectángulo, representando la capacidad de apertura y cierre del circuito.",
-                                "Protector termomagnético: A menudo ilustrado como un interruptor automático con un círculo (representando la protección magnética) y una “barrida” adicional (representando el mecanismo térmico).",
-                                "Disyuntor de circuito: Un interruptor doble con líneas cortadas y símbolos anexos de disparo térmico y magnético.",
-                                "Fusible: Un rectángulo pequeño con una línea diagonal."
+                                "Lineas de Transmisión: Formadas por conductores (usualmente de aluminio con núcleo de acero), torres de soporte y aisladores.",
+                                "Subestaciones Elevadoras: Ubicadas junto a las centrales generadoras para subir el voltaje.",
+                                "Subestaciones Reductoras: Ubicadas cerca de los centros de consumo para bajar el voltaje a niveles de subtransmisión o distribución.",
+                                "Transformadores de Potencia: El corazón de las subestaciones, equipos estáticos que modifican los niveles de voltaje.",
+                                "Equipos de Maniobra y Protección: Interruptores de poder y desconectadores que permiten operar red y aislar fallas de manera segura."
                             ]} />
-                            <Paragraph>Estas representaciones han sido universalmente adoptadas para facilitar la comprensión mutua y el diseño seguro de instalaciones eléctricas, independientemente del idioma o país de origen del personal técnico.</Paragraph>
-
-                            <SectionHeader title="1.2 Símbolos según la norma ANSI" />
-                            <Paragraph>Por su parte, la ANSI, utilizada habitualmente en América del Norte, emplea representaciones similares con ligeras variantes gráficas. Por ejemplo:</Paragraph>
-                            <List items={[
-                                "Circuit Breaker (Interruptor Automático): Un par de líneas inclinadas en ángulo recto, conectadas entre dos barras horizontales, con la posible adición de una marca “T” para indicar protección térmica y “M” para magnética.",
-                                "Fusible: Un óvalo elongado en el trayecto del conductor."
-                            ]} />
-                            <Paragraph>La correcta interpretación de la simbología es esencial durante el diseño, instalación y mantenimiento, permitiendo reconocer visualmente la función de cada elemento de protección y su adecuación al circuito respectivo. Los fabricantes, además, suelen añadir simbología complementaria en sus catálogos, específica para sus productos.</Paragraph>
-
-                            <SectionHeader title="1.3 Importancia de la correspondencia entre simbología y aplicación" />
-                            <Paragraph>Una de las competencias clave evaluadas en la formación de técnicos en protecciones eléctricas es la capacidad de leer e interpretar correctamente estos símbolos, ya que errores en la identificación pueden dar lugar a aplicaciones deficientes o peligrosas, además de incumplimientos normativos.</Paragraph>
                         </ExpansionTile>
 
-                        <ExpansionTile title="2. Funcionamiento de un Elemento Térmico" icon={Thermometer}>
-                            <Paragraph>El protector termomagnético combina dos mecanismos fundamentales: uno térmico y otro magnético. El elemento térmico está destinado principalmente a la protección contra sobrecargas, mientras que el magnético se encarga de proteger contra cortocircuitos.</Paragraph>
+                        <ExpansionTile title="II. El Sistema Interconectado Nacional (SEN)" icon={Activity}>
+                            <SectionHeader title="2.1 Qué es el SEN" />
+                            <Paragraph>En Chile, el Sistema Interconectado Nacional (SEN) es la red eléctrica principal que provee de energía a la gran mayoría de la población y la industria del país. Abarca geográficamente desde la región de Arica y Parinacota por el norte, hasta la isla de Chiloé en la región de Los Lagos por el sur, cubriendo más de 3.100 kilómetros de extensión.</Paragraph>
 
-                            <SectionHeader title="2.1 Principio de funcionamiento térmico" />
-                            <Paragraph>El componente térmico de un interruptor automático termomagnético generalmente está basado en una lámina bimetálica. Esta lámina está formada por dos metales con diferente coeficiente de dilatación térmica, unidos firmemente. Ante el paso de la corriente eléctrica, la resistencia natural de la lámina genera calor (efecto Joule). Cuando el flujo de corriente excede el valor nominal durante un intervalo prolongado, la temperatura de la lámina aumenta, ocasionando su deformación.</Paragraph>
-                            <Paragraph>Esta deformación es aprovechada para accionar un mecanismo de disparo que abre el circuito, impidiendo que la sobrecorriente dañe los conductores o los receptores conectados a la instalación eléctrica. La característica principal de esta protección es su respuesta lenta: el disparo es retardado para permitir sobrecargas temporales (como picos de arranque de motores), discriminando sobrecargas permanentes de condiciones transitorias normales.</Paragraph>
+                            <SectionHeader title="2.2 Origen y Evolución" />
+                            <Paragraph>Históricamente, Chile contaba con dos grandes redes separadas: el Sistema Interconectado del Norte Grande (SING), caracterizado por basarse principalmente en generación termoeléctrica para consumo minero, y el Sistema Interconectado Central (SIC), con mayor participación hidroeléctrica y consumo residencial/comercial. En el año 2017 se concretó la histórica interconexión de ambos sistemas, conformando el actual SEN, unificando el mercado eléctrico nacional, aumentando la seguridad del suministro y permitiendo, por ejemplo, que la energía solar abundante del norte fluya hacia los centros de mayor demanda en el centro y sur del país.</Paragraph>
 
-                            <SectionHeader title="2.2 Curvas de actuación térmica" />
-                            <Paragraph>La relación entre la cantidad de sobrecorriente y el tiempo de disparo se describe mediante "curvas de disparo", que definen cuánto tarda la protección en actuar en función del exceso de corriente. De acuerdo con Técnicas de aplicación de fusibles (Martínez, 1998), estas curvas permiten seleccionar adecuadamente el dispositivo, asegurando protección efectiva ante distintos escenarios de sobrecarga.</Paragraph>
-
-                            <SectionHeader title="2.3 Valoración de la protección térmica" />
-                            <Paragraph>La calidad de un protector térmico se evalúa por:</Paragraph>
-                            <List items={[
-                                "La exactitud de su disparo en función de los valores especificados.",
-                                "La resistencia mecánica a deformaciones que puedan alterar su graduación.",
-                                "La adecuación de la curva de disparo a la aplicación concreta."
-                            ]} />
-                            <Paragraph>El conocimiento de las características térmicas es fundamental durante la selección, que debe basarse en el tipo de carga (iluminación, motores, electrónica sensible, etc.) y el perfil operativo de la instalación.</Paragraph>
+                            <SectionHeader title="2.3 Sistemas Aislados" />
+                            <Paragraph>Además del SEN, existen sistemas medianos y aislados (como el de Aysén, Magallanes y Rapa Nui), que operan de forma independiente dada la complejidad geográfica que impide su interconexión rentable con el sistema principal.</Paragraph>
                         </ExpansionTile>
 
-                        <ExpansionTile title="3. Zonas de Operación contra Sobrecargas" icon={Activity}>
-                            <Paragraph>Los dispositivos de protección no actúan de manera instantánea ante toda clase de sobrecorriente; en cambio, su respuesta varía dependiendo de la magnitud de la sobrecarga. Esta exigencia técnica permite soportar transitorios breves y habituales (como arranque de motores) sin desconectar el circuito, pero sí hacerlo en situaciones anómalas persistentes.</Paragraph>
+                        <ExpansionTile title="III. Gestión y Coordinación del Sistema" icon={Settings}>
+                            <SectionHeader title="3.1 Operación a Tiempo Real" />
+                            <Paragraph>La electricidad, a nivel de red, no se puede almacenar en grandes cantidades de forma tradicional; debe generarse en el mismo instante y en la misma proporción en que se consume. Si la demanda sube, la generación debe subir inmediatamente. Si esta balanza se desequilibra, el sistema colapsa (apagón o blackout).</Paragraph>
 
-                            <SectionHeader title="3.1 Definición de zonas de operación" />
-                            <Paragraph>La norma IEC 60947-2 y la ANSI C37.16 describen las siguientes zonas características de respuesta para interruptores automáticos termomagnéticos:</Paragraph>
+                            <SectionHeader title="3.2 El Coordinador Eléctrico Nacional (CEN)" />
+                            <Paragraph>Debido a esta criticidad técnica y al hecho de que existen múltiples empresas generadoras y transmisoras privadas, se requiere una entidad neutral y central que ordene y coordine el funcionamiento de todos. En Chile, esa entidad es el Coordinador Eléctrico Nacional (CEN).</Paragraph>
+                            <Paragraph>Las responsabilidades del Coordinador incluyen:</Paragraph>
                             <List items={[
-                                "Zona de no actuación: Intervalo de corrientes por debajo del umbral nominal del dispositivo; no se produce disparo, permitiendo el funcionamiento normal.",
-                                "Zona de disparo retardado o térmico: Situación de sobrecorriente moderada (por encima del valor nominal, pero dentro del rango de tolerancia previsto). El disparo ocurre pasada una cierta cantidad de tiempo, dependiendo de la magnitud del exceso. Es la zona donde la lámina bimetálica actúa.",
-                                "Zona de disparo instantáneo o magnético: Para sobrecorrientes bruscas (típicamente provocadas por cortocircuitos), el mecanismo magnético actúa de manera casi instantánea (en milisegundos), minimizando riesgos mayores."
+                                "Operación Segura: Mantener la estabilidad de voltaje y frecuencia en todo momento.",
+                                "Despacho Económico: Decidir qué centrales generan energía en cada instante, priorizando siempre en estricto orden económico (enlistando desde la tecnología de menor costo operativo hasta la más cara) para asegurar el precio mínimo para el sistema.",
+                                "Acceso Abierto: Garantizar que todas las empresas tengan acceso justo a las redes de transmisión, fomentando la libre competencia."
                             ]} />
-
-                            <SectionHeader title="3.2 Ejemplo de aplicación de zonas de operación" />
-                            <Paragraph>Por ejemplo, un interruptor termomagnético de 16A puede tener la siguiente configuración, según las curvas típicas de fabricante (rechazando posibles particularidades):</Paragraph>
-                            <List items={[
-                                "Corriente ≤ 16A: Sin disparo.",
-                                "Corriente entre 16A y 32A: Disparo térmico, que puede tardar varios segundos o minutos.",
-                                "Corriente ≥ 80A: Disparo magnético instantáneo (en cuestión de milisegundos)."
-                            ]} />
-                            <HighlightBox title="Importante">
-                                <p>La adecuada comprensión de estas zonas es básica para seleccionar e instalar dispositivos que ofrezcan protección eficaz sin molestias operativas innecesarias.</p>
-                            </HighlightBox>
-
-                            <SectionHeader title="3.3 Ajuste y coordinación selectiva" />
-                            <Paragraph>En instalaciones complejas, puede ser necesario ajustar los tiempos y corrientes de disparo para lograr coordinación selectiva entre los diferentes dispositivos de protección (fusibles aguas arriba, interruptores de columna, etc.), de modo que solo el elemento más cercano al fallo actúe, tal como detallan Martínez (1998) y Mendoza Romero (1998).</Paragraph>
                         </ExpansionTile>
 
-                        <ExpansionTile title="4. Funcionamiento de un Elemento Magnético" icon={Zap}>
-                            <Paragraph>El dispositivo magnético de un protector termomagnético existe para proteger específicamente ante condiciones de cortocircuito, donde la corriente alcanza valores muy superiores a los admisibles en cuestión de milisegundos.</Paragraph>
+                        <ExpansionTile title="IV. Normativa de Seguridad y Mantenimiento" icon={ShieldCheck}>
+                            <Paragraph>El mantenimiento de líneas de transmisión y subestaciones es una tarea de alto riesgo que requiere estrictos protocolos de seguridad y personal altamente calificado.</Paragraph>
 
-                            <SectionHeader title="4.1 Principio de funcionamiento magnético" />
-                            <Paragraph>Se basa en el uso de una bobina (solenoide) atravesada por el mismo flujo de corriente que alimenta la carga. Bajo condiciones normales y ligeramente superiores, el campo magnético generado es insuficiente para mover el mecanismo de disparo. Sin embargo, ante un cortocircuito (corriente de alta intensidad), el campo magnético se incrementa drásticamente, generando una fuerza que provoca la liberación de un disparador que abre, de forma casi instantánea, el circuito.</Paragraph>
-                            <Paragraph>Esta intervención rápida es vital para evitar daños gravísimos en el cableado, transformadores, dispositivos conectados y, fundamentalmente, para reducir el riesgo de incendio o electrocución.</Paragraph>
+                            <SectionHeader title="4.1 Trabajos en Altura y Alta Tensión" />
+                            <Paragraph>Las labores de mantenimiento en torres de alta tensión involucran riesgos combinados: trabajo en altura geográfica (a menudo en condiciones climáticas adversas) y exposición a campos electromagnéticos e inducciones peligrosas, incluso cuando la línea principal está desenergizada. Por ello, el uso de Equipos de Protección Personal (EPP) específicos, arneses de seguridad, líneas de vida y pértigas aisladas es estrictamente obligatorio.</Paragraph>
 
-                            <SectionHeader title="4.2 Curvas de disparo magnético" />
-                            <Paragraph>Así como ocurre con el módulo térmico, el módulo magnético se calibra de fábrica para actuar sobre un rango específico. La norma IEC distingue varias curvas (B, C, D, K, Z), cada una idónea para distintas aplicaciones:</Paragraph>
-                            <List items={[
-                                "Curva B: Disparo magnético entre 3 y 5 veces la corriente nominal. Indicada para cargas generales de baja inrush (como iluminación).",
-                                "Curva C: Disparo magnético entre 5 y 10 veces la corriente nominal. Adecuada para motores y circuitos con picos moderados de arranque.",
-                                "Curva D: Disparo magnético entre 10 y 20 veces la corriente nominal. Para cargas con altos picos de arranque, como transformadores o motores grandes."
-                            ]} />
-                            <Paragraph>La selección de la curva adecuada es imprescindible para evitar disparos intempestivos y proteger la instalación eficazmente.</Paragraph>
+                            <SectionHeader title="4.2 Procedimientos de Bloqueo" />
+                            <Paragraph>Cualquier intervención directa sobre los equipos requiere la aplicación rigurosa de los procedimientos de bloqueo y etiquetado (LOTO). Se debe garantizar, mediante el uso de candados físicos y comprobación de ausencia de tensión, que ninguna maniobra remota o accidental pueda reenergizar la sección donde se encuentran los técnicos.</Paragraph>
 
-                            <SectionHeader title="4.3 Diagnóstico de la protección magnética" />
-                            <Paragraph>Durante el mantenimiento o instalación, una de las tareas clave consiste en comprobar que nada haya obstruido o deteriorado el mecanismo magnético (presencia de partículas metálicas, suciedad o desmagnetización), para evitar fallos peligrosos ante cortocircuitos.</Paragraph>
-                        </ExpansionTile>
-
-                        <ExpansionTile title="5. Instalación de un Elemento Magnético" icon={Wrench}>
-                            <Paragraph>El montaje efectivo del protector termomagnético —en la práctica, un interruptor automático con protección térmica y magnética— debe realizarse siguiendo tanto las instrucciones de los fabricantes como los requisitos de la normativa vigente. A continuación, se detallan los pasos y consideraciones fundamentales.</Paragraph>
-
-                            <SectionHeader title="5.1 Selección adecuada del dispositivo" />
-                            <Paragraph>Se debe elegir el modelo de interruptor teniendo en cuenta:</Paragraph>
-                            <List items={[
-                                "La corriente nominal del circuito.",
-                                "La curva de disparo (B, C, D, etc.), en función de la naturaleza de las cargas.",
-                                "El poder de corte (breaking capacity), que corresponde a la máxima corriente que puede interrumpir sin sufrir daños.",
-                                "El nivel de aislamiento requerido y la compatibilidad con el cuadro eléctrico."
-                            ]} />
-
-                            <SectionHeader title="5.2 Procedimiento de instalación paso a paso" />
-                            <List items={[
-                                "Desconexión y bloqueo de la alimentación: Siempre se debe activar el procedimiento de bloqueo y etiquetado (lock-out/tag-out) para evitar riesgos eléctricos durante la intervención.",
-                                "Identificación de circuitos: Se verifica que el interruptor seleccionado corresponda al circuito que se desea proteger y que la carga no exceda las características técnicas del dispositivo.",
-                                "Fijación mecánica: Se inserta el interruptor termomagnético en el rail DIN del cuadro eléctrico asegurándose de que no queden holguras.",
-                                "Conexión eléctrica: Se conectan los conductores de entrada (alimentación) y salida (carga) en los terminales apropiados del dispositivo. No se deben invertir las conexiones, salvo excepción expresada por el fabricante.",
-                                "Ajuste: En caso de dispositivos ajustables, se realiza la regulación de los valores de disparo térmico y magnético, siguiendo las recomendaciones técnicas para la sensibilidad deseada.",
-                                "Verificación y pruebas: Se comprueba la fijación, el aislamiento, la correcta sujeción de los cables y se procede a realizar las pruebas funcionales (manuales, con simulación de corrientes si corresponde) asegurando el correcto disparo y reenganche.",
-                                "Etiquetado y actualización de diagramas: Se registra la intervención con las referencias normalizadas en los esquemas unifilares y cuadros de distribución.",
-                                "Reposición de la alimentación: Se retiran los bloqueos, verificando la funcionalidad final de la protección y de la instalación a resguardo."
-                            ]} />
-
-                            <SectionHeader title="5.3 Precauciones y buenas prácticas" />
-                            <List items={[
-                                "No conectar varios conductores en un mismo borne, salvo que el fabricante lo permita.",
-                                "No utilizar interruptores automáticos sobredimensionados en extremo: debe proteger adecuadamente los conductores y las cargas, no solo evitar disparos molestos.",
-                                "Respetar las distancias de aislamiento y accesibilidad indicadas en la normativa y ficha técnica.",
-                                "Emplear herramientas aisladas y equipos de protección individual homologados.",
-                                "Mantener actualizado el registro de intervenciones y una documentación adecuada para facilitar el mantenimiento futuro."
-                            ]} />
-                            <HighlightBox type="warning">
-                                <p>De acuerdo con Martínez (1998), y Mendoza Romero (1998), una instalación deficiente puede comprometer la seguridad del sistema, por lo que es primordial respetar todos los pasos y precauciones indicados.</p>
-                            </HighlightBox>
-                        </ExpansionTile>
-
-                        <ExpansionTile title="6. Normativa de Seguridad Vigente" icon={ShieldCheck}>
-                            <Paragraph>La instalación y el mantenimiento de sistemas de protección eléctrica deben regirse por las normas técnicas internacionales y la legislación local vigente, que fija las condiciones mínimas de seguridad.</Paragraph>
-
-                            <SectionHeader title="6.1 Principales normativas relevantes" />
-                            <List items={[
-                                "IEC (International Electrotechnical Commission): Normas internacionales como la IEC 60947-2 para interruptores automáticos de baja tensión o la IEC 60898 para interruptores automáticos usados en circuitos domésticos y similares. Definen los requisitos de diseño, funcionamiento y comprobación de estos dispositivos.",
-                                "ANSI (American National Standards Institute): Normas como la ANSI C37 (Power Circuit Breakers) y ANSI C33 (Fuses and Switches), utilizadas en muchos países de América y por fabricantes internacionales.",
-                                "Normativa de seguridad eléctrica nacional o regional: En cada país existen códigos eléctricos específicos (por ejemplo, el NEC en Estados Unidos, el REBT en España, la NOM-001-SEDE en México, etc.) que deben ser consultados y respetados al diseñar y montar instalaciones eléctricas.",
-                                "Reglas de seguridad laboral: Reglamentos sobre trabajos en tensión, uso de equipos de protección individual, señalización y procedimientos de emergencia."
-                            ]} />
-
-                            <SectionHeader title="6.2 Principios fundamentales de seguridad" />
-                            <List items={[
-                                "Realizar siempre trabajos en ausencia de tensión, utilizando procedimientos de bloqueo y señalización apropiados.",
-                                "Verificar la ausencia de tensión con instrumentos certificados antes de manipular cualquier componente.",
-                                "Utilizar herramientas y equipos de protección personal certificados para trabajos eléctricos.",
-                                "No dejar bornes activos accesibles, asegurando la señalización idónea y las distancias mínimas de seguridad.",
-                                "Garantizar la correcta identificación de los elementos de protección mediante etiquetas normalizadas, evitando ambigüedades durante actuaciones de mantenimiento."
-                            ]} />
-
-                            <SectionHeader title="6.3 Documentación, registros y formación continuada" />
-                            <Paragraph>Debe mantenerse correctamente documentado todo el proceso de selección, instalación y mantenimiento de equipos de protección. Además, se exige una formación y reciclaje permanente de los operarios y responsables, a fin de estar al día con las novedades técnicas y normativas.</Paragraph>
+                            <SectionHeader title="4.3 Mantenimiento Predictivo" />
+                            <Paragraph>Dado el costo altísimo de desconectar una línea troncal de transmisión, la industria privilegia el mantenimiento predictivo y preventivo sin interrumpir el servicio. Esto incluye el uso de drones para inspección visual de aisladores, cámaras termográficas para detectar puntos calientes (falsos contactos) y análisis de aceite en transformadores para diagnosticar fallas incipientes.</Paragraph>
                         </ExpansionTile>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
                                 <Quote size={120} />
                             </div>
-                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">7. Conclusiones</h3>
-                            <Paragraph className="text-slate-700 dark:text-slate-200">El conjunto de contenidos expuestos en este texto proporciona los cimientos teóricos y prácticos para el trabajo seguro y conforme a las normas internacionales en la instalación y mantenimiento de protectores termomagnéticos en circuitos eléctricos. La selección adecuada de estos dispositivos, su correcta interpretación simbólica y su montaje acorde a los estándares IEC, ANSI y la normativa legal vigente, resultan clave para la protección eficiente de personas e infraestructuras eléctricas.</Paragraph>
-                            <Paragraph className="text-slate-700 dark:text-slate-200">Una sólida formación en las características funcionales, los parámetros operativos (térmicos y magnéticos), las diferentes zonas de actuación ante sobrecorriente, el dominio de la simbología internacional y el seguimiento riguroso de los procedimientos técnicos más las medidas de seguridad, son las competencias evaluadas y requeridas para los profesionales del campo, utilizando como base los aportes bibliográficos de Tomás Pascual Martínez y Agapito Mendoza Romero.</Paragraph>
-                            <Paragraph className="text-slate-700 dark:text-slate-200">La protección eléctrica no solo es un requisito legal y técnico, sino un principio fundamental para la preservación de la vida y el desarrollo industrial seguro en todo el mundo.</Paragraph>
+                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">V. Conclusiones</h3>
+                            <Paragraph className="text-slate-700 dark:text-slate-200">
+                                Los sistemas de transmisión son la columna vertebral energética de cualquier país moderno. En Chile, la robustez y extensa cobertura del Sistema Interconectado Nacional (SEN) aseguran que la energía generada —cada vez más proveniente de fuentes renovables en los extremos del país— pueda fluir confiablemente hacia los centros industriales y urbanos.
+                            </Paragraph>
+                            <Paragraph className="text-slate-700 dark:text-slate-200">
+                                Comprender la necesidad de elevar el voltaje para reducir las corrientes y minimizar pérdidas, identificar los roles de las subestaciones y entender la función crítica de coordinación económica y técnica que lleva a cabo el CEN, proporciona una visión integral de cómo interactúan las fuerzas del mercado, la física de la electricidad y la necesidad pública de un suministro ininterrumpido. Para el técnico e ingeniero eléctrico moderno, conocer esta red a gran escala es tan fundamental como dominar el circuito local.
+                            </Paragraph>
                         </div>
                     </div>
 
@@ -326,16 +228,12 @@ const AE2View = ({ onBack }) => {
                                 <h4 className="font-black text-xs uppercase tracking-widest mb-4 text-[#002855] dark:text-blue-400">Bibliografía Recomendada</h4>
                                 <div className="space-y-4">
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Técnicas de Aplicación de Fusibles</strong>
-                                        <span className="text-slate-500 italic">Tomás Pascual Martínez, 1998 <br /> (Instituto Politécnico Nacional)</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Coordinador Eléctrico Nacional (CEN)</strong>
+                                        <span className="text-slate-500 italic">Documentos Oficiales y Estadísticas, 2023.</span>
                                     </div>
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Protección por Relevadores a Sistemas de Potencia</strong>
-                                        <span className="text-slate-500 italic">Agapito Mendoza Romero, 1998 <br /> (Instituto Politécnico Nacional)</span>
-                                    </div>
-                                    <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Normas IEC / ANSI</strong>
-                                        <span className="text-slate-500 italic">IEC 60947-2, IEC 60898 <br /> ANSI C37, ANSI C33</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Ministerio de Energía - Chile</strong>
+                                        <span className="text-slate-500 italic">Reportes sobre el Sistema Interconectado Nacional (SEN).</span>
                                     </div>
                                 </div>
                             </div>

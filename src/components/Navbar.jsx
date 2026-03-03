@@ -16,10 +16,10 @@ const Navbar = ({ isDarkMode, toggleDarkMode, onNavigate }) => {
                     </div>
                     <div>
                         <p className="text-2xl font-black uppercase leading-none tracking-tighter dark:text-white">
-                            Protecciones <span className="text-[#D1202F]">Eléctricas</span>
+                            Industria <span className="text-[#D1202F]">Eléctrica</span>
                         </p>
                         <div className="flex items-center gap-3 mt-1.5 opacity-60">
-                            <p className="text-[10px] font-black tracking-[0.3em] uppercase dark:text-slate-300">TEL302</p>
+                            <p className="text-[10px] font-black tracking-[0.3em] uppercase dark:text-slate-300">TEL101</p>
                             <div className="h-1 w-1 bg-slate-300 rounded-full" />
                             <p className="text-[10px] font-bold uppercase tracking-widest dark:text-slate-400 text-slate-500">Ingeniería Eléctrica</p>
                         </div>

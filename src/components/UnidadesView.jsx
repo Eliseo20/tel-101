@@ -46,12 +46,9 @@ const UnidadesView = ({ moduleData }) => {
                         <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl leading-tight">{ae.titulo}</h3>
                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-8 h-20 overflow-hidden leading-relaxed">{ae.descripcion}</p>
                         <Button variant="outline" className="w-full text-xs uppercase" onClick={() => {
-                            if (ae.id === 1) navigate('/ae1');
-                            else if (ae.id === 2) navigate('/ae2');
-                            else if (ae.id === 3) navigate('/ae3');
-                            else if (ae.id === 4) navigate('/ae4');
+                            if (ae.id >= 1 && ae.id <= 3) navigate(`/ae${ae.id}`);
                         }}>
-                            {ae.id >= 1 && ae.id <= 4 ? 'Ver Materia' : 'En Desarrollo'}
+                            {ae.id >= 1 && ae.id <= 3 ? 'Ver Materia' : 'En Desarrollo'}
                         </Button>
                     </Card>
                 ))}

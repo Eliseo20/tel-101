@@ -94,14 +94,14 @@ const AE3View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
 
     const glossaryAE3 = [
-        { term: "Interruptor diferencial (RCD/GFCI)", def: "Dispositivo de corriente residual que desconecta automáticamente la alimentación al detectar una diferencia de corriente entre los conductores activos, indicando una fuga a tierra." },
-        { term: "Contacto directo", def: "Contacto de una persona con partes activas de una instalación eléctrica que normalmente están bajo tensión (ej. cables pelados)." },
-        { term: "Contacto indirecto", def: "Contacto de una persona con masas o partes metálicas que normalmente no tienen voltaje, pero que están energizadas debido a un fallo de aislamiento." },
-        { term: "Sensibilidad", def: "Valor de corriente diferencial a partir de la cual actúa el dispositivo (generalmente 30 mA para protección humana, y 100 o 300 mA para bienes/incendios)." },
-        { term: "Transformador toroidal", def: "Sensor componente del interruptor diferencial encargado de detectar la diferencia de corriente o desbalance entre las fases y el neutro." },
-        { term: "RCD Tipo AC", def: "Interruptor diferencial diseñado para detectar exclusivamente corrientes residuales alternas sinusoidales." },
-        { term: "RCD Tipo B", def: "Interruptor diferencial avanzado capaz de detectar corrientes alternas, pulsantes, de alta frecuencia y corriente continua suave, usado en industria y carga de vehículos eléctricos." },
-        { term: "Fibrilación ventricular", def: "Arritmia cardiaca grave potencialmente letal que puede producirse en el cuerpo humano al estar expuesto a corrientes eléctricas desde los 30 mA." }
+        { term: "Técnico Eléctrico", def: "Profesional capacitado para ejecutar labores de instalación, mantenimiento, operación y reparación de sistemas eléctricos, cumpliendo con la normativa vigente y garantizando la seguridad de bienes y personas." },
+        { term: "Prevención de Riesgos", def: "Conjunto de actividades y medidas adoptadas o previstas en todas las fases de actividad de la empresa con el fin de evitar o disminuir los riesgos derivados del trabajo." },
+        { term: "SEC (Superintendencia de Electricidad y Combustibles)", def: "Organismo público en Chile encargado de fiscalizar que la generación, transporte y distribución de energía eléctrica se ajusten a las leyes y reglamentos vigentes." },
+        { term: "Licencia de Instalador SEC", def: "Acreditación oficial que certifica las competencias de un profesional para ejecutar instalaciones eléctricas de acuerdo a las diferentes clasificaciones (Clase A, B, C o D)." },
+        { term: "EPP (Elementos de Protección Personal)", def: "Equipos, piezas o dispositivos que evitan que una persona tenga contacto directo con los peligros de ambientes riesgosos, los cuales pueden generar lesiones y enfermedades." },
+        { term: "Normativa RIC", def: "Pliegos Técnicos Normativos (Reglamentos de Instalación de Consumo) que establecen las exigencias de seguridad para las instalaciones de consumo de energía eléctrica en Chile." },
+        { term: "Reglas de Oro de la Electricidad", def: "Conjunto de 5 pasos estandarizados mundialmente para trabajar en instalaciones eléctricas sin tensión, garantizando que el circuito está desenergizado y bloqueado." },
+        { term: "LOTO (Lockout/Tagout)", def: "Procedimiento de seguridad vital que consiste en bloquear y etiquetar físicamente las fuentes de energía de los equipos antes de realizarles mantenimiento." }
     ];
 
     return (
@@ -117,7 +117,7 @@ const AE3View = ({ onBack }) => {
                     </button>
                     <div className="h-10 w-px bg-slate-200 dark:bg-slate-800" />
                     <div className="flex flex-col">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Módulo TEL302</span>
+                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Módulo TEL101</span>
                         <span className="text-sm font-black dark:text-white uppercase">AE3: Instalación y Mantenimiento</span>
                     </div>
                 </div>
@@ -145,189 +145,85 @@ const AE3View = ({ onBack }) => {
 
                         <div className="mb-12 border-l-8 border-[#D1202F] pl-8 py-2">
                             <h2 className="text-4xl font-black text-[#002855] dark:text-white uppercase tracking-tighter leading-tight">
-                                Protecciones Eléctricas: <br /> <span className="text-[#D1202F]">Instalación y Mantenimiento de Elementos de Protección: Protector Diferencial</span>
+                                Introducción a la Industria Eléctrica: <br /> <span className="text-[#D1202F]">Rol del Técnico, Normativa y Seguridad</span>
                             </h2>
                         </div>
 
                         <div className="p-8 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 lg:rounded-[3rem] rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 mb-10">
                             <SectionHeader title="Introducción" />
-                            <Paragraph>En el campo de las instalaciones eléctricas, la seguridad juega un papel fundamental, tanto para la integridad de las personas como para la protección de los bienes materiales. Dentro de los múltiples dispositivos de protección utilizados en los circuitos eléctricos, los protectores diferenciales se destacan por su capacidad para prevenir accidentes derivados del contacto directo e indirecto con la electricidad, así como por su contribución a la reducción del riesgo de incendios eléctricos. La correcta selección, instalación y mantenimiento de estos elementos depende tanto del dominio teórico como del manejo de la simbología y la normativa internacional, tales como IEC (International Electrotechnical Commission) y ANSI (American National Standards Institute).</Paragraph>
-                            <Paragraph>Este texto de estudio tiene por objetivo desarrollar de manera exhaustiva y académica todos los contenidos necesarios para que los futuros profesionales eléctricos sean capaces de realizar la instalación de protectores diferenciales en circuitos eléctricos, considerando la simbología, los componentes, el funcionamiento y la normativa vigente. Asimismo, se cubren los criterios de evaluación, promoviendo una comprensión profunda de los conceptos fundamentales apoyados en la bibliografía esencial representada especialmente por las obras de Pascual Martínez, Tomás y Mendoza Romero, Agapito.</Paragraph>
+                            <Paragraph>La industria eléctrica es uno de los motores fundamentales del desarrollo moderno, pero su manipulación conlleva riesgos inherentes que pueden ser fatales. Por esta razón, el rol del técnico eléctrico trasciende la simple ejecución de tareas manuales; implica una responsabilidad profunda y ética con la seguridad personal, la de su equipo y la de la comunidad.</Paragraph>
+                            <Paragraph>En esta sección de la Unidad 1, exploraremos el alcance profesional del técnico en la industria, el marco legal y normativo que rige sus acciones (particularmente a través de la SEC), y los principios inquebrantables de la prevención de riesgos, incluyendo el uso de Elementos de Protección Personal (EPP) y las vitales "5 Reglas de Oro" para trabajos sin tensión.</Paragraph>
                         </div>
 
-                        <ExpansionTile title="1. Simbología según norma IEC y ANSI" icon={BookOpen} defaultOpen={true}>
-                            <SectionHeader title="1.1 Importancia de la simbología eléctrica" />
-                            <Paragraph>La normalización de símbolos eléctricos es fundamental en la interpretación y elaboración de diagramas eléctricos ya que permite una comunicación clara y universal entre los distintos actores de la ingeniería eléctrica. La correcta identificación de elementos mediante simbología estandarizada es esencial tanto para el diseño, instalación, operación y mantenimiento de los sistemas eléctricos como para la seguridad de los mismos.</Paragraph>
-
-                            <SectionHeader title="1.2 Simbología IEC" />
-                            <Paragraph>La Comisión Electrotécnica Internacional (IEC), en su norma IEC 60617, proporciona la base sobre la cual se construye la simbología para esquemas eléctricos utilizada a nivel mundial fuera de Estados Unidos. Algunos de los símbolos relevantes para los dispositivos de protección diferencial son los siguientes:</Paragraph>
+                        <ExpansionTile title="I. El Rol del Técnico Eléctrico" icon={UserX} defaultOpen={true}>
+                            <SectionHeader title="1.1 Competencias y Responsabilidades" />
+                            <Paragraph>El técnico eléctrico es el especialista capacitado para diseñar (en ciertos niveles), instalar, operar, mantener y reparar sistemas e infraestructuras eléctricas. Su campo de acción abarca desde instalaciones domiciliarias y comerciales, hasta el mantenimiento en plantas generadoras y subestaciones de transmisión.</Paragraph>
+                            <Paragraph>Más allá de la destreza técnica, sus responsabilidades principales incluyen:</Paragraph>
                             <List items={[
-                                "Interruptor: Un trazo plano con una separación al centro, a veces con un mecanismo simbólico adicional para detallar su tipo.",
-                                "Interruptor automático: Suele representarse por dos líneas paralelas cortadas por una línea perpendicular (que indica el componente móvil).",
-                                "Interruptor diferencial (RCD, Residual Current Device): Se representa generalmente como un interruptor con una bobina o círculo inscrito a su lado. La bobina simboliza el sensor diferencial de corriente.",
-                                "Tierra: Representada por una línea vertical breve con varias líneas horizontales decrecientes debajo.",
-                                "Neutro: Línea con una letra “N” o un trazo y un símbolo de tierra (según el país y la aplicación)."
-                            ]} />
-                            <Paragraph>Según las recomendaciones del IEC, esta simbología debe ser utilizada de manera consistente en los esquemas eléctricos con el fin de evitar interpretaciones erróneas que podrían comprometer la seguridad del sistema y de los usuarios.</Paragraph>
-
-                            <SectionHeader title="1.3 Simbología ANSI" />
-                            <Paragraph>ANSI desarrolla estándares ampliamente utilizados en América del Norte y algunos otros países. Para dispositivos de protección diferencial y otros elementos eléctricos se utiliza simbología ligeramente diferente:</Paragraph>
-                            <List items={[
-                                "Interruptor: Representado frecuentemente como un punto de contacto abierto o cerrado, o un trazo en ángulo.",
-                                "Interruptor diferencial (GFCI, Ground Fault Circuit Interrupter): Suele representarse con un rectángulo dentro del cual se especifica el número de contactos, acompañando a veces de las letras “GFCI” o “RCD”.",
-                                "Tierra: Línea recta descendentemente vertical con tres líneas horizontales decrecientes.",
-                                "Neutro: Una línea diagonal atravesando un círculo, con una N cerca."
+                                "Cumplimiento Normativo: Ejecutar cada trabajo bajo los estrictos estándares de los reglamentos vigentes (como los Pliegos RIC en Chile).",
+                                "Diagnóstico y Resolución: Identificar fallas en sistemas complejos y proponer soluciones eficientes y seguras.",
+                                "Liderazgo en Seguridad: Ser el primer supervisor de su propia seguridad y la de su entorno, deteniendo cualquier faena que no cumpla con los estándares mínimos."
                             ]} />
 
-                            <SectionHeader title="1.4 Uso práctico de la simbología en proyectos reales" />
-                            <Paragraph>Tanto la IEC como la ANSI buscan garantizar que la información transmitida mediante planos eléctricos sea precisa y no ambigua. Por ejemplo, en proyectos donde se deben instalar interruptores diferenciales, los diagramas eléctricos deben identificar claramente la función diferencial, el tipo de interruptor, su localización en la red, la posición de los bornes de línea/carga y tierra, y cualquier accesorio relevante. El desconocimiento o mal uso de los símbolos puede llevar a conexiones erróneas y riesgosa operación.</Paragraph>
+                            <SectionHeader title="1.2 La Certificación SEC" />
+                            <Paragraph>En Chile, para ejercer legalmente como instalador eléctrico de manera independiente o certificar obras ante las distribuidoras, el técnico o ingeniero debe contar con una Licencia de Instalador Eléctrico, otorgada por la Superintendencia de Electricidad y Combustibles (SEC).</Paragraph>
+                            <Paragraph>Las licencias se dividen en clases (A, B, C, D) dependiendo del nivel de estudios (Ingeniería Civil, Ejecución, Técnico nivel superior, Técnico nivel medio) y limitan la cantidad de potencia (kilowatts) instalada y el nivel de tensión (Alta o Baja Tensión) que el profesional está autorizado a firmar y certificar.</Paragraph>
                         </ExpansionTile>
 
-                        <ExpansionTile title="2. Contactos Directos e Indirectos" icon={UserX}>
-                            <SectionHeader title="2.1 Definición de contacto directo" />
-                            <Paragraph>El contacto directo ocurre cuando una persona entra en contacto con partes activas de una instalación eléctrica, es decir, con conductores o componentes energizados que, en condiciones normales de operación, están destinados a estar bajo tensión. Este tipo de contacto constituye uno de los mayores peligros en instalaciones eléctricas, pudiendo causar lesiones graves o fatales.</Paragraph>
+                        <ExpansionTile title="II. Marco Normativo y Regulador" icon={BookOpen}>
+                            <SectionHeader title="2.1 La Superintendencia de Electricidad y Combustibles (SEC)" />
+                            <Paragraph>La SEC es la institución pública del Estado de Chile responsable de vigilar que las personas cuenten con productos y servicios seguros y de calidad en los sistemas de electricidad y combustibles. Su rol fiscalizador es fundamental para prevenir accidentes producto de malas instalaciones o equipos deficientes.</Paragraph>
 
-                            <SectionHeader title="2.2 Definición de contacto indirecto" />
-                            <Paragraph>El contacto indirecto se produce cuando una persona toca partes metálicas que normalmente no están energizadas, pero que pueden pasar a estarlo a causa de un fallo de aislamiento o una derivación a tierra. Ejemplos típicos incluyen la carcasa metálica de un electrodoméstico, tuberías, carcasas de maquinaria, entre otros.</Paragraph>
-
-                            <SectionHeader title="2.3 Efectos del contacto eléctrico en el cuerpo humano" />
-                            <Paragraph>Tanto el contacto directo como el indirecto pueden ser muy peligrosos. El daño dependerá del nivel de corriente, la duración y la trayectoria a través del cuerpo. A partir de 30 mA ya se pueden producir fibrilaciones ventriculares, siendo las protecciones diferenciales ideales para limitar la magnitud y el tiempo de exposición de la corriente de defecto.</Paragraph>
-
-                            <SectionHeader title="2.4 Medidas básicas de protección" />
-                            <Paragraph>Para evitar el contacto directo se recurre, entre otras técnicas, a:</Paragraph>
-                            <List items={[
-                                "El uso de aislamientos apropiados",
-                                "Instalaciones fuera del alcance",
-                                "Recubrimientos y barreras"
-                            ]} />
-                            <Paragraph>En tanto, la protección contra contactos indirectos se basa en:</Paragraph>
-                            <List items={[
-                                "La puesta a tierra de las masas",
-                                "La instalación de dispositivos de corte automático (interruptores diferenciales)",
-                                "Dobles aislamientos"
-                            ]} />
+                            <SectionHeader title="2.2 Los Pliegos Técnicos Normativos (RIC)" />
+                            <Paragraph>Hasta hace pocos años, las instalaciones eléctricas de consumo en Chile se regían por la Norma NCH 4/2003. Esta normativa fue actualizada y reemplazada por los Pliegos Técnicos Normativos RIC (Reglamentos de Instalación de Consumo), que entraron en vigencia plena. Estos 19 pliegos detallan paso a paso las exigencias actuales, desde el diseño de tableros (RIC N°2) y sistemas de puesta a tierra (RIC N°6), hasta instalaciones especiales y eficiencia energética.</Paragraph>
                             <HighlightBox type="info">
-                                <p>La instalación de interruptores diferenciales forma parte de las recomendaciones internacionales descritas en la normativa IEC 60364 y ANSI C33.16, y en manuales de referencia que subrayan la importancia de complementar la protección diferencial con la adecuada conexión a tierra.</p>
+                                <p>Un técnico profesional moderno no trabaja "de memoria". Su principal herramienta, a la par de su multitester, es su conocimiento actualizado y la consulta constante de los pliegos RIC pertinentes a la obra que está ejecutando.</p>
                             </HighlightBox>
                         </ExpansionTile>
 
-                        <ExpansionTile title="3. Interruptor Diferencial" icon={ShieldCheck}>
-                            <SectionHeader title="3.1 Definición y principio de funcionamiento" />
-                            <Paragraph>El interruptor diferencial, conocido técnicamente como dispositivo de corriente residual (RCD por sus siglas en inglés), es un equipo de seguridad cuya función principal es desconectar automáticamente la alimentación eléctrica de un circuito cuando detecta una diferencia de corriente entre los conductores activos (fase y neutro), diferencia que indica una fuga hacia tierra.</Paragraph>
-                            <Paragraph>El funcionamiento se basa en el principio de que, bajo condiciones normales, toda la corriente que entra al circuito por la fase debe regresar por el neutro. Cualquier desbalance (corriente diferencial) sugiere que parte de la corriente está retornando a través de otro camino, generalmente el cuerpo de una persona hacia tierra.</Paragraph>
+                        <ExpansionTile title="III. Prevención de Riesgos y EPP" icon={ShieldCheck}>
+                            <SectionHeader title="3.1 Cultura de Prevención" />
+                            <Paragraph>En la industria eléctrica, un accidente casi siempre tiene consecuencias graves (quemaduras severas, amputaciones, fibrilación ventricular o muerte). La prevención de riesgos no es un obstáculo para la productividad de la empresa; es la garantía de que el trabajador volverá a su hogar al finalizar la jornada.</Paragraph>
 
-                            <SectionHeader title="3.2 Partes constitutivas" />
+                            <SectionHeader title="3.2 Elementos de Protección Personal (EPP)" />
+                            <Paragraph>El técnico debe usar invariablemente el EPP dieléctrico (aislante) homologado y certificado. El EPP básico incluye:</Paragraph>
                             <List items={[
-                                "Transformador toroidal o sensor diferencial: Elemento clave que detecta la diferencia de corriente entre conductores.",
-                                "Mecanismo de disparo: Muelle y contactos que separan el circuito en caso de fuga.",
-                                "Palanca de accionamiento: Permite la conexión o desconexión manual.",
-                                "Módulo de prueba: Botón para comprobar el correcto funcionamiento del diferencial."
-                            ]} />
-
-                            <SectionHeader title="3.3 Valores nominales y características técnicas" />
-                            <List items={[
-                                "Sensibilidad: Corriente diferencial a partir de la cual actúa el dispositivo (30 mA típicamente para protección de personas, 100 o 300 mA para protección de bienes).",
-                                "Tensión y corriente nominal: Debe adecuarse al circuito a proteger (220/240V; 10, 16, 25A, etc.).",
-                                "Tipo de corriente detectada: Los RCD pueden ser para corriente alterna (AC), pulsante (A), continua (B), etc."
+                                "Casco dieléctrico: Con barbiquejo y sin partes metálicas.",
+                                "Calzado de seguridad dieléctrico: Sin puntas ni ojales de acero expuestos.",
+                                "Guantes aislantes de goma: Clasificados según el nivel de tensión (Clase 00, 0, 1, etc.), usualmente protegidos por guantes de cuero externos para evitar perforaciones mecánicas.",
+                                "Ropa de trabajo ignífuga: Algodón tratado o materiales específicos (Ropa Arc Flash) que no se derritan ni ardan al exponerse a un arco eléctrico.",
+                                "Lentes de seguridad y/o pantallas faciales: Especialmente cruciales al operar interruptores (protección contra proyección de partículas y rayos UV del arco)."
                             ]} />
                         </ExpansionTile>
 
-                        <ExpansionTile title="4. Clasificación de Interruptores Diferenciales" icon={ListChecks}>
-                            <SectionHeader title="4.1 Según el tipo de corriente detectada" />
+                        <ExpansionTile title="IV. Reglas de Oro y LOTO" icon={AlertTriangle}>
+                            <SectionHeader title="4.1 Las 5 Reglas de Oro" />
+                            <Paragraph>Para realizar trabajos sin tensión (desenergizados), que es la forma obligatoria de trabajar salvo contadísimas excepciones muy calificadas, se deben cumplir secuencialmente e invariablemente los siguientes 5 pasos:</Paragraph>
                             <List items={[
-                                "Tipo AC: Para corrientes residuales alternas sinusoidales.",
-                                "Tipo A: Detectan corrientes alternas y pulsantes de fuga.",
-                                "Tipo F: Adecuados para equipos con componentes de frecuencia variable.",
-                                "Tipo B: Detectan además corrientes residuales de alta frecuencia y corriente continua suave. Usados en instalaciones industriales avanzadas o en infraestructuras con conversión electrónica de potencia."
+                                "1. Corte efectivo de todas las fuentes de tensión: Desconectar la instalación usando interruptores, seccionadores o fusibles.",
+                                "2. Bloqueo de los aparatos de corte: Enclavar mecánica o físicamente (con candados LOTO) los dispositivos para evitar que alguien los reconecte por error. Colocar carteles de advertencia.",
+                                "3. Comprobación de ausencia de tensión: Verificar con un detector o multitester certificado (y probado previamente de que funciona) que realmente no hay voltaje en cada una de las fases.",
+                                "4. Puesta a tierra y en cortocircuito: Conectar todas las fases entre sí y a la malla de tierra física mediante equipos portátiles, para que, en caso de energización accidental (por ejemplo, un rayo o inducción), la corriente derive a tierra y produzca el disparo automático de las protecciones sin dañar al trabajador.",
+                                "5. Señalización de la zona de trabajo: Delimitar el área y proteger frente a elementos próximos que sí pudieran estar en tensión."
                             ]} />
-
-                            <SectionHeader title="4.2 Según el modo de disparo" />
-                            <List items={[
-                                "Electromecánicos: Funcionan sin alimentación auxiliar; detectan una diferencia de corriente y disparan mecánicamente.",
-                                "Electrónicos: Necesitan alimentación y circuitos electrónicos para procesar la señal diferencial; pueden ofrecer funciones adicionales, como comunicación o monitoreo remoto."
-                            ]} />
-
-                            <SectionHeader title="4.3 Según la cantidad de polos" />
-                            <List items={[
-                                "Bipolares (2 polos): Para circuitos monofásicos (fase-neutro).",
-                                "Tripolares / Tetrapolares (3 o 4 polos): Para circuitos trifásicos, con o sin neutro. Es esencial que todos los conductores activos (fases y, en su caso, neutro) pasen a través del sensor toroidal para detectar cualquier fuga de corriente al exterior del conjunto conductor."
-                            ]} />
-
-                            <SectionHeader title="4.4 Según aplicación" />
-                            <List items={[
-                                "Protección de personas: Usualmente con sensibilidad de 30 mA.",
-                                "Protección de instalaciones: Sensibilidad de 100 mA o 300 mA, protegiendo incendios u otros daños materiales.",
-                                "Protección selectiva (S): Con retardo frente a los disparos para coordinar con otros dispositivos ubicados aguas abajo o en jerarquía por zonas."
-                            ]} />
-                        </ExpansionTile>
-
-                        <ExpansionTile title="5. Instalación de Interruptores Diferenciales" icon={Wrench}>
-                            <SectionHeader title="5.1 Requisitos y consideraciones generales" />
-                            <Paragraph>La instalación correcta de los interruptores diferenciales es un requerimiento normativo internacional. Los documentos IEC 60364 y ANSI C33.16 proporcionan directrices sobre la selección, ubicación y mantenimiento de los RCD para lograr una protección efectiva. El circuito a proteger debe estar claramente identificado y el dispositivo debe instalarse de modo que todos los conductores activos (y el neutro, si existe) pasen a través del sensor del diferencial, quedando aguas abajo de la protección.</Paragraph>
-
-                            <Paragraph>Recomendaciones básicas:</Paragraph>
-                            <List items={[
-                                "Verificar que la corriente y tensión nominal coincidan con las características del circuito.",
-                                "Garantizar acceso fácil para el control y prueba del dispositivo.",
-                                "Realizar una adecuada conexión a tierra de las masas y neutro."
-                            ]} />
-                            <HighlightBox type="warning">
-                                <p>Un error común que compromete la protección es conectar otros conductores (por ejemplo, tierra de protección) a la salida o retorno del interruptor diferencial; toda derivación fuera del camino del RCD resulta en pérdida de sensibilidad del equipo.</p>
+                            <HighlightBox type="alert">
+                                <p>Omitir cualquiera de estos 5 pasos, especialmente el paso 3 (comprobar ausencia de tensión siempre antes de tocar un cable), es la principal causa de accidentes fatales en electricistas experimentados por exceso de confianza.</p>
                             </HighlightBox>
 
-                            <SectionHeader title="5.2 Procedimiento de instalación paso a paso" />
-                            <List items={[
-                                "Desconectar la alimentación eléctrica general del tablero para evitar riesgos.",
-                                "Seleccionar el interruptor diferencial adecuado basado en la corriente, los polos necesarios y la sensibilidad apropiada al tipo de protección (personas o instalaciones).",
-                                "Montar físicamente el diferencial en el carril DIN del tablero eléctrico, asegurando correcta fijación.",
-                                "Conectar los conductores de entrada (fase y neutro) provenientes del interruptor principal a los bornes de entrada del RCD.",
-                                "Conectar los conductores de salida del diferencial hacia el circuito o circuitos a proteger; en circuitos monofásicos, habitualmente dos conductores; en circuitos trifásicos, las tres fases y el neutro si corresponde.",
-                                "Verificar que el neutro de los circuitos aguas abajo no se encuentra conectado a otras tierras o neutros fuera del lado protegido.",
-                                "Conectar la masa de las carcasas y elementos metálicos a la tierra física del sistema, independiente del RCD.",
-                                "Restablecer la energía, y realizar la prueba funcional utilizando el pulsador de prueba incorporado en el RCD para verificar su correcto disparo.",
-                                "Etiquetar claramente el circuito protegido para futuras tareas de mantenimiento."
-                            ]} />
-
-                            <SectionHeader title="5.3 Normativas aplicables" />
-                            <Paragraph>Tanto la normativa IEC como ANSI establecen que la protección diferencial es obligatoria en circuitos que alimentan puntos de uso en acceso general (baños, cocinas, exteriores, etc.), así como en áreas con riesgo incrementado de contacto accidental. Las normativas precisan:</Paragraph>
-                            <List items={[
-                                "El valor máximo de disparo (IΔn ≤ 30 mA para protección de personas).",
-                                "La coordinación con la protección de sobreintensidad aguas arriba para evitar daños en el dispositivo diferencial.",
-                                "Las pruebas periódicas, indicadas en los manuales del fabricante y recomendaciones internacionales, típicamente cada 6 meses."
-                            ]} />
-
-                            <SectionHeader title="5.4 Mantenimiento de interruptores diferenciales" />
-                            <Paragraph>El mantenimiento preventivo consiste en la verificación visual, la realización periódica del test incorporado, la comprobación de tornillos de conexión y terminales, así como la inspección del correcto estado de los aislamientos en los conductores entrantes y salientes.</Paragraph>
-                            <Paragraph>Se recomienda realizar mediciones de la resistividad de la puesta a tierra y comprobar que la suma de corrientes inversas o parásitas no exceda la sensibilidad del RCD, para prevenir disparos no deseados.</Paragraph>
-                        </ExpansionTile>
-
-                        <ExpansionTile title="6. Aplicaciones Globales y 7. Caso Práctico" icon={ActivitySquare}>
-                            <SectionHeader title="6. Aplicaciones Prácticas Globales" />
-                            <Paragraph>En países europeos, americanos, asiáticos y africanos, la implementación de interruptores diferenciales es hoy en día una exigencia normativa para nuevos edificios y una recomendación para antiguas instalaciones. Las variantes en la red (monofásica, bifásica, trifásica), los estándares locales de distribución y los requisitos climáticos y ambientales determinan el tipo y modelo de RCD a emplear.</Paragraph>
-                            <Paragraph>Es fundamental conocer las prácticas nacionales y locales, pero manejar la normativa y simbología internacional (IEC/ANSI) permite movilidad y versatilidad profesional en el trabajo global de la industria eléctrica. La globalización de la industria hace imprescindible que los técnicos e ingenieros estén capacitados para interpretar ambas normativas, evitando así defectos de instalación y asegurando la máxima protección.</Paragraph>
-
-                            <SectionHeader title="7. Caso de Estudio: Instalación en una Vivienda" />
-                            <Paragraph>A continuación se describe la aplicación práctica de los conocimientos desarrollados en una instalación domiciliaria:</Paragraph>
-                            <List items={[
-                                "Se cuenta con un tablero principal que alimenta varios circuitos de iluminación y enchufes. El electricista selecciona un RCD de 2 polos, 25A, sensibilidad 30mA, tipo A, adecuado para detectar corrientes alternas y pulsantes.",
-                                "Previa desconexión eléctrica, identifica los conductores de fase y neutro, montando el RCD en el carril DIN del tablero.",
-                                "Conecta el suministro proveniente del medidor a la entrada del RCD, y la salida hacia los diferentes circuitos internos.",
-                                "Evalúa que no existan derivaciones del neutro después del RCD fuera de los circuitos protegidos.",
-                                "Despliega instrumentos de prueba, chequea continuidad, realiza el test del dispositivo y constata su correcto funcionamiento.",
-                                "Documenta el trabajo mediante los símbolos reglamentarios en el plano del inmueble, anotando marca, modelo, sensibilidad, fecha de instalación y recomendaciones para el usuario."
-                            ]} />
+                            <SectionHeader title="4.2 Procedimientos Lockout/Tagout (LOTO)" />
+                            <Paragraph>LOTO, por sus siglas en inglés, se refiere a la práctica del paso 2 de las Reglas de Oro. Implica el uso de candados personales exclusivos y tarjetas de advertencia. Es la garantía física de que nadie, excepto quien instaló el candado, puede reenergizar el circuito mientras está expuesto reparándolo.</Paragraph>
                         </ExpansionTile>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
                                 <Quote size={120} />
                             </div>
-                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">8. Conclusiones</h3>
+                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">V. Conclusiones</h3>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                La protección diferencial constituye una barrera tecnológica esencial para reducir accidentes eléctricos y preservar la seguridad de las personas y bienes. La correcta interpretación de la simbología siguiendo los estándares IEC y ANSI, el dominio de los conceptos de contacto directo e indirecto, la comprensión de los fundamentos y clasificación de los interruptores diferenciales, y su correcta instalación y mantenimiento, son competencias fundamentales en el desempeño de los profesionales eléctricos.
+                                El técnico en la industria eléctrica no es solo un operario calificado; es un profesional garante de la seguridad y el correcto funcionamiento de la infraestructura energética que mueve al país. Su labor exige un profundo respeto por la energía con la que trabaja, sustentado en un conocimiento técnico sólido, una actualización normativa constante (Pliegos RIC) y una cultura de prevención de riesgos innegociable.
                             </Paragraph>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                La bibliografía de Martínez y Mendoza Romero proporciona un marco riguroso y práctico en la aplicación de las técnicas y normativas internacionales, favoreciendo la calidad y seguridad en las instalaciones eléctricas en un contexto global. El dominio de estas unidades de aprendizaje permite al estudiante y al profesional integrarse exitosamente al ámbito laboral local e internacional.
+                                La internalización y aplicación estricta de las "5 Reglas de Oro" y los procedimientos LOTO, junto con el uso adecuado de los Elementos de Protección Personal, marcan la diferencia entre una operación exitosa y un accidente fatal. En última instancia, la formación de un técnico eléctrico debe aspirar a la excelencia técnica fundida inextricablemente con una ética de seguridad intransigente.
                             </Paragraph>
                         </div>
                     </div>
@@ -338,16 +234,16 @@ const AE3View = ({ onBack }) => {
                                 <h4 className="font-black text-xs uppercase tracking-widest mb-4 text-[#002855] dark:text-blue-400">Bibliografía Recomendada</h4>
                                 <div className="space-y-4">
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Técnicas de Aplicación de Fusibles</strong>
-                                        <span className="text-slate-500 italic">Tomás Pascual Martínez, 1998 <br /> (Instituto Politécnico Nacional)</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Superintendencia de Electricidad y Combustibles</strong>
+                                        <span className="text-slate-500 italic">Pliegos Técnicos Normativos RIC (Vigentes)</span>
                                     </div>
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Protección por Relevadores a Sistemas de Potencia</strong>
-                                        <span className="text-slate-500 italic">Agapito Mendoza Romero, 1998 <br /> (Instituto Politécnico Nacional)</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Seguridad Eléctrica y Reglas de Oro</strong>
+                                        <span className="text-slate-500 italic">Manuales ACHS / Mutual de Seguridad</span>
                                     </div>
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Normativas IEC y ANSI</strong>
-                                        <span className="text-slate-500 italic">IEC 60617, IEC 60364 <br /> ANSI C33.16</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Ley 16.744</strong>
+                                        <span className="text-slate-500 italic">Normas sobre Accidentes del Trabajo y Enfermedades Profesionales (Chile)</span>
                                     </div>
                                 </div>
                             </div>
