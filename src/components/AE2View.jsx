@@ -132,6 +132,8 @@ const AE2View = ({ onBack }) => {
         { term: "Subestación Eléctrica", def: "Instalación destinada a modificar y establecer los niveles de tensión de una infraestructura eléctrica, facilitando la transmisión y distribución." },
         { term: "Transformador", def: "Máquina eléctrica estática que transfiere energía eléctrica de un circuito a otro, elevando o reduciendo el voltaje manteniendo la frecuencia y operando bajo el principio de inducción electromagnética." },
         { term: "Relación de Transformación", def: "Proporción entre el número de espiras del devanado secundario y el primario en un transformador, que determina la razón en la cual el voltaje será modificado." },
+        { term: "Línea de Transmisión", def: "Estructura de cables (aéreos o subterráneos) y elementos de soporte diseñada para transportar energía eléctrica a altas tensiones desde la generación hasta los centros de consumo." },
+        { term: "Efecto Corona", def: "Fenómeno eléctrico producido por la ionización del aire circundante a los conductores de alta tensión, provocando pérdidas de energía y ruido audible." },
         { term: "Sistema Interconectado Nacional (SEN)", def: "Infraestructura principal en Chile que concentra casi la totalidad de la generación y transmisión, extendiéndose desde Arica hasta Chiloé." },
         { term: "Centro de Despacho Económico de Carga (CEN)", def: "Entidad independiente (Coordinador Eléctrico Nacional en Chile) encargada de coordinar la operación segura y al mínimo costo del sistema eléctrico." },
         { term: "Pérdidas de Transmisión", def: "Porcentaje de energía que se disipa en forma de calor en los conductores durante su transporte, debido a la resistencia natural del material y al efecto Joule." }
@@ -504,16 +506,108 @@ const AE2View = ({ onBack }) => {
                             </SubExpansionTile>
                         </ExpansionTile>
 
+                        <ExpansionTile title="IV. Líneas de Transmisión" icon={Wrench} defaultOpen={false}>
+                            <Paragraph>Las líneas de transmisión eléctrica representan uno de los elementos fundamentales en la industria eléctrica, cumpliendo un rol clave en el transporte de energía desde los centros de generación hasta los puntos de consumo final, ya sean estos grandes centros urbanos, industrias, o pequeñas comunidades alejadas. El correcto diseño, operación y mantenimiento de estas infraestructuras garantiza la continuidad y confiabilidad del suministro eléctrico a escala global. El estudio de las líneas de transmisión abarca diversos aspectos técnicos, reglamentarios, económicos y ambientales, configurando un espacio de conocimiento crítico para los futuros profesionales de la industria eléctrica.</Paragraph>
+
+                            <SubExpansionTile title="1. Conceptos y Tipos Fundamentales">
+                                <SectionHeader title="1.1 Conceptos Fundamentales" />
+                                <Paragraph>De acuerdo con Roldán Viloria, José (2008), las líneas de transmisión eléctrica constituyen canales artificiales creados para transportar energía eléctrica mediante conductores a altas tensiones. Este sistema permite transferir energía de un sitio a otro minimizando las pérdidas de energía que se producirían si se utilizaran tensiones bajas.</Paragraph>
+                                <Paragraph>Por normativa, según las Normas Técnicas del Sector Electricidad (SEC), una línea de transmisión se define como la extensión de cableado aéreo o subterráneo, junto con sus elementos auxiliares, que conecta una subestación de generación con subestaciones de distribución o consumo, operando a niveles de tensión estandarizados dependiendo de la topología y necesidades del sistema.</Paragraph>
+
+                                <SectionHeader title="1.2 Tipos de Líneas de Transmisión" />
+                                <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">Según número de fases</h5>
+                                <List items={[
+                                    "Líneas Monofásicas: Utilizadas principalmente en aplicaciones rurales o de baja potencia. Constan de dos conductores: uno activo y otro de retorno o neutro.",
+                                    "Líneas Trifásicas: Son el estándar en la transmisión y distribución de grandes cantidades de energía. Con tres conductores activos (y ocasionalmente uno neutro), permiten el transporte eficiente y balanceado de energía."
+                                ]} />
+
+                                <h5 className="font-bold text-slate-900 dark:text-white mt-4 mb-2">Según Nivel de Tensión</h5>
+                                <List items={[
+                                    "Baja tensión: menos de 1 kV, típicamente utilizado en distribución a nivel local.",
+                                    "Media tensión: entre 1 kV y 69 kV, utilizada en redes urbanas e interurbanas de distribución primaria.",
+                                    "Alta tensión: entre 69 kV y 230 kV, empleada para transportar grandes potencias a distancias medias.",
+                                    "Extra alta y ultra alta tensión: más de 230 kV, esenciales para largas distancias y transmisión masiva a nivel regional."
+                                ]} />
+
+                                <h5 className="font-bold text-slate-900 dark:text-white mt-4 mb-2">Líneas Aéreas y Subterráneas</h5>
+                                <List items={[
+                                    "Líneas aéreas: Soportadas por estructuras (postes o torres), predominan por menor costo en comparación con las subterráneas para largas distancias. Están expuestas a condiciones ambientales.",
+                                    "Líneas subterráneas: Más costosas, pero preferidas en zonas urbanas densas o donde hay restricciones medioambientales o estéticas. Menos vulnerables a daños meteorológicos."
+                                ]} />
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="2. Estructura y Parámetros Eléctricos">
+                                <SectionHeader title="2.1 Componentes de una Línea de Transmisión" />
+                                <Paragraph>El diseño y construcción de las líneas de transmisión requieren una meticulosa selección y dimensionamiento de varios componentes:</Paragraph>
+                                <List items={[
+                                    "Conductores: Generalmente de aluminio con alma de acero (ACSR) o de cobre. Deben resistir elevadas corrientes y condiciones climáticas, y minimizar pérdidas por efecto Joule y efecto corona.",
+                                    "Aislamiento: Proporcionado por aisladores de vidrio, porcelana o polímeros compuestos, que impiden el paso accidental de corriente eléctrica hacia tierra o a las estructuras de soporte.",
+                                    "Estructuras de soporte: Usualmente torres metálicas, postes de hormigón o madera. Deben soportar el peso y la tensión de los conductores.",
+                                    "Elementos de protección: Guardacables o cables de guarda, apartarrayos y sistemas de conexión a tierra. Protegen la integridad de la línea frente a descargas eléctricas."
+                                ]} />
+
+                                <SectionHeader title="2.2 Parámetros Eléctricos" />
+                                <Paragraph>Roldán Viloria (2008) explica que las líneas de transmisión pueden ser modeladas eléctricamente mediante cuatro parámetros principales:</Paragraph>
+                                <List items={[
+                                    "Resistencia (R): Relacionada con la naturaleza de los conductores y su temperatura, determina la pérdida de energía en forma de calor.",
+                                    "Inductancia (L): Surge por el campo magnético que se genera alrededor de los conductores al circular corriente, influye en la transferencia de energía reactiva.",
+                                    "Capacitancia (C): Resulta de la diferencia de potencial entre conductores y entre estos y tierra, relevante en líneas de larga distancia.",
+                                    "Conductancia (G): Representa las pérdidas por fugas a través del material dieléctrico, normalmente despreciable en líneas aéreas."
+                                ]} />
+                                <Paragraph>Las combinaciones de estos elementos definen el fenómeno de línea corta, media o larga, que afecta los métodos de cálculo de pérdidas y caídas de tensión.</Paragraph>
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="3. Pérdidas y Operación">
+                                <SectionHeader title="3.1 Pérdidas en Líneas de Transmisión" />
+                                <Paragraph>Durante la transmisión eléctrica desde los centros generadores hasta los puntos de consumo, existe una inevitable pérdida de energía, principalmente por:</Paragraph>
+                                <List items={[
+                                    "Pérdidas por efecto Joule: Originadas por la resistencia de los conductores.",
+                                    "Pérdidas por efecto corona: Descargas eléctricas alrededor de los conductores a alto voltaje, acompañadas de ionización del aire.",
+                                    "Pérdidas dieléctricas: En líneas subterráneas, por fugas de corriente a través del material aislante."
+                                ]} />
+                                <Paragraph>El nivel de pérdidas depende de la tensión de operación, la distancia y la naturaleza de los materiales empleados. Elevar la tensión permite transferir mayor potencia minimizando estas pérdidas.</Paragraph>
+
+                                <SectionHeader title="3.2 Dimensión y Selección" />
+                                <Paragraph>El correcto dimensionamiento de una línea requiere estudios de carga anticipada, topografía, y regulaciones. Las Normas Técnicas del Sector Electricidad (SEC) establecen las condiciones de seguridad como la separación de fases, distancias al suelo y selección de aisladores.</Paragraph>
+
+                                <SectionHeader title="3.3 Topologías en Sistemas Interconectados" />
+                                <Paragraph>Las tendencias apuntan a redes malladas en lugar de radiales, permitiendo respaldar fallas. Las topologías principales son:</Paragraph>
+                                <List items={[
+                                    "Radial: Una subestación principal alimenta cargas, muy vulnerable a cortes.",
+                                    "Anillo: Cargas en circuito cerrado, mejora la continuidad.",
+                                    "Malla: Múltiples nodos interconectados (como una red neuronal), máxima confiabilidad, estándar en transmisión."
+                                ]} />
+                            </SubExpansionTile>
+
+                            <SubExpansionTile title="4. Medio Ambiente y Futuro">
+                                <SectionHeader title="4.1 Impacto Ambiental y Mitigación" />
+                                <Paragraph>Las líneas de transmisión requieren estudios de impacto debido a sus efectos:</Paragraph>
+                                <List items={[
+                                    "Fragmentación de hábitats y ocupación territorial (visual y suelo).",
+                                    "Riesgos de colisión de avifauna.",
+                                    "Campos electromagnéticos (regulados estrictamente por la SEC) y ruido audible (efecto corona)."
+                                ]} />
+                                <Paragraph>Las normativas exigen mitigaciones como el uso de líneas subterráneas en zonas sensibles, señalización de conductores para aves y revegetación de servidumbres de paso.</Paragraph>
+
+                                <SectionHeader title="4.2 Tendencias Futuras e Innovación" />
+                                <List items={[
+                                    "Redes inteligentes (Smart grids): Sensores IoT y automatización para gestión en tiempo real.",
+                                    "Nuevos conductores y HVDC: Expansión de la corriente continua de alta tensión para conectar continentes, limitando las pérdidas y aumentando la resiliencia climática.",
+                                    "Drones y análisis predictivo: Mantenimiento mediante visión artificial para anticiparse a incendios y cortes."
+                                ]} />
+                            </SubExpansionTile>
+                        </ExpansionTile>
+
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
                                 <Quote size={120} />
                             </div>
                             <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">Conclusiones Generales</h3>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                Los sistemas de transmisión eléctrica trifásica, las redes interconectadas y los transformadores de alto voltaje constituyen la piedra angular de la infraestructura energética mundial. Permiten el aprovechamiento racional de los recursos, facilitando el transporte y entrega confiable de electricidad a millones de familias, industrias y comercios. Su desarrollo busca maximizar la eficiencia y diversificar la matriz energética garantizando una transición justa y segura.
+                                Los sistemas de transmisión eléctrica trifásica, las redes interconectadas, los transformadores de alto voltaje y el entramado mismo de líneas de transmisión constituyen la piedra angular de la infraestructura energética mundial. Permiten el aprovechamiento racional de los recursos, facilitando el transporte y entrega confiable de electricidad a millones de familias, industrias y comercios. Su desarrollo busca maximizar la eficiencia y diversificar la matriz energética garantizando una transición justa y segura.
                             </Paragraph>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                La interconexión de sistemas responde tanto a la necesidad de seguridad del suministro como a la optimización económica. Solo a través de la aplicación técnica, el diseño de infraestructuras clave como las de alta tensión y el cumplimiento riguroso de normativas (como las directrices de la SEC en Chile e IEC a nivel internacional), estos sistemas podrán hacer frente a los enormes desafíos de integración renovable, digitalización y sostenibilidad en las décadas venideras.
+                                La interconexión de sistemas responde tanto a la necesidad de seguridad del suministro como a la optimización económica y de operación. Solo a través del modelado técnico, el diseño de infraestructuras clave soportado en materiales avanzados y el cumplimiento riguroso de normativas (como las directrices de la SEC en Chile e IEC a nivel internacional), estos sistemas podrán hacer frente a los enormes desafíos de integración renovable, digitalización y protección ambiental en las décadas venideras.
                             </Paragraph>
                         </div>
                     </div>
