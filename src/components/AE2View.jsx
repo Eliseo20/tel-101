@@ -145,79 +145,127 @@ const AE2View = ({ onBack }) => {
 
                         <div className="mb-12 border-l-8 border-[#D1202F] pl-8 py-2">
                             <h2 className="text-4xl font-black text-[#002855] dark:text-white uppercase tracking-tighter leading-tight">
-                                Introducción a la Industria Eléctrica: <br /> <span className="text-[#D1202F]">Sistemas de Transmisión Eléctrica</span>
+                                Sistemas de Transmisión <br /> <span className="text-[#D1202F]">Eléctrica Trifásica</span>
                             </h2>
                         </div>
 
                         <div className="p-8 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 lg:rounded-[3rem] rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 mb-10">
                             <SectionHeader title="Introducción" />
-                            <Paragraph>Una vez generada la energía eléctrica, debe ser transportada hacia los centros de consumo (ciudades, industrias, minería), que a menudo se encuentran a cientos o miles de kilómetros de las centrales generadoras. Esta tarea monumental es llevada a cabo por los Sistemas de Transmisión Eléctrica, verdaderas autopistas de energía que sostienen el desarrollo y la interconexión del país.</Paragraph>
-                            <Paragraph>La Unidad 2 de este módulo tiene como objetivo caracterizar estos sistemas a nivel nacional, analizando su infraestructura, el papel de las subestaciones y el rol fundamental de las entidades coordinadoras que gestionan la operación segura y económica del flujo eléctrico. Entender la transmisión es comprender cómo se integra el país energéticamente.</Paragraph>
+                            <Paragraph>La transmisión eléctrica es un componente fundamental dentro de la industria eléctrica global, debido a su papel en el transporte eficiente de energía desde los puntos de generación hasta las áreas de consumo. La utilización de sistemas de transmisión eléctrica trifásica es predominante y esencial para satisfacer los altos requerimientos de potencia y eficiencia de los sistemas eléctricos modernos. En el contexto global, países han adoptado este tipo de sistema, cuyos principios y configuraciones han sido desarrollados, normalizados y mejorados a lo largo de décadas. El presente texto tiene como objetivo caracterizar, desde una perspectiva técnica y regulatoria, los sistemas de transmisión eléctrica trifásica, integrando nociones fundamentales extraídas de textos de referencia como "Fuentes de energía" de Roldán Viloria (2008) y de las "Normas Técnicas Sector Electricidad" de la Superintendencia de Electricidad y Combustibles de Chile (SEC).</Paragraph>
                         </div>
 
-                        <ExpansionTile title="I. Fundamentos de la Transmisión Eléctrica" icon={Zap} defaultOpen={true}>
-                            <SectionHeader title="1.1 ¿Por qué se transmite en Alta Tensión?" />
-                            <Paragraph>El principal desafío de transportar electricidad largas distancias es la pérdida de energía en forma de calor debido a la resistencia de los cables (Efecto Joule). Dado que las pérdidas son proporcionales al cuadrado de la corriente ($I^2R$), la estrategia técnica consiste en reducir la corriente al mínimo posible. Para transmitir la misma potencia ($P = V \times I$), si se reduce la corriente, se debe elevar proporcionalmente el voltaje.</Paragraph>
-                            <Paragraph>Por este motivo, a la salida de las centrales generadoras, grandes transformadores elevan la tensión a niveles de Alta Tensión (AT) o Extra Alta Tensión (EAT), generalmente a 110 kV, 220 kV o hasta 500 kV. Esta operación minimiza drásticamente las pérdidas, reduce el calibre (y el peso/costo) de los cables conductores necesarios y permite la viabilidad técnica y económica del transporte a larga distancia.</Paragraph>
+                        <ExpansionTile title="I. Fundamentos y Principios Operativos" icon={Zap} defaultOpen={true}>
+                            <SectionHeader title="1.1 Fundamentos de la Transmisión Eléctrica Trifásica" />
+                            <Paragraph>El sistema de transmisión eléctrica trifásica nace de la necesidad de trasladar grandes cantidades de energía eléctrica a largas distancias con el menor nivel posible de pérdidas y con una eficiencia operativa máxima. El sistema trifásico, a diferencia del monofásico, se basa en la existencia de tres corrientes alternas generadas simultáneamente, desfasadas una de otra por 120 grados eléctricos. Esto permite que, en cualquier momento, la suma vectorial de las corrientes y tensiones proporcione una capacidad uniforme para la transmisión y utilización de la energía.</Paragraph>
+                            <Paragraph>Según Roldán Viloria (2008), el desarrollo de los sistemas trifásicos responde a la necesidad de lograr dos objetivos principales: minimizar las pérdidas de energía (pérdidas Joule en líneas de transmisión) y optimizar la infraestructura, logrando transportar la misma o mayor potencia con menos material conductor y menor sección transversal que en sistemas monofásicos. Este principio ha sido adoptado globalmente, constituyendo la base del transporte de energía eléctrica de alta y media tensión.</Paragraph>
 
-                            <SectionHeader title="1.2 Componentes de un Sistema de Transmisión" />
+                            <SectionHeader title="1.2 Principios Operativos de la Trifásica" />
+                            <Paragraph>En un sistema trifásico típico, tres conductores portan corrientes alternas de igual amplitud pero desfasadas en el tiempo. Esto permite el desarrollo de máquinas eléctricas, como transformadores y motores, mucho más eficientes y de menor tamaño para una misma potencia que sus contrapartes monofásicas. La transmisión trifásica se realiza generalmente en dos modalidades:</Paragraph>
                             <List items={[
-                                "Lineas de Transmisión: Formadas por conductores (usualmente de aluminio con núcleo de acero), torres de soporte y aisladores.",
-                                "Subestaciones Elevadoras: Ubicadas junto a las centrales generadoras para subir el voltaje.",
-                                "Subestaciones Reductoras: Ubicadas cerca de los centros de consumo para bajar el voltaje a niveles de subtransmisión o distribución.",
-                                "Transformadores de Potencia: El corazón de las subestaciones, equipos estáticos que modifican los niveles de voltaje.",
-                                "Equipos de Maniobra y Protección: Interruptores de poder y desconectadores que permiten operar red y aislar fallas de manera segura."
+                                "Con neutro: Permitiendo la obtención de dos tensiones diferentes (fase-neutro y fase-fase).",
+                                "Sin neutro: Utilizada en redes de alta tensión para reducir corrientes de fuga y necesidades de aislamiento."
+                            ]} />
+                            <Paragraph>En la transmisión de energía eléctrica a larga distancia, se usan predominantemente configuraciones trifásicas sin neutro, debido al mejor rendimiento frente a pérdidas y a la reducción del material necesario.</Paragraph>
+                        </ExpansionTile>
+
+                        <ExpansionTile title="II. Configuración y Elementos del Sistema" icon={Activity}>
+                            <SectionHeader title="2.1 Configuración Típica de un Sistema de Transmisión Trifásico" />
+                            <Paragraph>Un sistema de transmisión eléctrico trifásico estándar incluye:</Paragraph>
+                            <List items={[
+                                "Plantas generadoras: donde se produce energía en forma trifásica.",
+                                "Transformadores elevadores: situados en la subestación junto a la central generadora.",
+                                "Líneas de alta tensión: formadas generalmente por tres cables conductores, soportados en torres o postes separados por igual distancia.",
+                                "Subestaciones de rebaje: con transformadores reductores, que disminuyen la tensión para la distribución regional y urbana.",
+                                "Líneas de distribución: que pueden mantener el sistema trifásico o pasar a un suministro monofásico para usuarios residenciales."
+                            ]} />
+                            <Paragraph>Esta estructura modular permite la integración, el mantenimiento y la regulación del flujo eléctrico de forma eficiente y segura.</Paragraph>
+
+                            <SectionHeader title="2.2 Principales Elementos de los Sistemas de Transmisión Trifásica" />
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">Generadores Trifásicos</h5>
+                            <Paragraph>La generación de energía eléctrica a gran escala se realiza mediante alternadores trifásicos, que convierten la energía mecánica —producida en turbinas hidráulicas, térmicas, nucleares o eólicas— en energía eléctrica de corriente alterna trifásica. Según Roldán Viloria (2008), la estructura de estos generadores se basa en la obtención de tensiones sinusoidales perfectamente desfasadas entre sí, lo cual resulta en un sistema inherentemente balanceado y eficiente.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">Transformadores de Potencia</h5>
+                            <Paragraph>Los transformadores trifásicos son fundamentales para conectar diferentes niveles de tensión dentro de los sistemas eléctricos. Permiten elevar la tensión generada en la central (habitualmente entre 11 y 25 kV) hasta decenas o cientos de kilovoltios (132, 220, 500 kV o más), lo que reduce la corriente y, por ende, las pérdidas en las líneas de transmisión. La conformidad y el diseño de estos equipos están ampliamente regulados por normativas técnicas internacionales y locales, como las publicadas por la SEC en Chile.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">Líneas de Transmisión de Alta Tensión</h5>
+                            <Paragraph>Las líneas de transmisión trifásicas son la \"columna vertebral\" del sistema eléctrico nacional e internacional. Estas líneas, construidas con conductores de aluminio reforzado con acero, aisladores, torres metálicas o postes de hormigón, están diseñadas para soportar condiciones adversas y transmitir grandes bloques de energía con un mínimo de pérdidas. La geometría tridimensional y la separación de fases son cuidadosamente determinadas para disminuir los efectos inductivos, capacitivos y el riesgo de cortocircuitos o descargas a tierra.</Paragraph>
+                        </ExpansionTile>
+
+                        <ExpansionTile title="III. Aspectos Técnicos y Beneficios" icon={Calculator}>
+                            <SectionHeader title="3.1 Aspectos Técnicos: Tensión, Corriente y Potencia en Trifásica" />
+                            <Paragraph>En un sistema trifásico equilibrado, la potencia total entregada (activa, reactiva y aparente) puede ser expresada de manera sencilla. Asumiendo tensiones y corrientes de igual magnitud en cada fase:</Paragraph>
+                            <List items={[
+                                "Potencia activa total: P = √3 × Vlínea × Ilínea × cos(φ)",
+                                "Potencia reactiva total: Q = √3 × Vlínea × Ilínea × sen(φ)",
+                                "Potencia aparente total: S = √3 × Vlínea × Ilínea"
+                            ]} />
+                            <Paragraph>Donde Vlínea es la tensión entre conductores de línea e Ilínea la corriente circulante por cada conductor. Esta relación evidencia la eficiencia del sistema, al maximizar el transporte de potencia activa y minimizar el costo en material conductor.</Paragraph>
+
+                            <SectionHeader title="3.2 Ventajas y Desventajas de la Transmisión Trifásica" />
+                            <Paragraph>Los sistemas de transmisión trifásica poseen notables ventajas sobre los monofásicos, especialmente en transmisión de energía a largas distancias y para grandes cargas. Entre sus principales ventajas se destacan:</Paragraph>
+                            <List items={[
+                                "Uso más eficiente del conductor en relación a la potencia transmitida.",
+                                "Reducción de pérdidas energéticas para el mismo nivel de potencia transmitida.",
+                                "Capacidad de suministrar energía tanto a cargas monofásicas como trifásicas.",
+                                "Mayor facilidad en la generación de campos magnéticos rotatorios para motores y generadores eficientes.",
+                                "Mayor estabilidad en la transmisión y reducción de parpadeos o fluctuaciones en la tensión."
+                            ]} />
+                            <Paragraph>Sin embargo, también existen ciertos retos y desventajas:</Paragraph>
+                            <List items={[
+                                "Sistemas más complejos: desde el punto de vista del diseño, construcción, operación y mantenimiento.",
+                                "Mayor coordinación: necesidad en la protección, control y sincronización de los equipos.",
+                                "Mayor costo inicial: de infraestructura y equipamiento especializado."
                             ]} />
                         </ExpansionTile>
 
-                        <ExpansionTile title="II. El Sistema Interconectado Nacional (SEN)" icon={Activity}>
-                            <SectionHeader title="2.1 Qué es el SEN" />
-                            <Paragraph>En Chile, el Sistema Interconectado Nacional (SEN) es la red eléctrica principal que provee de energía a la gran mayoría de la población y la industria del país. Abarca geográficamente desde la región de Arica y Parinacota por el norte, hasta la isla de Chiloé en la región de Los Lagos por el sur, cubriendo más de 3.100 kilómetros de extensión.</Paragraph>
+                        <ExpansionTile title="IV. Regulación, Control e Impacto Ambiental" icon={Settings}>
+                            <SectionHeader title="4.1 Protección, Control y Regulación" />
+                            <Paragraph>La protección y el control de los sistemas trifásicos requieren dispositivos automáticos como relés de protección, interruptores automáticos y sistemas de supervisión en tiempo real (SCADA). Esto se debe a la complejidad inherente de coordinar tres fases en ambientes de alta tensión y la criticidad de la continuidad del suministro eléctrico.</Paragraph>
+                            <Paragraph>Las normativas técnicas internacionales y la regulación local, recogidas en documentos como las \"Normas Técnicas Sector Electricidad\" de la SEC, contemplan desde los niveles de aislamiento mínimos, distancias de seguridad y coordinación de protecciones hasta la gestión de fallas y maniobras operacionales.</Paragraph>
 
-                            <SectionHeader title="2.2 Origen y Evolución" />
-                            <Paragraph>Históricamente, Chile contaba con dos grandes redes separadas: el Sistema Interconectado del Norte Grande (SING), caracterizado por basarse principalmente en generación termoeléctrica para consumo minero, y el Sistema Interconectado Central (SIC), con mayor participación hidroeléctrica y consumo residencial/comercial. En el año 2017 se concretó la histórica interconexión de ambos sistemas, conformando el actual SEN, unificando el mercado eléctrico nacional, aumentando la seguridad del suministro y permitiendo, por ejemplo, que la energía solar abundante del norte fluya hacia los centros de mayor demanda en el centro y sur del país.</Paragraph>
-
-                            <SectionHeader title="2.3 Sistemas Aislados" />
-                            <Paragraph>Además del SEN, existen sistemas medianos y aislados (como el de Aysén, Magallanes y Rapa Nui), que operan de forma independiente dada la complejidad geográfica que impide su interconexión rentable con el sistema principal.</Paragraph>
-                        </ExpansionTile>
-
-                        <ExpansionTile title="III. Gestión y Coordinación del Sistema" icon={Settings}>
-                            <SectionHeader title="3.1 Operación a Tiempo Real" />
-                            <Paragraph>La electricidad, a nivel de red, no se puede almacenar en grandes cantidades de forma tradicional; debe generarse en el mismo instante y en la misma proporción en que se consume. Si la demanda sube, la generación debe subir inmediatamente. Si esta balanza se desequilibra, el sistema colapsa (apagón o blackout).</Paragraph>
-
-                            <SectionHeader title="3.2 El Coordinador Eléctrico Nacional (CEN)" />
-                            <Paragraph>Debido a esta criticidad técnica y al hecho de que existen múltiples empresas generadoras y transmisoras privadas, se requiere una entidad neutral y central que ordene y coordine el funcionamiento de todos. En Chile, esa entidad es el Coordinador Eléctrico Nacional (CEN).</Paragraph>
-                            <Paragraph>Las responsabilidades del Coordinador incluyen:</Paragraph>
+                            <SectionHeader title="4.2 Normativa y Regulación en Sistemas Trifásicos" />
+                            <Paragraph>La operación segura, eficiente y sostenible de los sistemas de transmisión trifásica se fundamenta en diversas normativas. Estas regulan desde la construcción de las infraestructuras hasta la operación, mantenimiento y actualización tecnológica. La SEC en Chile, por ejemplo, establece mediante las \"Normas Técnicas Sector Electricidad\" pautas para:</Paragraph>
                             <List items={[
-                                "Operación Segura: Mantener la estabilidad de voltaje y frecuencia en todo momento.",
-                                "Despacho Económico: Decidir qué centrales generan energía en cada instante, priorizando siempre en estricto orden económico (enlistando desde la tecnología de menor costo operativo hasta la más cara) para asegurar el precio mínimo para el sistema.",
-                                "Acceso Abierto: Garantizar que todas las empresas tengan acceso justo a las redes de transmisión, fomentando la libre competencia."
+                                "Criterios de diseño e instalación de líneas y subestaciones trifásicas.",
+                                "Requisitos para planes de mantenimiento preventivo y correctivo.",
+                                "Registros y reportes de incidentes y fallas.",
+                                "Gestión ambiental y social de proyectos eléctricos.",
+                                "Establecimiento de distancias mínimas a otras infraestructuras y áreas pobladas."
                             ]} />
+
+                            <SectionHeader title="4.3 Impacto Ambiental" />
+                            <Paragraph>Dada la extensión territorial de las líneas de transmisión trifásica, su impacto ambiental es un asunto prioritario. Según recoge Roldán Viloria (2008) y las \"Normas Técnicas\" de la SEC, los principales impactos están asociados a:</Paragraph>
+                            <List items={[
+                                "Alteración de ecosistemas y suelos durante la construcción.",
+                                "Modificación del paisaje visual y riesgos para la fauna local.",
+                                "Generación de campos electromagnéticos y su posible repercusión en la salud pública.",
+                                "Emisión de ruido en subestaciones y paso de líneas por áreas habitadas."
+                            ]} />
+                            <Paragraph>Los marcos regulatorios establecen la obligación de realizar evaluaciones de impacto ambiental, implementar medidas de mitigación, seguimiento y compensación ambiental. Todo proyecto de transmisión trifásico debe prever adecuadas rutas de paso, minimizando zonas protegidas y promoviendo la participación de las comunidades afectadas.</Paragraph>
                         </ExpansionTile>
 
-                        <ExpansionTile title="IV. Normativa de Seguridad y Mantenimiento" icon={ShieldCheck}>
-                            <Paragraph>El mantenimiento de líneas de transmisión y subestaciones es una tarea de alto riesgo que requiere estrictos protocolos de seguridad y personal altamente calificado.</Paragraph>
+                        <ExpansionTile title="V. Gestión, Interconexión y Perspectivas Globales" icon={ShieldCheck}>
+                            <SectionHeader title="5.1 Interconexión y Resiliencia de la Red" />
+                            <Paragraph>Un aspecto fundamental en la transmisión eléctrica trifásica a nivel global es la interconexión de sistemas: la posibilidad de transferir energía entre diferentes regiones o países, optimizando recursos y mejorando la seguridad y la resiliencia ante contingencias. Los \"sistemas interconectados\" permiten, por ejemplo, compartir reservas de generación, coordinar mantenimientos y enfrentar emergencias en tiempo real, conceptos desarrollados exhaustivamente tanto por Roldán Viloria (2008) como por la normativa chilena.</Paragraph>
 
-                            <SectionHeader title="4.1 Trabajos en Altura y Alta Tensión" />
-                            <Paragraph>Las labores de mantenimiento en torres de alta tensión involucran riesgos combinados: trabajo en altura geográfica (a menudo en condiciones climáticas adversas) y exposición a campos electromagnéticos e inducciones peligrosas, incluso cuando la línea principal está desenergizada. Por ello, el uso de Equipos de Protección Personal (EPP) específicos, arneses de seguridad, líneas de vida y pértigas aisladas es estrictamente obligatorio.</Paragraph>
+                            <SectionHeader title="5.2 Gestión y Optimización Contemporánea" />
+                            <Paragraph>La gestión eficiente del sistema trifásico ha evolucionado gracias al desarrollo tecnológico, la digitalización y la utilización de sistemas de información geográfica, monitoreo remoto y análisis predictivo. La planificación integrada y la incorporación de tecnologías como líneas compactas, cables subterráneos y equipos de control de flujo de potencia han elevado el estándar de seguridad y eficiencia. En lo referente a la sostenibilidad, el impulso a redes inteligentes (smart grids), integración de energías renovables a gran escala y estrategias de pérdidas mínimas apuntan a sistemas trifásicos más resilientes y amigables con el medioambiente.</Paragraph>
 
-                            <SectionHeader title="4.2 Procedimientos de Bloqueo" />
-                            <Paragraph>Cualquier intervención directa sobre los equipos requiere la aplicación rigurosa de los procedimientos de bloqueo y etiquetado (LOTO). Se debe garantizar, mediante el uso de candados físicos y comprobación de ausencia de tensión, que ninguna maniobra remota o accidental pueda reenergizar la sección donde se encuentran los técnicos.</Paragraph>
-
-                            <SectionHeader title="4.3 Mantenimiento Predictivo" />
-                            <Paragraph>Dado el costo altísimo de desconectar una línea troncal de transmisión, la industria privilegia el mantenimiento predictivo y preventivo sin interrumpir el servicio. Esto incluye el uso de drones para inspección visual de aisladores, cámaras termográficas para detectar puntos calientes (falsos contactos) y análisis de aceite en transformadores para diagnosticar fallas incipientes.</Paragraph>
+                            <SectionHeader title="5.3 Aplicación Global de la Transmisión Trifásica" />
+                            <Paragraph>La transmisión eléctrica trifásica ha sido adoptada a nivel global, normalizándose en la mayoría de los países para redes de transmisión y subtransmisión. El intercambio de energía rumbo a la transición energética, la descarbonización y la integración regional dependen en gran medida de la eficiencia y robustez de los sistemas trifásicos interconectados.</Paragraph>
+                            <Paragraph>Países de Europa, América, Asia y Oceanía han estandarizado niveles de tensión y criterios de interconexión, permitiendo una cooperación energética sin precedentes en la historia. Las tendencias apuntan hacia la utilización de tensiones cada vez más elevadas (hasta 1100 kV en sistemas de corriente alterna y corriente continua) y el desarrollo de corredores transnacionales de transmisión de energía verde.</Paragraph>
                         </ExpansionTile>
 
                         <div className="mt-8 p-10 bg-slate-100 dark:bg-[#002855] border border-slate-200 dark:border-transparent rounded-[3rem] shadow-lg dark:shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10 text-[#002855] dark:text-white">
                                 <Quote size={120} />
                             </div>
-                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">V. Conclusiones</h3>
+                            <h3 className="text-xl font-black uppercase mb-4 tracking-widest text-[#002855] dark:text-blue-300">Conclusiones</h3>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                Los sistemas de transmisión son la columna vertebral energética de cualquier país moderno. En Chile, la robustez y extensa cobertura del Sistema Interconectado Nacional (SEN) aseguran que la energía generada —cada vez más proveniente de fuentes renovables en los extremos del país— pueda fluir confiablemente hacia los centros industriales y urbanos.
+                                Los sistemas de transmisión eléctrica trifásica constituyen la columna vertebral de la infraestructura energética mundial, permitiendo la entrega confiable y eficiente de electricidad a millones de familias, industrias y comercios. Su desarrollo, operación y regulación buscan maximizar la eficiencia, minimizar las pérdidas y reducir el impacto ambiental, garantizando así una transición energética justa, segura y sostenible.
                             </Paragraph>
                             <Paragraph className="text-slate-700 dark:text-slate-200">
-                                Comprender la necesidad de elevar el voltaje para reducir las corrientes y minimizar pérdidas, identificar los roles de las subestaciones y entender la función crítica de coordinación económica y técnica que lleva a cabo el CEN, proporciona una visión integral de cómo interactúan las fuerzas del mercado, la física de la electricidad y la necesidad pública de un suministro ininterrumpido. Para el técnico e ingeniero eléctrico moderno, conocer esta red a gran escala es tan fundamental como dominar el circuito local.
+                                La comprensión y dominio de los principios, normativas y tecnologías asociadas a la transmisión trifásica son esenciales para los profesionales de la industria eléctrica. El abordar los desafíos presentes y futuros —como la integración de energías renovables, la digitalización y la sostenibilidad ambiental— requiere sólidos conocimientos técnicos, legales y de gestión, tal como lo presentan Roldán Viloria (2008) en "Fuentes de energía" y la normativa sectorial de la SEC.
                             </Paragraph>
                         </div>
                     </div>
@@ -228,12 +276,12 @@ const AE2View = ({ onBack }) => {
                                 <h4 className="font-black text-xs uppercase tracking-widest mb-4 text-[#002855] dark:text-blue-400">Bibliografía Recomendada</h4>
                                 <div className="space-y-4">
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Coordinador Eléctrico Nacional (CEN)</strong>
-                                        <span className="text-slate-500 italic">Documentos Oficiales y Estadísticas, 2023.</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Fuentes de energía</strong>
+                                        <span className="text-slate-500 italic">Roldán Viloria, José (2008), Madrid: Paraninfo.</span>
                                     </div>
                                     <div className="p-4 bg-white dark:bg-slate-800 rounded-2xl text-[12px] font-medium border border-slate-200 dark:border-slate-700 shadow-sm transition hover:shadow-md">
-                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Ministerio de Energía - Chile</strong>
-                                        <span className="text-slate-500 italic">Reportes sobre el Sistema Interconectado Nacional (SEN).</span>
+                                        <strong className="block text-slate-900 dark:text-white uppercase mb-1">Normativas SEC</strong>
+                                        <span className="text-slate-500 italic">Normas Técnicas Sector Electricidad. Superintendencia de Electricidad y Combustibles (SEC), Santiago de Chile.</span>
                                     </div>
                                 </div>
                             </div>
