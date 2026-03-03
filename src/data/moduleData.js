@@ -14,6 +14,8 @@ export const MODULE_DATA = {
     aprendizajes: [
         { id: 1, unidad: 1, titulo: "AE1: Sistemas de Generación", descripcion: "Caracterizan los sistemas de generación eléctrica mediante fuentes hídricas, térmicas y alternativas en la industria, considerando principios e impacto ambiental." },
         { id: 2, unidad: 1, titulo: "AE2: Sistemas de Transmisión", descripcion: "Caracterizan sistemas de transmisión eléctrica a nivel nacional, considerando procesos de gestión y uso de la generación eléctrica." },
-        { id: 3, unidad: 1, titulo: "AE3: Rol del Técnico", descripcion: "Identifican el rol del técnico en el ámbito de la industria eléctrica, considerando alcance de la seguridad y prevención de riesgos, según normativa vigente." }
+        { id: 3, unidad: 1, titulo: "AE3: Rol del Técnico", descripcion: "Identifican el rol del técnico en el ámbito de la industria eléctrica, considerando alcance de la seguridad y prevención de riesgos, según normativa vigente." },
+        { id: 4, unidad: 2, titulo: "AE4: Normativa Baja Tensión (RIC)", descripcion: "Identifican normativa chilena referente a instalaciones de baja tensión y de protección en obras, de acuerdo con Pliegos técnicos DS 8/2019." },
+        { id: 5, unidad: 2, titulo: "AE5: Normativa Alumbrado y Fuerza", descripcion: "Identifican normativa chilena referente a instalaciones de alumbrado, potencia eléctrica, calefacción, lugares especiales y provisionales, según Pliegos técnicos DS 8/2019." }
     ]
 };

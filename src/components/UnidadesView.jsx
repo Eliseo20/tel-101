@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const COLORS = {
@@ -45,11 +45,20 @@ const UnidadesView = ({ moduleData }) => {
                         <span className="text-5xl font-black text-slate-50 dark:text-slate-800 block mb-4">0{ae.id}</span>
                         <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl leading-tight">{ae.titulo}</h3>
                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-8 h-20 overflow-hidden leading-relaxed">{ae.descripcion}</p>
-                        <Button variant="outline" className="w-full text-xs uppercase" onClick={() => {
-                            if (ae.id >= 1 && ae.id <= 3) navigate(`/ae${ae.id}`);
-                        }}>
-                            {ae.id >= 1 && ae.id <= 3 ? 'Ver Materia' : 'En Desarrollo'}
-                        </Button>
+                        <button
+                            onClick={() => [1, 2, 3, 4, 5].includes(ae.id) ? navigate(`/ae${ae.id}`) : null}
+                            className={`w-full py-4 rounded-2xl font-black uppercase tracking-widest text-[11px] transition-all flex items-center justify-center gap-3
+                        ${[1, 2, 3, 4, 5].includes(ae.id)
+                                    ? 'bg-[#002855] hover:bg-[#D1202F] text-white shadow-lg hover:shadow-red-500/25 hover:-translate-y-0.5'
+                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed border border-slate-200 dark:border-slate-700'
+                                }`}
+                        >
+                            {[1, 2, 3, 4, 5].includes(ae.id) ? (
+                                <>Ver Materia <ArrowRight size={16} /></>
+                            ) : (
+                                'En Desarrollo'
+                            )}
+                        </button>
                     </Card>
                 ))}
             </div>

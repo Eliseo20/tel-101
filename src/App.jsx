@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import AE1View from './components/AE1View';
 import AE2View from './components/AE2View';
 import AE3View from './components/AE3View';
+import AE4View from './components/AE4View';
+import AE5View from './components/AE5View';
 import HomeView from './components/HomeView';
 import UnidadesView from './components/UnidadesView';
 import GaleriaView from './components/GaleriaView';
@@ -95,6 +97,8 @@ const App = () => {
           <Route path="/ae1" element={<AE1View onBack={() => navigate('/')} darkMode={darkMode} />} />
           <Route path="/ae2" element={<AE2View onBack={() => navigate('/')} />} />
           <Route path="/ae3" element={<AE3View onBack={() => navigate('/')} />} />
+          <Route path="/ae4" element={<AE4View onBack={() => navigate('/')} />} />
+          <Route path="/ae5" element={<AE5View onBack={() => navigate('/')} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
