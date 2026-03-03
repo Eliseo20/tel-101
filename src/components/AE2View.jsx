@@ -126,16 +126,51 @@ const AE2View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
 
     const glossaryAE2 = [
-        { term: "Transmisión Eléctrica Trifásica", def: "Sistema de transporte de energía basado en tres corrientes alternas desfasadas 120 grados, minimizando pérdidas y optimizando infraestructura." },
-        { term: "Alta Tensión (AT)", def: "Niveles de voltaje elevados (entre 66 kV y 220 kV en Chile) utilizados para disminuir el impacto del efecto Joule en trayectos largos." },
-        { term: "Sistema Interconectado", def: "Red integrada de instalaciones de generación, transformación y transmisión que operan de forma coordinada para asegurar el abastecimiento." },
-        { term: "Centro de Despacho Económico de Carga", def: "Entidad independiente (CEN en Chile) encargada de coordinar la operación sistémica de forma segura y al mínimo costo posible." },
-        { term: "Transformador de Alto Voltaje", def: "Máquina estática que transfiere energía eléctrica elevando o reduciendo el nivel de tensión para permitir el transporte masivo eficiente." },
-        { term: "Relación de Transformación", def: "Proporción entre el número de espiras del devanado secundario y el primario, determinando el nivel de cambio de voltaje." },
-        { term: "Líneas de Transmisión", def: "Conjunto de conductores blindados y estructuras de soporte diseñadas para el transporte aéreo o subterráneo de altos bloques de potencia." },
-        { term: "Subestación Eléctrica", def: "Instalación destinada a concentrar, modificar niveles de tensión, y realizar maniobras de aislamiento y protección en el sistema eléctrico." },
-        { term: "Efecto Corona", def: "Fenómeno eléctrico producido por la ionización del aire que rodea líneas AT, provocando zumbidos y pérdidas adicionales de potencia." },
-        { term: "Pérdidas de Transmisión", def: "Disipación natural de energía transportada producto de la resistencia de los materiales conductores operando bajo carga." }
+        // Líneas de Transmisión
+        { term: "Línea de transmisión", def: "Infraestructura que transporta energía eléctrica desde las centrales de generación hasta los centros de consumo." },
+        { term: "Monofásica", def: "Línea con un solo circuito de fase, usada en aplicaciones rurales o de baja potencia." },
+        { term: "Trifásica", def: "Estándar en transmisión de grandes potencias, con tres fases desfasadas 120°." },
+        { term: "Alta tensión / Extra alta tensión", def: "Clasificación según voltaje de operación; se usan para largas distancias y grandes volúmenes de energía." },
+        { term: "Efecto corona", def: "Descarga eléctrica alrededor de conductores a alto voltaje, que genera pérdidas y ruido." },
+        { term: "Servidumbre eléctrica", def: "Franja de terreno destinada al paso de líneas, que implica restricciones de uso y afecta vegetación y paisaje." },
+        { term: "Salvapájaros", def: "Dispositivos visuales instalados en cables para reducir colisiones de aves." },
+        { term: "Campos electromagnéticos (CEM)", def: "Radiación eléctrica y magnética generada por las líneas, objeto de regulación por posibles efectos en salud y equipos." },
+        // Impacto Ambiental de Líneas de Transmisión
+        { term: "Fragmentación de hábitat", def: "Alteración de corredores ecológicos por la apertura de franjas de servidumbre." },
+        { term: "Compactación de suelos", def: "Daño físico causado por maquinaria pesada durante la construcción." },
+        { term: "Impacto paisajístico", def: "Alteración visual del entorno por torres y cables." },
+        { term: "Ruido por efecto corona", def: "Sonido generado en condiciones de alta humedad o contaminación." },
+        { term: "Residuos de construcción", def: "Materiales sólidos, aceites y lubricantes que requieren gestión ambiental." },
+        { term: "Participación ciudadana", def: "Proceso obligatorio de consulta y diálogo con comunidades afectadas." },
+        // Sistema Interconectado
+        { term: "Sistema interconectado", def: "Red eléctrica que conecta múltiples fuentes de generación con centros de consumo mediante transmisión y distribución coordinada." },
+        { term: "Red mallada", def: "Configuración que permite múltiples rutas de energía, aumentando confiabilidad." },
+        { term: "Centro de control", def: "Unidad que supervisa y despacha la operación de centrales y líneas en tiempo real." },
+        { term: "Despacho eléctrico", def: "Proceso de asignar qué centrales entran en operación para equilibrar oferta y demanda." },
+        { term: "Interoperabilidad internacional", def: "Capacidad de interconectar sistemas eléctricos de distintos países." },
+        { term: "Blackout", def: "Apagón masivo por falla en el sistema interconectado." },
+        { term: "Resiliencia", def: "Capacidad del sistema para recuperarse frente a contingencias (climáticas, técnicas o cibernéticas)." },
+        // Sistemas de Transmisión Trifásica
+        { term: "Sistema trifásico", def: "Transmisión con tres corrientes alternas desfasadas 120°, más eficiente que el monofásico." },
+        { term: "Generador trifásico", def: "Alternador que produce energía en tres fases equilibradas." },
+        { term: "Transformador trifásico", def: "Equipo que eleva o reduce tensión en sistemas de transmisión." },
+        { term: "Potencia activa (P)", def: "Energía útil entregada, calculada como P = √3 · V · I · cos(φ)." },
+        { term: "Potencia reactiva (Q)", def: "Energía asociada a campos eléctricos y magnéticos, no útil directamente." },
+        { term: "SCADA", def: "Sistema de supervisión y control en tiempo real para redes eléctricas." },
+        // Transformadores de Alto Voltaje
+        { term: "Transformador", def: "Dispositivo que modifica niveles de tensión mediante inducción electromagnética." },
+        { term: "Elevador", def: "Aumenta la tensión para transmisión eficiente a largas distancias." },
+        { term: "Reductor", def: "Disminuye la tensión para distribución y consumo final." },
+        { term: "Núcleo magnético", def: "Parte central de acero silicio que concentra el flujo magnético." },
+        { term: "Aceite dieléctrico", def: "Líquido aislante y refrigerante usado en transformadores." },
+        { term: "Relé Buchholz", def: "Dispositivo de protección que detecta gases por fallas internas." },
+        { term: "PCBs (bifenilos policlorados)", def: "Sustancias tóxicas usadas en transformadores antiguos, hoy prohibidas." },
+        { term: "Transformador seco", def: "Tecnología moderna que utiliza aislamiento sólido, evitando aceites contaminantes." },
+        // Conceptos Normativos y Técnicos Transversales
+        { term: "Normas Técnicas del Sector Electricidad (SEC)", def: "Regulaciones chilenas que establecen requisitos de seguridad, eficiencia y protección ambiental." },
+        { term: "Evaluación de Impacto Ambiental (EIA)", def: "Estudio obligatorio para proyectos eléctricos que analiza efectos sobre entorno natural y social." },
+        { term: "Compensación ambiental", def: "Medidas para restaurar o equilibrar impactos inevitables de proyectos eléctricos." },
+        { term: "Smart grid (red inteligente)", def: "Sistema eléctrico digitalizado que integra sensores, automatización y gestión eficiente de energía." }
     ];
 
     return (
