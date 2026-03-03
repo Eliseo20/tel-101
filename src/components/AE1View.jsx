@@ -493,12 +493,17 @@ const AE1View = ({ onBack }) => {
                             <SectionHeader title="Introducción a la Energía Geotérmica" />
                             <Paragraph>La geotermia se ha consolidado, a nivel global, como una alternativa relevante y sustentable dentro del espectro de fuentes utilizadas para la generación eléctrica. Su utilización descansa en la capacidad de aprovechar el calor interno de la Tierra, mediante tecnologías específicas que transforman esta energía térmica en electricidad. Este texto, basado principalmente en la obra "Fuentes de energía" de José Roldán Viloria (2008) y las directrices planteadas por la Superintendencia de Electricidad y Combustibles (SEC) de Chile, profundiza en los fundamentos, procesos, ventajas, desafíos y el marco regulatorio de la generación de electricidad geotérmica, con un enfoque académico, estructurado y contextualizado a nivel global.</Paragraph>
 
-                            {/* Espacio reservado para Video/Imagen de Introducción Geotermia */}
-                            <div className="my-8 relative w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-dashed border-slate-300 dark:border-slate-700">
-                                <Info size={40} className="text-slate-400 dark:text-slate-500 mb-2 opacity-50" />
-                                <span className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest opacity-70">
-                                    [Espacio reservado para Video/Imagen: Geotermia]
-                                </span>
+                            {/* Video de Introducción Geotermia */}
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/ZLY35JgQgQU"
+                                    title="¿Cómo funciona una planta geotérmica?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <SectionHeader title="1. Principios Fundamentales de la Geotermia" />
@@ -514,6 +519,19 @@ const AE1View = ({ onBack }) => {
 
                             <SectionHeader title="2. Proceso de Generación Eléctrica Mediante Energía Geotérmica" />
                             <Paragraph>El proceso para la generación de electricidad a partir de energía geotérmica implica la transformación de la energía térmica en energía eléctrica a través de una serie de etapas y componentes tecnológicos que dependen del tipo de recurso geotérmico y la tecnología seleccionada para su explotación.</Paragraph>
+
+                            {/* Video Animación Geotermia 3D */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/_XfsQVh-QNE"
+                                    title="Animación Geotermia - Maqueta GIZ"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
 
                             <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">2.1. Extracción del Fluido Geotérmico</h5>
                             <Paragraph>El primer paso consiste en la perforación y diseño de pozos geotérmicos, que permiten acceder al reservorio subterráneo. Una vez llegado a las profundidades deseadas (que pueden oscilar entre 500 y 3.000 metros, dependiendo del campo geotérmico), los fluidos calientes (agua, vapor o una mezcla de ambos) ascienden a la superficie impulsados por su propia presión y el gradiente de temperatura.</Paragraph>
