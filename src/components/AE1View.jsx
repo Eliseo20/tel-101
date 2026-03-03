@@ -916,10 +916,188 @@ const AE1View = ({ onBack }) => {
                                 <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante centrales termosolares, identificando sus principios técnicos, sus distintas variantes tecnológicas, sus impactos ambientales y su viabilidad frente a otras energías alternativas en el mercado global.</p>
                             </HighlightBox>
 
-                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
-                            <Paragraph>Además de la geotermia, la energía solar fotovoltaica y la termosolar, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes muy relevantes en la matriz energética moderna:</Paragraph>
+                            <div className="mt-16 mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800">
+                                <h3 className="text-xl font-black text-amber-900 dark:text-amber-300 uppercase mb-2">D. Energía Eólica</h3>
+                                <p className="text-sm text-amber-700 dark:text-amber-500">Transformación de la energía cinética del viento en electricidad mediante el uso de aerogeneradores.</p>
+                            </div>
+
+                            <SectionHeader title="1. Introducción a la Energía Eólica" />
+                            <Paragraph>La energía eólica se ha consolidado en las últimas décadas como una de las fuentes alternativas más relevantes para la generación de electricidad a nivel global. Su desarrollo ha sido impulsado no solo por la creciente necesidad de diversificar la matriz energética, sino también por la urgencia de reducir los impactos ambientales asociados a los sistemas convencionales de generación. En esta unidad de estudio se aborda el funcionamiento, principios, impacto ambiental y relevancia económica y legal de las centrales eólicas, de acuerdo con el contexto internacional, haciendo referencia a la obra de Roldán Viloria (2008) y la normativa técnica sectorial vigente.</Paragraph>
+
+                            {/* Video Cómo Funcionan Realmente las Turbinas Eólicas */}
+                            <div className="my-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/Uk4LlN7qIaA"
+                                    title="Cómo Funcionan Realmente las Turbinas Eólicas"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            <SectionHeader title="2. Principios de la Generación Eléctrica Mediante Energía Eólica" />
+                            <Paragraph>La energía eólica es la energía cinética contenida en las masas de aire en movimiento. Para transformar dicha energía en electricidad, se utilizan dispositivos denominados aerogeneradores. El principio fundamental detrás de la generación eólica radica en la conversión de la energía cinética del viento en energía mecánica, y posteriormente en energía eléctrica.</Paragraph>
+                            <Paragraph>De acuerdo con Roldán Viloria (2008), el proceso se inicia cuando el viento impulsa las palas del aerogenerador, las cuales están acopladas a un eje central. Este eje está conectado a un generador que transforma la energía de rotación en energía eléctrica, mediante un sistema electromecánico basado generalmente en el principio de inducción electromagnética de Faraday. La cantidad de energía que puede generarse depende de factores como la velocidad del viento, el área barrida por las palas y la eficiencia del sistema.</Paragraph>
+                            <Paragraph>Es importante destacar que, como establece la legislación técnica del sector electricidad, la factibilidad de instalación de una central eólica está sujeta a estudios previos del recurso viento, análisis de impacto ambiental y cumplimiento de las normativas de conexión al sistema eléctrico, como la normativa chilena en actores locales y los estándares internacionales en la mayoría de los países.</Paragraph>
+
+                            <SectionHeader title="3. Componentes Básicos de un Sistema Eólico de Generación" />
+                            <Paragraph>Las centrales eólicas están compuestas por varios aerogeneradores, que pueden instalarse en tierra (onshore) o mar adentro (offshore). Los principales componentes de un aerogenerador, de acuerdo al desarrollo teórico y técnico de Roldán Viloria (2008) son:</Paragraph>
                             <List items={[
-                                "Energía Eólica: Utiliza aerogeneradores impulsados por el viento. Limpia pero intermitente. Requiere estudios precisos de vientos.",
+                                "Palas: Son los elementos que capturan la energía del viento y la transmiten al rotor.",
+                                "Rotor: Conjunto de palas y cubo que gira al recibir el impulso del viento.",
+                                "Eje de baja velocidad: Conecta el rotor a la caja multiplicadora y gira a la misma velocidad que el rotor.",
+                                "Caja multiplicadora: Sistema de engranajes que incrementa la velocidad de rotación para adecuarla al generador.",
+                                "Generador: Transforma la energía mecánica de rotación en energía eléctrica, usualmente mediante inducción.",
+                                "Torre: Estructura que soporta el sistema a una altura adecuada para captar los vientos más fuertes y constantes.",
+                                "Sistema de control: Monitorea y regula la orientación del rotor y la velocidad de las palas.",
+                                "Sistema de orientación: Permite girar la góndola para que el rotor esté siempre orientado hacia el viento predominante.",
+                                "Transformadores y sistemas de conexión: Adecuan la energía eléctrica generada para su integración a la red eléctrica."
+                            ]} />
+                            <Paragraph>Estos componentes trabajan de forma coordinada para maximizar la producción y minimizar los riesgos de daños frente a velocidades excesivas del viento o variaciones bruscas en las condiciones atmosféricas.</Paragraph>
+
+                            <SectionHeader title="4. Tipos y Configuraciones de Centrales Eólicas" />
+                            <Paragraph>Existen diversas modalidades de instalaciones eólicas, que responden a factores geográficos, técnicos y económicos. Las principales configuraciones reconocidas en la bibliografía y la normativa internacional son:</Paragraph>
+                            <List items={[
+                                "Centrales eólicas terrestres (onshore): Son las más comunes y se ubican en tierra firme, generalmente en zonas de campo abierto, crestas de montaña o llanuras costeras con buen recurso eólico.",
+                                "Centrales eólicas marinas (offshore): Se instalan en el mar, aprovechando la mayor constancia y velocidad del viento en alta mar. Requieren una infraestructura más compleja, pero poseen mayores factores de capacidad."
+                            ]} />
+                            <Paragraph>Desde el punto de vista de la disposición y operación, las centrales eólicas pueden ser:</Paragraph>
+                            <List items={[
+                                "Sistemas aislados: Generan energía para consumo local, sin conexión a la red principal. Son comunes en islas, zonas rurales o instalaciones remotas.",
+                                "Sistemas interconectados: Inyectan la energía producida directamente a las redes públicas de electricidad, contribuyendo a la matriz global."
+                            ]} />
+                            <Paragraph>Esta distinción es relevante para la planificación y el cálculo del impacto tanto técnico como ambiental de los parques eólicos.</Paragraph>
+
+                            <SectionHeader title="5. Funcionamiento Técnico de las Centrales Eólicas" />
+                            <Paragraph>De acuerdo con Roldán Viloria (2008), el proceso de generación en una central eólica sigue las siguientes etapas técnicas:</Paragraph>
+                            <List items={[
+                                "Captación del viento por las palas.",
+                                "Conversión de la energía cinética en rotación del rotor.",
+                                "Transmisión de la rotación a través del eje y la caja multiplicadora.",
+                                "Conversión de la energía mecánica en energía eléctrica en el generador.",
+                                "Acondicionamiento de la energía (transformadores, electrónica de potencia) para integración a la red."
+                            ]} />
+
+                            {/* Video Instalacion de generador eolico */}
+                            <div className="my-6 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/Hx1cOrIJcpQ"
+                                    title="Instalación de generador eólico"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            <Paragraph>El rendimiento depende mucho de la capacidad del aerogenerador para captar la máxima energía posible del viento. Esto se ve afectado por el diseño de las palas, la altura de la torre, la calidad de los materiales, y el sistema de control, que ajusta el ángulo de las palas (pitch) y orienta el rotor (yaw) en todo momento.</Paragraph>
+                            <Paragraph>El viento no sopla siempre a la misma velocidad, y la eficiencia del aerogenerador varía. Los sistemas modernos integran algoritmos avanzados para predecir y optimizar la generación dependiendo de las condiciones climáticas y de demanda.</Paragraph>
+
+                            <SectionHeader title="6. Factores de Capacidad y Limitaciones de la Energía Eólica" />
+                            <Paragraph>A diferencia de las fuentes convencionales, la eólica es una fuente de carácter variable. El llamado factor de capacidad es una expresión del porcentaje de energía realmente producida respecto al máximo teórico de generación. Este factor depende de:</Paragraph>
+                            <List items={[
+                                "Variabilidad y constancia de la velocidad del viento.",
+                                "Ubicación geográfica (topografía, obstáculos, altura).",
+                                "Disponibilidad de tecnología y mantenimiento.",
+                                "Políticas de integración a la red (normas técnicas SEC, 200)."
+                            ]} />
+                            <Paragraph>Globalmente, los mejores emplazamientos de parques eólicos logran factores de capacidad entre el 30% y 45%, aunque en algunas zonas marinas superan el 50%. Es importante dimensionar correctamente la instalación considerando estos valores, ya que la falta de viento implica reducción o ausencia temporal de generación, por lo que habitualmente se requiere respaldo de otras fuentes o almacenamiento de energía.</Paragraph>
+
+                            <SectionHeader title="7. Ventajas y Desventajas de la Energía Eólica" />
+                            <Paragraph>Desde el punto de vista técnico y ambiental, la energía eólica presenta una serie de ventajas sustanciales respecto a tecnologías tradicionales y a otras fuentes alternativas, aunque también ciertas limitaciones, tal como lo resume Roldán Viloria (2008):</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">7.1. Ventajas</h5>
+                            <List items={[
+                                "No consume combustibles fósiles, por lo que no produce emisiones de Gases de Efecto Invernadero (GEI) durante su operación.",
+                                "La materia prima (viento) es gratuita, inagotable y disponible en la mayoría de los países.",
+                                "Bajo costo operativo y de mantenimiento una vez instalada la infraestructura.",
+                                "Tiempo relativamente corto de instalación y posibilidad de desmantelamiento o relocalización al término de la vida útil.",
+                                "Compatibilidad con actividades agropecuarias en el caso de parques terrestres."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">7.2. Desventajas</h5>
+                            <List items={[
+                                "Intermitencia e imprevisibilidad del recurso viento.",
+                                "Necesidad de respaldo o combinación con sistemas de almacenamiento y gestión de red.",
+                                "Impacto paisajístico por la instalación de torres de gran altura en el entorno natural.",
+                                "Potencial impacto ecológico (colisión de aves, alteración de hábitats).",
+                                "Generación de ruido en las cercanías de los aerogeneradores."
+                            ]} />
+                            <Paragraph>La evolución tecnológica, la correcta planificación y la integración con otras formas de suministro en sistemas híbridos han permitido mitigar de manera significativa varias de las desventajas señaladas.</Paragraph>
+
+                            <SectionHeader title="8. Impactos Ambientales de las Centrales Eólicas" />
+                            <Paragraph>Si bien la energía eólica es considerada una de las fuentes más limpias de electricidad, la instalación y operación de centrales eólicas no está exenta de impactos sobre el medio ambiente y la sociedad. El análisis de estos impactos, según las directrices técnicas sectoriales (SEC, 200-) y la discusión en Roldán Viloria (2008), debe distinguir entre los distintos tipos de efectos, tanto positivos como negativos.</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">8.1. Durante la fase de construcción</h5>
+                            <List items={[
+                                "Alteración del uso del suelo y paisaje, especialmente por apertura de caminos, cimentaciones y tendido de líneas eléctricas.",
+                                "Emisión de polvo, ruidos y movimiento de suelo.",
+                                "Modificación temporal de hábitats y alteración de la fauna local, principalmente aves y murciélagos."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">8.2. Durante la fase de operación</h5>
+                            <List items={[
+                                "Ruido aerodinámico y mecánico generado por el giro del rotor y la maquinaria interna.",
+                                "Riesgo de colisión y muerte de aves, así como de alteración de los patrones migratorios.",
+                                "Efecto visual o impacto paisajístico, que puede causar rechazo en comunidades o afectar el turismo local.",
+                                "Parpadeo de sombra ('shadow flicker') debido al paso del sol detrás de las palas giratorias."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">8.3. Durante la fase de desmantelamiento</h5>
+                            <List items={[
+                                "Posibilidad de reciclaje y reutilización de materiales.",
+                                "Restauración progresiva del entorno a su estado original."
+                            ]} />
+                            <Paragraph>En la evaluación global, la relación entre energía producida y el impacto ambiental causado es significativamente más favorable en las centrales eólicas que en otras fuentes convencionales. No obstante, la adecuada selección del sitio, la participación ciudadana y la aplicación de métodos para la mitigación de impactos (control de ruido, diseño para evitar colisión de aves, planificación paisajística, etc.) son aspectos mandatados por la normativa sectorial y resultan fundamentales en todo proyecto eólico.</Paragraph>
+
+                            <SectionHeader title="9. Aspectos Económicos y Regulación Legal de las Centrales Eólicas" />
+                            <Paragraph>La viabilidad de las centrales eólicas está determinada tanto por la competitividad de sus costes como por el marco jurídico que facilita o restringe su desarrollo. De acuerdo a Roldán Viloria (2008) y las normas técnicas del sector electricidad (SEC, 200-), se deben considerar los siguientes elementos:</Paragraph>
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">9.1. Costos de inversión y operación</h5>
+                            <List items={[
+                                "El costo inicial de construcción e infraestructura es elevado, pero se compensa por los bajos costos de operación y mantenimiento.",
+                                "Al carecer de costos de combustible, la previsibilidad del costo marginal es alta.",
+                                "El desarrollo tecnológico ha permitido reducir significativamente los costos de generación eólica en la última década."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">9.2. Incentivos y políticas de apoyo</h5>
+                            <List items={[
+                                "Muchos países ofrecen incentivos fiscales, tarifas preferenciales (feed-in tariffs), subastas de capacidad y sistemas de certificación de energías limpias para promover la inversión.",
+                                "La regulación técnica y medioambiental define los requisitos de conexión, seguridad, medición, trazabilidad de la energía y responsabilidad en caso de impactos."
+                            ]} />
+
+                            <h5 className="font-bold text-slate-900 dark:text-white mt-6 mb-2">9.3. Mercados de energía eléctrica</h5>
+                            <List items={[
+                                "La electricidad de origen eólico participa en mercados mayoristas, pudiendo contribuir al balance y seguridad del sistema, especialmente en combinación con almacenamiento o fuentes gestionables.",
+                                "La integración masiva de la eólica plantea desafíos para la operación de redes (fluctuaciones, congestión, coordinación con otras fuentes), exigiendo sistemas inteligentes y flexibles."
+                            ]} />
+                            <Paragraph>En Chile y otros países, las normas técnicas contemplan estándares internacionales respecto a eficiencia, calidad, electromagnetismo, seguridad y protección ambiental, exigencias de monitoreo y reporte a la autoridad sectorial y medidas de compensación para las comunidades afectadas.</Paragraph>
+
+                            <SectionHeader title="10. Tendencias y Futuro de la Energía Eólica" />
+                            <Paragraph>La energía eólica representa hoy uno de los pilares de la transición energética mundial. Según Roldán Viloria (2008), su potencial es inmenso, ya que la energía cinética disponible en la atmósfera es vastamente superior a la demanda eléctrica global. Las tendencias principales apuntan a:</Paragraph>
+                            <List items={[
+                                "Aumento del tamaño y capacidad de los aerogeneradores, permitiendo instalaciones de mayor potencia por unidad y mayores factores de capacidad.",
+                                "Desarrollo de nuevos materiales ligeros y resistentes, reducción de costos y mejora en los sistemas de control y almacenamiento asociado.",
+                                "Expansión de los parques eólicos marinos (offshore) con nuevas tecnologías como plataformas flotantes.",
+                                "Mejor integración y gestión de la variabilidad mediante inteligencia artificial, sistemas híbridos y baterías.",
+                                "Fomentar la participación ciudadana y la creación de comunidades energéticas, para democratizar el acceso a la energía renovable."
+                            ]} />
+                            <Paragraph>El compromiso global para enfrentar el cambio climático y el agotamiento de combustibles fósiles ha posicionado a la eólica como una de las vías principales para lograr una matriz energética sostenible, segura y económicamente viable. En este contexto, el conocimiento técnico, la correcta planificación y el respeto por la regulación legal y ambiental son elementos indispensables para el desarrollo responsable del sector.</Paragraph>
+
+                            <SectionHeader title="11. Conclusión" />
+                            <Paragraph>La generación eléctrica mediante energía eólica es una alternativa tecnológica madura, eficiente y ambientalmente sostenible frente a las fuentes tradicionales. Su adecuada implementación requiere comprender los principios técnicos, la operación de los aerogeneradores, la selección de emplazamientos óptimos y el control de los impactos ambientales.</Paragraph>
+                            <Paragraph>La evolución normativa impulsa la adopción de buenas prácticas y la garantía de que la expansión de la energía eólica se traduzca no solo en beneficios ambientales y económicos, sino también sociales. El futuro del sector eólico dependerá de la continua innovación tecnológica, el desarrollo de un marco legal robusto, y la capacidad de integrar esta fuente en redes eléctricas inteligentes, resilientes y equitativas a escala global.</Paragraph>
+
+                            <HighlightBox type="warning" title="Criterio de Evaluación 1.6">
+                                <p>Al finalizar esta sección, el estudiante debiese ser capaz de caracterizar el proceso de generación eléctrica mediante energía eólica, identificando sus principios técnicos, impactos ambientales, normativa aplicable y viabilidad frente a otras energías en la transición energética global.</p>
+                            </HighlightBox>
+
+                            <SectionHeader title="Anexo: Otras Energías Alternativas" />
+                            <Paragraph>Además de la geotermia, la energía solar fotovoltaica, termosolar y eólica, el portafolio de Energías Renovables No Convencionales (ERNC) incluye otras fuentes relevantes en la matriz energética moderna:</Paragraph>
+                            <List items={[
                                 "Biomasa: Quema de residuos orgánicos para generar calor y electricidad. Neutra en carbono si se gestiona sosteniblemente.",
                                 "Energía Marina (Mareomotriz/Undimotriz): Aprovechamiento de mareas y olas. En vías de desarrollo comercial por sus altos costos."
                             ]} />
