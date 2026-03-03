@@ -126,17 +126,16 @@ const AE2View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
 
     const glossaryAE2 = [
-        { term: "Transmisión Eléctrica", def: "Etapa del suministro eléctrico que transporta la energía a largas distancias desde las plantas generadoras hasta las subestaciones o puntos de consumo masivo, utilizando altos niveles de tensión." },
-        { term: "Alta Tensión (AT)", def: "Niveles de voltaje elevados (generalmente entre 66 kV y 220 kV en Chile) utilizados para minimizar las pérdidas de energía (efecto Joule) durante el transporte a largas distancias." },
-        { term: "Extra Alta Tensión (EAT)", def: "Voltajes superiores a 220 kV (típicamente 500 kV) empleados en líneas troncales para la interconexión de grandes regiones." },
-        { term: "Subestación Eléctrica", def: "Instalación destinada a modificar y establecer los niveles de tensión de una infraestructura eléctrica, facilitando la transmisión y distribución." },
-        { term: "Transformador", def: "Máquina eléctrica estática que transfiere energía eléctrica de un circuito a otro, elevando o reduciendo el voltaje manteniendo la frecuencia y operando bajo el principio de inducción electromagnética." },
-        { term: "Relación de Transformación", def: "Proporción entre el número de espiras del devanado secundario y el primario en un transformador, que determina la razón en la cual el voltaje será modificado." },
-        { term: "Línea de Transmisión", def: "Estructura de cables (aéreos o subterráneos) y elementos de soporte diseñada para transportar energía eléctrica a altas tensiones desde la generación hasta los centros de consumo." },
-        { term: "Efecto Corona", def: "Fenómeno eléctrico producido por la ionización del aire circundante a los conductores de alta tensión, provocando pérdidas de energía y ruido audible." },
-        { term: "Sistema Interconectado Nacional (SEN)", def: "Infraestructura principal en Chile que concentra casi la totalidad de la generación y transmisión, extendiéndose desde Arica hasta Chiloé." },
-        { term: "Centro de Despacho Económico de Carga (CEN)", def: "Entidad independiente (Coordinador Eléctrico Nacional en Chile) encargada de coordinar la operación segura y al mínimo costo del sistema eléctrico." },
-        { term: "Pérdidas de Transmisión", def: "Porcentaje de energía que se disipa en forma de calor en los conductores durante su transporte, debido a la resistencia natural del material y al efecto Joule." }
+        { term: "Transmisión Eléctrica Trifásica", def: "Sistema de transporte de energía basado en tres corrientes alternas desfasadas 120 grados, minimizando pérdidas y optimizando infraestructura." },
+        { term: "Alta Tensión (AT)", def: "Niveles de voltaje elevados (entre 66 kV y 220 kV en Chile) utilizados para disminuir el impacto del efecto Joule en trayectos largos." },
+        { term: "Sistema Interconectado", def: "Red integrada de instalaciones de generación, transformación y transmisión que operan de forma coordinada para asegurar el abastecimiento." },
+        { term: "Centro de Despacho Económico de Carga", def: "Entidad independiente (CEN en Chile) encargada de coordinar la operación sistémica de forma segura y al mínimo costo posible." },
+        { term: "Transformador de Alto Voltaje", def: "Máquina estática que transfiere energía eléctrica elevando o reduciendo el nivel de tensión para permitir el transporte masivo eficiente." },
+        { term: "Relación de Transformación", def: "Proporción entre el número de espiras del devanado secundario y el primario, determinando el nivel de cambio de voltaje." },
+        { term: "Líneas de Transmisión", def: "Conjunto de conductores blindados y estructuras de soporte diseñadas para el transporte aéreo o subterráneo de altos bloques de potencia." },
+        { term: "Subestación Eléctrica", def: "Instalación destinada a concentrar, modificar niveles de tensión, y realizar maniobras de aislamiento y protección en el sistema eléctrico." },
+        { term: "Efecto Corona", def: "Fenómeno eléctrico producido por la ionización del aire que rodea líneas AT, provocando zumbidos y pérdidas adicionales de potencia." },
+        { term: "Pérdidas de Transmisión", def: "Disipación natural de energía transportada producto de la resistencia de los materiales conductores operando bajo carga." }
     ];
 
     return (

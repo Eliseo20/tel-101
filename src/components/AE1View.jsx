@@ -119,13 +119,51 @@ const AE1View = ({ onBack }) => {
     const [activeTab, setActiveTab] = useState('materia');
 
     const glossaryAE1 = [
-        { term: "Fuente Hídrica", def: "Energía obtenida del aprovechamiento de las energías cinéticas y potenciales de la corriente del agua, saltos de agua o mareas." },
-        { term: "Energía Térmica", def: "Generación de electricidad a partir del calor, generalmente quemando combustibles fósiles (carbón, gas natural, petróleo) o biomasa." },
-        { term: "Energías Alternativas", def: "Fuentes de energía renovables que se consideran alternativas a los combustibles fósiles, como la solar, eólica, geotérmica, entre otras." },
-        { term: "Impacto Ambiental", def: "Efecto que produce la actividad humana, en este caso la generación eléctrica, sobre el medio ambiente." },
-        { term: "Central Hidroeléctrica", def: "Instalación que utiliza energía hidráulica para la generación de energía eléctrica." },
-        { term: "Central Termoeléctrica", def: "Instalación empleada en la generación de energía eléctrica a partir de la energía liberada por combustibles fósiles o uranio." },
-        { term: "Generación Distribuida", def: "Generación de energía eléctrica a partir de muchas pequeñas fuentes de energía." }
+        // Geotermia
+        { term: "Gradiente geotérmico", def: "Aumento promedio de la temperatura del subsuelo entre 25 y 30 °C por cada kilómetro de profundidad." },
+        { term: "Alta entalpía", def: "Recursos geotérmicos con temperaturas superiores a 150 °C, aptos para generación eléctrica." },
+        { term: "Centrales de vapor seco", def: "Usan directamente el vapor natural del reservorio para mover turbinas." },
+        { term: "Centrales de vapor flash", def: "Despresurizan agua caliente para generar vapor y accionar turbinas." },
+        { term: "Centrales de ciclo binario", def: "Utilizan un fluido secundario de bajo punto de ebullición (isobutano, pentano) para mover la turbina." },
+        { term: "Reinyección", def: "Práctica de devolver los fluidos al reservorio para mantener presión y sustentabilidad." },
+        { term: "Sismicidad inducida", def: "Microsismos ocasionados por la reinyección de fluidos en el subsuelo." },
+        // Mareomotriz
+        { term: "Pleamar y bajamar", def: "Estados de marea alta y baja, cuya diferencia de nivel se aprovecha para generar energía." },
+        { term: "Centrales de embalse mar", def: "Usan diques para almacenar agua en marea alta y liberarla en marea baja." },
+        { term: "Centrales de corriente de marea (tidal stream)", def: "Capturan la energía cinética de las corrientes mediante turbinas submarinas." },
+        { term: "Turbinas bulbo", def: "Turbinas reversibles que permiten el paso de agua en ambas direcciones." },
+        { term: "Doble efecto", def: "Centrales que generan electricidad tanto en la entrada como en la salida del agua del embalse." },
+        { term: "Impacto estuarino", def: "Alteración de ecosistemas costeros por la construcción de diques y variación en salinidad y sedimentación." },
+        // Eólica
+        { term: "Aerogenerador", def: "Dispositivo que convierte la energía cinética del viento en electricidad." },
+        { term: "Rotor", def: "Conjunto de palas que gira impulsado por el viento." },
+        { term: "Caja multiplicadora", def: "Sistema de engranajes que aumenta la velocidad de rotación para el generador." },
+        { term: "Coeficiente de potencia (Cp)", def: "Medida de eficiencia de un aerogenerador, con límite teórico de 0,593 (Límite de Betz)." },
+        { term: "Onshore / Offshore", def: "Centrales eólicas terrestres y marinas." },
+        { term: "Shadow flicker", def: "Parpadeo de sombra causado por el giro de las palas frente al sol." },
+        { term: "Factor de capacidad", def: "Porcentaje de energía realmente producida respecto al máximo teórico." },
+        // Hidroeléctrica
+        { term: "Salto hidráulico (H)", def: "Diferencia de altura que recorre el agua, clave para calcular la potencia generada." },
+        { term: "Centrales de embalse hidr", def: "Almacenan agua en presas para regular caudal y generar electricidad de forma continua." },
+        { term: "Centrales de pasada", def: "Aprovechan directamente el caudal natural del río sin grandes embalses." },
+        { term: "Turbina Pelton", def: "Para saltos altos y caudales bajos." },
+        { term: "Turbina Francis", def: "Para saltos y caudales medios." },
+        { term: "Turbina Kaplan", def: "Para saltos bajos y caudales altos." },
+        { term: "Caudal ecológico", def: "Descarga mínima de agua necesaria para mantener el ecosistema aguas abajo." },
+        // Solar Fotovoltaica
+        { term: "Efecto fotovoltaico", def: "Fenómeno por el cual materiales semiconductores generan electricidad al recibir radiación solar." },
+        { term: "Célula fotovoltaica", def: "Unidad básica que convierte la luz solar en corriente eléctrica." },
+        { term: "Unión p-n", def: "Configuración de materiales semiconductores que permite la separación de electrones y huecos." },
+        { term: "Generación distribuida", def: "Instalaciones cercanas al consumo, como techos residenciales o comerciales." },
+        { term: "Centrales solares fotovoltaicas", def: "Plantas de gran escala que inyectan energía a la red." },
+        { term: "Irradiancia", def: "Cantidad de energía solar que llega a la superficie terrestre." },
+        { term: "Prosumidor", def: "Usuario que produce y consume energía simultáneamente." },
+        // Transversales
+        { term: "Factor de planta", def: "Número de horas efectivas de operación de una central en un año." },
+        { term: "Huella de carbono", def: "Medida de emisiones de gases de efecto invernadero asociadas a un proceso." },
+        { term: "Normas Técnicas del Sector Electricidad (SEC)", def: "Regulaciones chilenas que establecen requisitos de seguridad, eficiencia y protección ambiental." },
+        { term: "Evaluación de impacto ambiental (EIA)", def: "Estudio obligatorio para proyectos energéticos que analiza efectos sobre el entorno." },
+        { term: "Sostenibilidad energética", def: "Capacidad de un sistema de proveer energía a largo plazo minimizando el daño ambiental y asegurando el acceso." }
     ];
 
     return (
