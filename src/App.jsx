@@ -92,7 +92,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomeView moduleData={MODULE_DATA} />} />
           <Route path="/unidades" element={<UnidadesView moduleData={MODULE_DATA} />} />
-          <Route path="/galeria" element={<GaleriaView onBack={() => navigate('/')} />} />
+          {/* <Route path="/galeria" element={<GaleriaView onBack={() => navigate('/')} />} /> */}
           {/* <Route path="/quiz" element={<ProtectionsQuizGame />} /> */}
           <Route path="/ae1" element={<AE1View onBack={() => navigate('/')} darkMode={darkMode} />} />
           <Route path="/ae2" element={<AE2View onBack={() => navigate('/')} />} />
