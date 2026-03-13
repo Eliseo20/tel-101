@@ -50,13 +50,13 @@ const Navbar = ({ isDarkMode, toggleDarkMode, onNavigate }) => {
                             Galería
                             <span className="absolute -bottom-8 left-0 w-full h-1.5 bg-[#D1202F] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform" />
                         </button>
-                        <button
+                        {/* <button
                             onClick={() => onNavigate('quiz')}
                             className="text-[10px] font-black uppercase tracking-[0.3em] transition-all relative text-[#D1202F] dark:text-red-400 hover:text-red-500 dark:hover:text-red-300 group"
                         >
                             Desafío
                             <span className="absolute -bottom-8 left-0 w-full h-1.5 bg-[#D1202F] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform" />
-                        </button>
+                        </button> */}
                     </nav>
 
                     <div className="h-8 w-px bg-slate-200 dark:bg-slate-800 hidden md:block" />
