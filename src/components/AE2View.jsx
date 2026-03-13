@@ -221,6 +221,19 @@ const AE2View = ({ onBack }) => {
                         <div className="p-8 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 lg:rounded-[3rem] rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 mb-10">
                             <SectionHeader title="Introducción" />
                             <Paragraph>La transmisión eléctrica es un componente fundamental dentro de la industria eléctrica global, debido a su papel en el transporte eficiente de energía desde los puntos de generación hasta las áreas de consumo. La utilización de sistemas de transmisión eléctrica trifásica es predominante y esencial para satisfacer los altos requerimientos de potencia y eficiencia de los sistemas eléctricos modernos. A su vez, estas infraestructuras se agrupan conformando un Sistema Interconectado, una red integrada que garantiza la gestión coordinada, estabilidad, seguridad y calidad del suministro a gran escala. El presente texto explora ambos conceptos clave basados en la literatura técnica ("Fuentes de energía", Roldán Viloria, 2008) y las Normas Técnicas Sector Electricidad (SEC).</Paragraph>
+                            
+                            {/* Video de Introducción AE2 */}
+                            <div className="mt-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/UMt9xIOzriM"
+                                    title="Transmisión y Sistemas Interconectados"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
                         </div>
 
                         <ExpansionTile title="I. Sistemas de Transmisión Eléctrica Trifásica" icon={Zap} defaultOpen={false}>
