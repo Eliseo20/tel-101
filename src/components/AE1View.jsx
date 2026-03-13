@@ -215,6 +215,19 @@ const AE1View = ({ onBack }) => {
                             <SectionHeader title="Introducción" />
                             <Paragraph>El rubro de la energía eléctrica es el pilar fundamental para el desarrollo sostenible de la sociedad moderna. Comprender cómo se genera, transmite y distribuye esta energía es esencial para dimensionar su impacto económico, legal y medioambiental. La Unidad 1 de este Módulo se centra en los Sistemas de Generación Eléctrica, una de las etapas iniciales y más críticas de toda la cadena de suministro industrial.</Paragraph>
                             <Paragraph>En este documento se caracterizan los principales sistemas de generación presentes en la industria: fuentes hídricas, térmicas y alternativas. Analizaremos sus principios de funcionamiento, sus beneficios y el consecuente impacto ambiental que cada una de estas tecnologías conlleva, adaptándose a los estándares y normativas vigentes.</Paragraph>
+
+                            {/* Video de Introducción General */}
+                            <div className="mt-8 relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-inner flex flex-col items-center justify-center border border-slate-300 dark:border-slate-700">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/k_UGyjqbEHE"
+                                    title="Sistemas de Generación Eléctrica"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
                         </div>
 
                         <ExpansionTile title="I. Generación Hidroeléctrica" icon={Power}>
